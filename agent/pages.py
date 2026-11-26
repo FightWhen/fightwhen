@@ -200,7 +200,6 @@ def page(f, stories, bars, others):
 <p class="dek">{e(answer)}.</p>
 <div class="ticket"><div class="in">{title_tag}{big_time}{cd}</div></div>
 <p class="where">{e(f.get('v') or 'Venue TBA')}</p>
-<section><h2>Start time by time zone</h2>{zones}</section>
 <section class="box" id="watch"><h2>Where to watch</h2>{watch_html(f)}
 {'<a class="btn" href="#bars">Watch it at a bar near you</a>' if bars_for(f, bars) else ''}</section>
 {card_html(f)}
