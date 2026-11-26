@@ -810,6 +810,31 @@
   ]
  },
  {
+  "id": "2027-02-06-salkilld-saint-denis",
+  "c": "ufc",
+  "d": "2027-02-06",
+  "day": "Sat",
+  "f": "UFC Fight Night: Salkilld vs. Saint Denis",
+  "t": "",
+  "v": "Afterpay Arena, Sydney, Australia",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Salkilld",
+      "",
+      "Saint Denis",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "id": "2027-02-13-pyfer-nickal",
   "c": "ufc",
   "d": "2027-02-13",
