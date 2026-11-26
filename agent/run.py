@@ -42,7 +42,17 @@ MOODS = ["Bold prediction", "Bad intentions", "Mind games", "Hungry", "Defiant",
 report = []
 
 
+def redact(text):
+    """Never let a key reach the log or the public pull request."""
+    text = re.sub(r"(key|token|password)=[^&\s]+", r"\1=***", str(text), flags=re.I)
+    for secret in (os.environ.get(n) for n in ("YOUTUBE_API_KEY", "ANTHROPIC_API_KEY", "PROXY_PASSWORD")):
+        if secret:
+            text = text.replace(secret, "***")
+    return text
+
+
 def log(msg):
+    msg = redact(msg)
     print(msg)
     report.append(msg)
 
@@ -290,6 +300,14 @@ TRANSCRIPT (timestamps in seconds)
     return json_answer(msg)
 
 
+def retry_later(state, video, tries=2):
+    """A model hiccup shouldn't lose a good video: look at it again next run."""
+    retries = state.setdefault("retries", {})
+    retries[video["id"]] = retries.get(video["id"], 0) + 1
+    if retries[video["id"]] <= tries and video["id"] in state["seen"]:
+        state["seen"].remove(video["id"])
+
+
 def slug(text):
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "-", text).strip("-")[:60]
@@ -348,7 +366,8 @@ def main():
         try:
             candidates += new_videos(channel, state)
         except (requests.HTTPError, ValueError) as exc:
-            log(f"Could not read {channel['name']}: {exc}")
+            status = getattr(getattr(exc, "response", None), "status_code", "")
+            log(f"Could not read {channel['name']}: {exc.__class__.__name__} {status}".rstrip())
 
     # Fight week: also search YouTube for the fighters on this week's big cards.
     last_search = state.get("last_search")
@@ -386,6 +405,11 @@ def main():
             first = screen(video, text)
         except Exception as exc:
             log(f"  screen step failed: {exc}")
+            retry_later(state, video)
+            continue
+        if first.get("why") == "unreadable screen answer":
+            log("  screen answer unreadable, will try again next run")
+            retry_later(state, video)
             continue
         if not first.get("keep"):
             log(f"  passed on it: {first.get('why', '')}")
@@ -394,6 +418,7 @@ def main():
             result = write_story(video, text, fights, new + state["pending"] + published)
         except Exception as exc:
             log(f"  writer step failed: {exc}")
+            retry_later(state, video)
             continue
         if not result.get("newsworthy"):
             log(f"  skipped: {result.get('reason', 'not newsworthy')}")
