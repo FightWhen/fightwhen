@@ -302,6 +302,7 @@ def clean(story, video, fights):
     story["src"] = video["channel"]
     story["url"] = url + (f"&t={start}s" if start else "")
     story["clip"] = url
+    story["vid"] = video["id"]   # the site shows this video's thumbnail, linked to YouTube
     story["published"] = NOW.isoformat().replace("+00:00", "Z")
     for key in ("tags", "body"):
         story[key] = [str(x) for x in story.get(key, [])][:6]
