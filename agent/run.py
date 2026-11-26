@@ -243,15 +243,22 @@ def verify(story, transcript_text):
 SCREEN_PROMPT = """You screen YouTube videos for a combat sports news site. Given a video's title, channel and the start of its transcript, decide if a fighter, trainer or promoter says something new that fans would care about: a prediction, callout, trash talk, injury, opponent or date change, result, reaction, retirement or signing. Say no to highlight reels, full fights, fan reaction or betting videos, and to channels just repeating news without a fighter or insider speaking. Reply with JSON only: {"keep": true or false, "who": "main speaker or empty", "why": "a few words"}"""
 
 
+def json_answer(msg):
+    """The JSON object in the model's answer, ignoring thinking blocks and code fences."""
+    raw = "".join(b.text for b in msg.content if b.type == "text").strip()
+    start, end = raw.find("{"), raw.rfind("}")
+    if start < 0 or end < start:
+        raise json.JSONDecodeError("no JSON object in answer", raw, 0)
+    return json.loads(raw[start:end + 1])
+
+
 def screen(video, text):
     """Cheap first look so only real news reaches the writer model."""
     msg = anthropic.Anthropic().messages.create(
-        model=SCREEN_MODEL, max_tokens=200, system=SCREEN_PROMPT,
+        model=SCREEN_MODEL, max_tokens=2000, system=SCREEN_PROMPT,
         messages=[{"role": "user", "content": f"Title: {video['title']}\nChannel: {video['channel']}\nDescription: {video['description'][:500]}\n\nTranscript start:\n{text[:12000]}"}])
-    raw = "".join(b.text for b in msg.content if b.type == "text").strip()
-    raw = re.sub(r"^```(?:json)?|```$", "", raw, flags=re.M).strip()
     try:
-        return json.loads(raw)
+        return json_answer(msg)
     except json.JSONDecodeError:
         return {"keep": False, "why": "unreadable screen answer"}
 
@@ -276,13 +283,11 @@ TRANSCRIPT (timestamps in seconds)
 {text[:120000]}"""
     msg = anthropic.Anthropic().messages.create(
         model=WRITE_MODEL,
-        max_tokens=2000,
+        max_tokens=12000,
         system=PROMPT,
         messages=[{"role": "user", "content": user}],
     )
-    raw = "".join(b.text for b in msg.content if b.type == "text").strip()
-    raw = re.sub(r"^```(?:json)?|```$", "", raw, flags=re.M).strip()
-    return json.loads(raw)
+    return json_answer(msg)
 
 
 def slug(text):

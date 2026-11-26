@@ -163,7 +163,7 @@ def fingerprint(text):
 
 # ---------- asking the model, with evidence that is checked ----------
 
-def ask_json(system, user, max_tokens=4000, model=None):
+def ask_json(system, user, max_tokens=8000, model=None):
     c = claude()
     if not c:
         return None
