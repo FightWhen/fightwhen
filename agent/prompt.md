@@ -23,6 +23,7 @@ When in doubt, skip it. A thin story is worse than no story.
 
 - Every word inside quote marks must appear in the transcript exactly. Quotes are checked automatically, and a story with a quote that doesn't match is thrown away.
 - Don't add facts that aren't in the transcript, the video title or description, or the fight list. No records, odds, rankings or history from memory.
+- Never decide who "he" or "him" is. Fighters often tell stories about past opponents, so a story told during fight week may not be about the next opponent. Name a person only where the transcript, title or description names them for that part of the story. If it doesn't say who, write "a past opponent" or "the other fighter", or skip that part. If you can't tell whether a story is about the upcoming fight, it isn't newsworthy.
 - If what was said contradicts the fight list (a new opponent, a new date, a fighter out), describe it in `schedule_alert` so a person can update the schedule.
 
 ## Output
