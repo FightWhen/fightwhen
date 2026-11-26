@@ -90,6 +90,8 @@ For each event give:
 - "time_words": the exact words giving that time and zone, or null
 - "venue": venue and city if stated, else null
 - "broadcaster": the TV or streaming service if stated, else null
+- "price": the US pay-per-view price exactly as the page writes it (like "$59.99"), only if the
+  page states one, else null
 - "status": "scheduled", "cancelled" or "postponed", as the page says
 - "bouts": every announced bout, main event first, each as
   {{"a": fighter name, "b": fighter name, "weight": weight class or null,
@@ -125,12 +127,15 @@ def extract(src, text, where):
                 bouts.append({k: b.get(k) for k in ("a", "b", "weight", "title")})
         if ev.get("start_utc") and not in_source(ev.get("time_words") or "", page):
             ev["start_utc"] = None
+        price = ev.get("price")
+        if price and (not re.search(r"\d", price) or norm(price) not in page):
+            price = None
         if not bouts and not ev.get("name"):
             continue
         good.append({"name": ev.get("name") or f"{bouts[0]['a']} vs {bouts[0]['b']}",
                      "date": day.isoformat(), "start_utc": ev.get("start_utc"),
                      "venue": ev.get("venue"), "broadcaster": ev.get("broadcaster"),
-                     "status": ev.get("status") or "scheduled", "bouts": bouts, "c": src["c"]})
+                     "price": price, "status": ev.get("status") or "scheduled", "bouts": bouts, "c": src["c"]})
     return good
 
 
@@ -249,6 +254,7 @@ def apply(fights, groups):
                        "f": lead["name"] if " vs" in lead["name"].lower() or " v " in lead["name"].lower()
                        else f"{main[0]} vs {main[1]}: {lead['name']}", "t": rows[0][4], "v": lead.get("venue") or "Venue TBA",
                        "w": lead.get("broadcaster") or "TBA", "auto": 1,
+                       **({"wp": lead["price"]} if lead.get("price") else {}),
                        "card": [{"sec": "Main card", "b": rows}]}
                 if lead.get("start_utc"):
                     new.update(utc=lead["start_utc"], lab="Main card")
@@ -283,6 +289,9 @@ def apply(fights, groups):
                    "t": (bouts[0].get("weight") if bouts else None) or "", "v": agreed(group, lambda e: e["venue"], lambda a, b: norm(a)[:12] == norm(b)[:12]) or "Venue TBA",
                    "w": agreed(group, lambda e: e["broadcaster"], lambda a, b: norm(a) == norm(b)) or "TBA",
                    "auto": 1}
+            price = agreed(group, lambda e: e.get("price"), lambda a, b: norm(a) == norm(b))
+            if price:
+                new["wp"] = price
             start = agreed(group, lambda e: e["start_utc"])
             if start:
                 new.update(utc=start, lab="Main card")
@@ -316,8 +325,8 @@ def apply(fights, groups):
                 risky(f"**{title}**: start time {fight['utc']} → {start} ({names}).",
                       lambda fs, fid=fid, s=start: by_id(fs, fid).update(utc=s))
 
-        for key, field in (("broadcaster", "w"), ("venue", "v")):
-            val = agreed(group, lambda e, k=key: e[k], lambda a, b: norm(a) == norm(b))
+        for key, field in (("broadcaster", "w"), ("price", "wp"), ("venue", "v")):
+            val = agreed(group, lambda e, k=key: e.get(k), lambda a, b: norm(a) == norm(b))
             cur = fight.get(field, "")
             if val and norm(val) != norm(cur):
                 if not cur or cur in ("TBA", "Venue TBA"):

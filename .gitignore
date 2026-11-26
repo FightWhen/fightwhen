@@ -2,3 +2,6 @@ agent/fights_review.json
 agent/results_review.json
 agent/*_review_count
 agent/__pycache__/
+site/fight/
+site/sitemap.xml
+site/robots.txt
