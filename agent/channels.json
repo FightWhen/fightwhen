@@ -1,0 +1,135 @@
+{
+ "normal_hours_between_runs": 3,
+ "max_video_age_days": 2,
+ "draft_expiry_hours": 48,
+ "max_transcripts_per_run": 40,
+ "screen_model": "claude-haiku-5-5",
+ "write_model": "claude-sonnet-5-5",
+ "search_fight_week": true,
+ "search_every_hours": 4,
+ "max_fighters_to_search": 6,
+ "search_results_per_fighter": 8,
+ "too_common_names": [
+  "smith",
+  "garcia",
+  "lopez",
+  "davis",
+  "jones",
+  "johnson",
+  "moreno",
+  "rodriguez",
+  "perry",
+  "taylor",
+  "price",
+  "miller",
+  "james",
+  "ramirez",
+  "cruz",
+  "martinez",
+  "gonzalez",
+  "haney"
+ ],
+ "channels": [
+  {
+   "name": "Fight Hub TV",
+   "handle": "@FightHubTV"
+  },
+  {
+   "name": "EsNews Boxing (Elie Seckbach)"
+  },
+  {
+   "name": "iFL TV"
+  },
+  {
+   "name": "Seconds Out"
+  },
+  {
+   "name": "Boxing Social"
+  },
+  {
+   "name": "FightHype"
+  },
+  {
+   "name": "Little Giant Boxing"
+  },
+  {
+   "name": "Boxing King Media"
+  },
+  {
+   "name": "The Ring Magazine"
+  },
+  {
+   "name": "Pro Box TV"
+  },
+  {
+   "name": "THE FIGHT with Teddy Atlas"
+  },
+  {
+   "name": "DAZN Boxing",
+   "handle": "@DAZNBoxing"
+  },
+  {
+   "name": "Matchroom Boxing",
+   "handle": "@MatchroomBoxing"
+  },
+  {
+   "name": "Top Rank Boxing"
+  },
+  {
+   "name": "Queensberry Promotions"
+  },
+  {
+   "name": "Golden Boy Boxing"
+  },
+  {
+   "name": "Premier Boxing Champions"
+  },
+  {
+   "name": "Misfits Boxing"
+  },
+  {
+   "name": "UFC",
+   "handle": "@ufc"
+  },
+  {
+   "name": "MMA Junkie"
+  },
+  {
+   "name": "MMA Fighting"
+  },
+  {
+   "name": "The MMA Hour"
+  },
+  {
+   "name": "BKFC Bare Knuckle Fighting Championship"
+  },
+  {
+   "name": "ONE Championship"
+  },
+  {
+   "name": "PFL MMA"
+  },
+  {
+   "name": "RIZIN FIGHTING FEDERATION"
+  }
+ ],
+ "extra_keywords": [
+  "press conference",
+  "weigh-in",
+  "face off",
+  "face-off",
+  "post fight",
+  "post-fight",
+  "replaces",
+  "injury",
+  "injured",
+  "withdraws",
+  "pulls out",
+  "callout",
+  "calls out",
+  "knockout",
+  "results",
+  "trainer",
+  "sparring"
+ ]
+}

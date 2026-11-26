@@ -1,0 +1,699 @@
+[
+ {
+  "c": "one",
+  "d": "2026-12-02",
+  "day": "Wed",
+  "f": "ONE Samurai 6",
+  "t": "MMA, Muay Thai and kickboxing",
+  "v": "Yokohama Buntai, Japan",
+  "w": "TBA",
+  "id": "2026-12-02-one-samurai-6"
+ },
+ {
+  "c": "bkfc",
+  "d": "2026-12-04",
+  "day": "Fri",
+  "f": "Dustin Pague vs Mike Richman",
+  "t": "BKFC Fight Night Hershey · middleweight",
+  "v": "Giant Center, Hershey, PA",
+  "w": "BKFC+",
+  "utc": "2026-12-05T01:00:00Z",
+  "lab": "Main card",
+  "card": [
+   {
+    "sec": "Announced so far",
+    "b": [
+     [
+      "Dustin Pague",
+      "",
+      "Mike Richman",
+      "",
+      "Middleweight · main event",
+      {
+       "ca": "USA",
+       "cb": "USA",
+       "tape": {
+        "a": [
+         "39",
+         "5′9″",
+         "74.5″",
+         "Orthodox"
+        ],
+        "b": [
+         "38",
+         "5′8″",
+         "70.5″",
+         ""
+        ]
+       }
+      }
+     ],
+     [
+      "Benjamin Moser",
+      "",
+      "Julian Valencia",
+      "",
+      "",
+      {}
+     ],
+     [
+      "Hunter Starner",
+      "",
+      "Blaine Shutt",
+      "",
+      "",
+      {}
+     ]
+    ]
+   }
+  ],
+  "cn": "Full card not announced yet.",
+  "id": "2026-12-04-dustin-pague-vs-mike-richman"
+ },
+ {
+  "id": "ben",
+  "c": "boxing",
+  "d": "2026-12-05",
+  "day": "Sat",
+  "f": "David Benavidez vs Michał Cieślak",
+  "t": "Cruiserweight unification · WBA, WBO and WBC",
+  "v": "Desert Diamond Arena, Glendale, AZ",
+  "w": "PPV",
+  "utc": "2026-12-06T00:00:00Z",
+  "lab": "Main card, approx.",
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "David Benavidez",
+      "32-0",
+      "Michał Cieślak",
+      "28-2",
+      "Cruiserweight · WBA, WBO and WBC titles",
+      {
+       "ca": "USA",
+       "cb": "POL",
+       "tape": {
+        "a": [
+         "29",
+         "6′2″",
+         "74.5″",
+         "Orthodox"
+        ],
+        "b": [
+         "37",
+         "6′3″",
+         "79″",
+         "Orthodox"
+        ]
+       }
+      }
+     ],
+     [
+      "Vergil Ortiz Jr.",
+      "24-0",
+      "Keith Thurman",
+      "31-2",
+      "Middleweight",
+      {
+       "ca": "USA",
+       "cb": "USA",
+       "tape": {
+        "a": [
+         "28",
+         "5′10″",
+         "",
+         "Orthodox"
+        ],
+        "b": [
+         "38",
+         "5′7½″",
+         "69″",
+         "Orthodox"
+        ]
+       }
+      }
+     ]
+    ],
+    "w": "DAZN PPV"
+   },
+   {
+    "sec": "Prelims",
+    "b": [
+     [
+      "Elijah Garcia",
+      "",
+      "Thomas O’Toole",
+      "",
+      "Super middleweight · 10 rounds",
+      {
+       "ca": "USA",
+       "tape": {
+        "a": [
+         "23",
+         "6′0″",
+         "71″",
+         "Southpaw"
+        ],
+        "b": [
+         "28",
+         "6′3″",
+         "",
+         ""
+        ]
+       },
+       "cb": "IRL"
+      }
+     ],
+     [
+      "Luis Nunez",
+      "",
+      "Toshiki Shimomachi",
+      "",
+      "Title eliminator",
+      {
+       "cb": "JPN",
+       "ca": "DOM",
+       "tape": {
+        "a": [
+         "27",
+         "5′7″",
+         "67″",
+         "Orthodox"
+        ],
+        "b": [
+         "30",
+         "5′10½″",
+         "68.5″",
+         "Southpaw"
+        ]
+       }
+      }
+     ]
+    ],
+    "w": "DAZN"
+   }
+  ],
+  "cn": ""
+ },
+ {
+  "c": "ufc",
+  "d": "2026-12-05",
+  "day": "Sat",
+  "f": "UFC Fight Night: Adesanya vs Magomedov",
+  "t": "Middleweight",
+  "v": "Venue TBA",
+  "w": "Paramount+",
+  "id": "2026-12-05-ufc-fight-night-adesanya-vs-m"
+ },
+ {
+  "id": "fj",
+  "c": "boxing",
+  "d": "2026-12-11",
+  "day": "Fri",
+  "f": "Tyson Fury vs Anthony Joshua",
+  "t": "Heavyweight · 12 rounds",
+  "v": "Principality Stadium, Cardiff",
+  "w": "Netflix",
+  "u": "Co-main: Deontay Wilder vs Martin Bakole",
+  "utc": "2026-12-12T01:30:00Z",
+  "lab": "Ringwalks, reported",
+  "big": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Tyson Fury",
+      "36-2-1",
+      "Anthony Joshua",
+      "30-4",
+      "Heavyweight · 12 rounds",
+      {
+       "ca": "GBR",
+       "cb": "GBR",
+       "tape": {
+        "a": [
+         "38",
+         "6′9″",
+         "85″",
+         "Orthodox"
+        ],
+        "b": [
+         "37",
+         "6′6″",
+         "82″",
+         "Orthodox"
+        ]
+       }
+      }
+     ],
+     [
+      "Deontay Wilder",
+      "45-4-1",
+      "Martin Bakole",
+      "22-2-1",
+      "Heavyweight · replaces injured Jai Opetaia",
+      {
+       "ca": "USA",
+       "cb": "COD",
+       "tape": {
+        "a": [
+         "41",
+         "6′7″",
+         "83″",
+         "Orthodox"
+        ],
+        "b": [
+         "33",
+         "6′6″",
+         "82″",
+         "Orthodox"
+        ]
+       }
+      }
+     ],
+     [
+      "Da’Mazion Vanhouter",
+      "14-0",
+      "Michael Essomba",
+      "11-2",
+      "Heavyweight",
+      {
+       "ca": "USA",
+       "tape": {
+        "a": [
+         "21",
+         "6′1″",
+         "76″",
+         ""
+        ],
+        "b": [
+         "",
+         "",
+         "",
+         ""
+        ]
+       }
+      }
+     ]
+    ],
+    "w": "Netflix"
+   }
+  ],
+  "cn": "More undercard bouts may be added."
+ },
+ {
+  "c": "boxing",
+  "d": "2026-12-12",
+  "day": "Sat",
+  "f": "Dmitry Bivol vs Callum Smith",
+  "t": "Light heavyweight · WBA, IBF and WBO",
+  "v": "UMMC Arena, Yekaterinburg, Russia",
+  "w": "DAZN",
+  "id": "2026-12-12-dmitry-bivol-vs-callum-smith",
+  "noest": 1,
+  "utc": "2026-12-13T00:00:00Z",
+  "lab": "Card start, approx.",
+  "card": [
+   {
+    "sec": "Main event",
+    "b": [
+     [
+      "Dmitry Bivol",
+      "25-1",
+      "Callum Smith",
+      "",
+      "Light heavyweight · WBA, IBF and WBO titles · 12 rounds",
+      {
+       "ca": "RUS",
+       "cb": "GBR",
+       "tape": {
+        "a": [
+         "35",
+         "6′0″",
+         "72″",
+         "Orthodox"
+        ],
+        "b": [
+         "36",
+         "6′3″",
+         "78″",
+         "Orthodox"
+        ]
+       }
+      }
+     ]
+    ],
+    "w": "DAZN"
+   }
+  ],
+  "cn": "Undercard not announced yet. DAZN is the reported broadcaster; start time is an estimate."
+ },
+ {
+  "c": "one",
+  "d": "2026-12-12",
+  "day": "Sat",
+  "f": "ONE Fight Night 49",
+  "t": "Card TBA",
+  "v": "Lumpinee Stadium, Bangkok",
+  "w": "Prime Video",
+  "id": "2026-12-12-one-fight-night-49"
+ },
+ {
+  "id": "ufc335",
+  "c": "ufc",
+  "d": "2026-12-12",
+  "day": "Sat",
+  "f": "UFC 335: Charles Oliveira vs Diego Lopes",
+  "t": "BMF title · lightweight, 5 rounds",
+  "v": "T-Mobile Arena, Las Vegas",
+  "w": "Paramount+",
+  "u": "Also: Alex Pereira vs Sergei Pavlovich · Bo Nickal vs Joe Pyfer",
+  "utc": "2026-12-13T02:00:00Z",
+  "lab": "Main card",
+  "card": [
+   {
+    "sec": "Main card",
+    "t": "2026-12-13T02:00:00Z",
+    "b": [
+     [
+      "Charles Oliveira",
+      "37-11",
+      "Diego Lopes",
+      "28-8",
+      "BMF title · lightweight · 5 rounds",
+      {
+       "ca": "BRA",
+       "cb": "BRA",
+       "tape": {
+        "a": [
+         "37",
+         "5′10″",
+         "74″",
+         "Orthodox"
+        ],
+        "b": [
+         "31",
+         "5′11″",
+         "72.5″",
+         "Orthodox"
+        ]
+       }
+      }
+     ],
+     [
+      "Alex Pereira",
+      "",
+      "Sergei Pavlovich",
+      "",
+      "Heavyweight · 5 rounds",
+      {
+       "ca": "BRA",
+       "cb": "RUS",
+       "tape": {
+        "a": [
+         "39",
+         "6′4″",
+         "79″",
+         "Orthodox"
+        ],
+        "b": [
+         "34",
+         "6′3″",
+         "84″",
+         "Orthodox"
+        ]
+       }
+      }
+     ],
+     [
+      "Bo Nickal",
+      "9-1",
+      "Joe Pyfer",
+      "16-3",
+      "Middleweight",
+      {
+       "ca": "USA",
+       "cb": "USA",
+       "tape": {
+        "a": [
+         "30",
+         "6′1″",
+         "76″",
+         "Southpaw"
+        ],
+        "b": [
+         "30",
+         "6′2″",
+         "75″",
+         "Orthodox"
+        ]
+       }
+      }
+     ],
+     [
+      "Brandon Moreno",
+      "24-10-2",
+      "Charles Johnson",
+      "20-9",
+      "Flyweight",
+      {
+       "ca": "MEX",
+       "cb": "USA",
+       "tape": {
+        "a": [
+         "32",
+         "5′7″",
+         "70″",
+         "Orthodox"
+        ],
+        "b": [
+         "35",
+         "5′9″",
+         "70″",
+         "Switch"
+        ]
+       }
+      }
+     ]
+    ],
+    "w": "Paramount+"
+   },
+   {
+    "sec": "Prelims",
+    "t": "2026-12-13T00:00:00Z",
+    "b": [
+     [
+      "Maycee Barber",
+      "15-3",
+      "Carli Judice",
+      "7-2",
+      "Women’s flyweight",
+      {
+       "ca": "USA",
+       "cb": "USA",
+       "tape": {
+        "a": [
+         "28",
+         "5′5″",
+         "65″",
+         "Switch"
+        ],
+        "b": [
+         "27",
+         "5′7″",
+         "68″",
+         "Southpaw"
+        ]
+       }
+      }
+     ]
+    ],
+    "w": "Paramount+"
+   },
+   {
+    "sec": "Early prelims",
+    "t": "2026-12-12T22:00:00Z",
+    "b": [],
+    "w": "Paramount+ · UFC Fight Pass"
+   }
+  ],
+  "cn": "Prelim lineup is still filling out."
+ },
+ {
+  "c": "boxing",
+  "d": "2026-12-13",
+  "day": "Sun",
+  "f": "Erislandy Lara vs Tim Tszyu",
+  "t": "WBA middleweight title · Sat Dec 12 in the Americas",
+  "v": "Cbus Super Stadium, Gold Coast, Australia",
+  "w": "TBA",
+  "id": "2026-12-13-erislandy-lara-vs-tim-tszyu"
+ },
+ {
+  "c": "misfits",
+  "d": "2026-12-18",
+  "day": "Fri",
+  "f": "Chase DeMoor vs Andrei Arlovski",
+  "t": "Misfits “New Blood” · heavyweight title",
+  "v": "Municipal Auditorium, Nashville",
+  "w": "DAZN",
+  "u": "Also: Matt Riddle, Bi Nguyen, Charles Bennett",
+  "card": [
+   {
+    "sec": "Announced so far",
+    "b": [
+     [
+      "Chase DeMoor",
+      "",
+      "Andrei Arlovski",
+      "",
+      "Misfits heavyweight title",
+      {
+       "ca": "USA",
+       "cb": "BLR",
+       "tape": {
+        "a": [
+         "30",
+         "6′5″",
+         "84″",
+         "Orthodox"
+        ],
+        "b": [
+         "47",
+         "6′4″",
+         "77″",
+         "Orthodox"
+        ]
+       }
+      }
+     ]
+    ]
+   }
+  ],
+  "cn": "Matt Riddle, Bi Nguyen and Charles Bennett are also on the card.",
+  "id": "2026-12-18-chase-demoor-vs-andrei-arlovs"
+ },
+ {
+  "c": "one",
+  "d": "2026-12-18",
+  "day": "Fri",
+  "f": "ONE Fight Night 50: Kade Ruotolo vs Ok Rae Yoon",
+  "t": "Lightweight MMA · Sat Dec 19 in Bangkok",
+  "v": "Lumpinee Stadium, Bangkok",
+  "w": "Prime Video",
+  "u": "Also: Maurice Abevi vs Dzhabir Dzhabrailov",
+  "card": [
+   {
+    "sec": "Announced so far",
+    "b": [
+     [
+      "Kade Ruotolo",
+      "",
+      "Ok Rae Yoon",
+      "",
+      "Lightweight MMA",
+      {
+       "ca": "USA",
+       "cb": "KOR",
+       "tape": {
+        "a": [
+         "23",
+         "5′11″",
+         "75″",
+         ""
+        ],
+        "b": [
+         "",
+         "",
+         "",
+         ""
+        ]
+       }
+      }
+     ],
+     [
+      "Maurice Abevi",
+      "",
+      "Dzhabir Dzhabrailov",
+      "",
+      "",
+      {
+       "ca": "SUI",
+       "tape": {
+        "a": [
+         "27",
+         "6′0″",
+         "76″",
+         ""
+        ],
+        "b": [
+         "",
+         "",
+         "",
+         ""
+        ]
+       }
+      }
+     ]
+    ]
+   }
+  ],
+  "cn": "Full card not announced yet.",
+  "id": "2026-12-18-one-fight-night-50-kade-ruoto"
+ },
+ {
+  "c": "pfl",
+  "d": "2026-12-19",
+  "day": "Sat",
+  "f": "PFL Lyon",
+  "t": "Card TBA",
+  "v": "LDLC Arena, Lyon, France",
+  "w": "ESPN+",
+  "id": "2026-12-19-pfl-lyon"
+ },
+ {
+  "c": "boxing",
+  "d": "2026-12-20",
+  "day": "Sun",
+  "f": "Jarrell Miller vs Tony Yoka",
+  "t": "Heavyweight · Matchroom’s last card of 2026",
+  "v": "Accra, Ghana",
+  "w": "TBA",
+  "id": "2026-12-20-jarrell-miller-vs-tony-yoka"
+ },
+ {
+  "c": "boxing",
+  "d": "2026-12-24",
+  "day": "Thu",
+  "f": "Jake Paul vs Cédric Doumbé",
+  "t": "Cruiserweight · 8 rounds",
+  "v": "Coca-Cola Arena, Dubai",
+  "w": "TBA",
+  "id": "2026-12-24-jake-paul-vs-cedric-doumbe"
+ },
+ {
+  "c": "k1",
+  "d": "2026-12-29",
+  "day": "Tue",
+  "f": "K-1 World MAX 2026 Final",
+  "t": "–70kg tournament, final eight",
+  "v": "Yokohama Buntai, Japan",
+  "w": "TBA",
+  "id": "2026-12-29-k-1-world-max-2026-final"
+ },
+ {
+  "c": "rizin",
+  "d": "2026-12-31",
+  "day": "Thu",
+  "f": "RIZIN New Year’s Eve",
+  "t": "Annual NYE card · lineup TBA",
+  "v": "Vantelin Dome, Nagoya, Japan",
+  "w": "RIZIN.tv",
+  "utc": "2026-12-31T05:00:00Z",
+  "lab": "Start, approx.",
+  "id": "2026-12-31-rizin-new-year-s-eve"
+ }
+]

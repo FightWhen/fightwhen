@@ -1,0 +1,4 @@
+agent/fights_review.json
+agent/results_review.json
+agent/*_review_count
+agent/__pycache__/
