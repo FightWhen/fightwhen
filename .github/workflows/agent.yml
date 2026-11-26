@@ -54,7 +54,8 @@ jobs:
           git push
 
       - name: Send new drafts for approval
-        if: vars.AUTO_PUBLISH != 'true'
+        # Quiet runs write no report, so there is nothing to send.
+        if: vars.AUTO_PUBLISH != 'true' && hashFiles('agent/last_run.md') != ''
         uses: peter-evans/create-pull-request@v7
         with:
           branch: agent/new-stories

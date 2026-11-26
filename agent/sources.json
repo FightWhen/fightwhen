@@ -1,30 +1,107 @@
 {
- "_how": "Where the schedule and results agents look. 'c' is the site's category. 'wiki' entries are Wikipedia page titles ({year} and {next_year} are filled in). 'url' entries are official pages, read only where robots.txt allows. BoxRec, Tapology and ESPN are deliberately not on this list. If the run log says a page answered 404, fix or remove its line.",
+ "_how": "Where the schedule and results agents look. 'c' is the site's category. 'wiki' entries are Wikipedia page titles ({year} and {next_year} are filled in). 'url' entries are official pages, read only where robots.txt allows. BoxRec, Tapology and ESPN are deliberately not on this list. Wikipedia has no yearly boxing schedule page, so boxing comes from the promoters' own pages. If the run log says a page answered 404, fix or remove its line.",
  "schedule": [
-  {"id": "wiki-boxing", "c": "boxing", "wiki": "{year} in boxing"},
-  {"id": "wiki-boxing-next", "c": "boxing", "wiki": "{next_year} in boxing"},
-  {"id": "wiki-ufc", "c": "ufc", "wiki": "List of UFC events"},
-  {"id": "wiki-pfl", "c": "pfl", "wiki": "List of PFL events"},
-  {"id": "wiki-one", "c": "one", "wiki": "List of ONE Championship events"},
-  {"id": "wiki-bkfc", "c": "bkfc", "wiki": "List of Bare Knuckle Fighting Championship events"},
-  {"id": "wiki-rizin", "c": "rizin", "wiki": "List of Rizin Fighting Federation events"},
-  {"id": "ufc", "c": "ufc", "url": "https://www.ufc.com/events"},
-  {"id": "pfl", "c": "pfl", "url": "https://pflmma.com/events"},
-  {"id": "one", "c": "one", "url": "https://www.onefc.com/events/"},
-  {"id": "bkfc", "c": "bkfc", "url": "https://www.bkfc.com/events"},
-  {"id": "matchroom", "c": "boxing", "url": "https://www.matchroomboxing.com/events/"},
-  {"id": "pbc", "c": "boxing", "url": "https://www.premierboxingchampions.com/boxing-schedule"},
-  {"id": "toprank", "c": "boxing", "url": "https://www.toprank.com/events"},
-  {"id": "goldenboy", "c": "boxing", "url": "https://www.goldenboy.com/events/"},
-  {"id": "queensberry", "c": "boxing", "url": "https://www.queensberry.co.uk/pages/events"},
-  {"id": "misfits", "c": "misfits", "url": "https://www.misfitsboxing.com/events"}
+  {
+   "id": "wiki-ufc",
+   "c": "ufc",
+   "wiki": "List of UFC events"
+  },
+  {
+   "id": "wiki-bkfc",
+   "c": "bkfc",
+   "wiki": "List of BKFC events"
+  },
+  {
+   "id": "wiki-bkfc-year",
+   "c": "bkfc",
+   "wiki": "{year} in Bare Knuckle Fighting Championship"
+  },
+  {
+   "id": "wiki-rizin-year",
+   "c": "rizin",
+   "wiki": "{year} in Rizin Fighting Federation"
+  },
+  {
+   "id": "wiki-pfl",
+   "c": "pfl",
+   "wiki": "List of PFL events"
+  },
+  {
+   "id": "wiki-one",
+   "c": "one",
+   "wiki": "List of ONE Championship events"
+  },
+  {
+   "id": "ufc",
+   "c": "ufc",
+   "url": "https://www.ufc.com/events"
+  },
+  {
+   "id": "pfl",
+   "c": "pfl",
+   "url": "https://pflmma.com/events"
+  },
+  {
+   "id": "one",
+   "c": "one",
+   "url": "https://www.onefc.com/events/"
+  },
+  {
+   "id": "bkfc",
+   "c": "bkfc",
+   "url": "https://www.bkfc.com/events"
+  },
+  {
+   "id": "matchroom",
+   "c": "boxing",
+   "url": "https://www.matchroomboxing.com/events/"
+  },
+  {
+   "id": "pbc",
+   "c": "boxing",
+   "url": "https://www.premierboxingchampions.com/boxing-schedule"
+  },
+  {
+   "id": "goldenboy",
+   "c": "boxing",
+   "url": "https://www.goldenboy.com/events/"
+  },
+  {
+   "id": "queensberry",
+   "c": "boxing",
+   "url": "https://www.queensberry.co.uk/pages/events"
+  }
  ],
  "results": [
-  {"id": "ufc", "c": "ufc", "url": "https://www.ufc.com/events"},
-  {"id": "pfl", "c": "pfl", "url": "https://pflmma.com/events"},
-  {"id": "one", "c": "one", "url": "https://www.onefc.com/events/"},
-  {"id": "bkfc", "c": "bkfc", "url": "https://www.bkfc.com/events"},
-  {"id": "matchroom", "c": "boxing", "url": "https://www.matchroomboxing.com/results/"},
-  {"id": "pbc", "c": "boxing", "url": "https://www.premierboxingchampions.com/boxing-results"}
+  {
+   "id": "ufc",
+   "c": "ufc",
+   "url": "https://www.ufc.com/events"
+  },
+  {
+   "id": "pfl",
+   "c": "pfl",
+   "url": "https://pflmma.com/events"
+  },
+  {
+   "id": "one",
+   "c": "one",
+   "url": "https://www.onefc.com/events/"
+  },
+  {
+   "id": "bkfc",
+   "c": "bkfc",
+   "url": "https://www.bkfc.com/events"
+  },
+  {
+   "id": "matchroom",
+   "c": "boxing",
+   "url": "https://www.matchroomboxing.com/results/"
+  },
+  {
+   "id": "pbc",
+   "c": "boxing",
+   "url": "https://www.premierboxingchampions.com/boxing-results"
+  }
  ]
 }
