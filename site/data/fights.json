@@ -6,7 +6,7 @@
   "day": "Sat",
   "f": "Agit Kabayel vs Nelson Hysa: Bad Blood",
   "t": "Heavyweight · title fight",
-  "v": "Mekur Spiel Arena, Dusseldorf, Germany",
+  "v": "Merkur Spiel-Arena, Düsseldorf, Germany",
   "w": "TBA",
   "auto": 1,
   "card": [
@@ -237,7 +237,7 @@
   "c": "boxing",
   "d": "2026-12-05",
   "day": "Sat",
-  "f": "Matchroom Boxing event (Walker VS Rocha)",
+  "f": "Walker vs Rocha",
   "t": "",
   "v": "Civic Hall, Wolverhampton, UK",
   "w": "TBA",
@@ -262,7 +262,7 @@
   "c": "boxing",
   "d": "2026-12-10",
   "day": "Thu",
-  "f": "Matchroom Boxing event (Diaz VS Chaves)",
+  "f": "Diaz vs Chaves",
   "t": "",
   "v": "Caribe Royale, Orlando, Florida, USA",
   "w": "TBA",
@@ -639,7 +639,7 @@
   "c": "boxing",
   "d": "2026-12-12",
   "day": "Sat",
-  "f": "Matchroom Boxing event (Soro VS Liddard)",
+  "f": "Soro vs Liddard",
   "t": "",
   "v": "Salle des Étoiles, Monte Carlo, Monaco",
   "w": "TBA",
@@ -953,9 +953,9 @@
   "c": "bkfc",
   "d": "2027-01-23",
   "day": "Sat",
-  "f": "BKFSEA BRUISE CRUISE STEWART vs DURAN",
+  "f": "BKFC Bruise Cruise: Stewart vs Duran",
   "t": "",
-  "v": "NORWEGIAN JEWEL - BAHAMAS",
+  "v": "Norwegian Jewel, Bahamas",
   "w": "TBA",
   "auto": 1,
   "card": [
@@ -963,9 +963,9 @@
     "sec": "Main card",
     "b": [
      [
-      "KAI STEWART",
+      "Kai Stewart",
       "",
-      "BRYAN DURAN",
+      "Bryan Duran",
       "",
       ""
      ]
@@ -1053,9 +1053,9 @@
   "c": "bkfc",
   "d": "2027-02-05",
   "day": "Fri",
-  "f": "BKFC FIGHT NIGHT PALM DESERT KURDANOV vs PERALTA",
+  "f": "BKFC Fight Night Palm Desert: Kurdanov vs Peralta",
   "t": "",
-  "v": "ACRIURE ARENA - PALM DESERT, CA",
+  "v": "Acrisure Arena, Palm Desert, CA",
   "w": "TBA",
   "auto": 1,
   "card": [
@@ -1063,9 +1063,9 @@
     "sec": "Main card",
     "b": [
      [
-      "EVGENII KURDANOV",
+      "Evgenii Kurdanov",
       "",
-      "ROBBIE PERALTA",
+      "Robbie Peralta",
       "",
       ""
      ]
@@ -1128,9 +1128,9 @@
   "c": "bkfc",
   "d": "2027-02-13",
   "day": "Sat",
-  "f": "BKFC 99 SHEFFIELD BONNER vs FRANCO",
+  "f": "BKFC 99 Sheffield: Bonner vs Franco",
   "t": "",
-  "v": "UTILITA ARENA - SHEFFIELD, UK",
+  "v": "Utilita Arena, Sheffield, UK",
   "w": "TBA",
   "auto": 1,
   "card": [
@@ -1138,9 +1138,9 @@
     "sec": "Main card",
     "b": [
      [
-      "BEN BONNER",
+      "Ben Bonner",
       "",
-      "RICO FRANCO",
+      "Rico Franco",
       "",
       ""
      ]
@@ -1149,38 +1149,11 @@
   ]
  },
  {
-  "id": "2027-02-20-tbd-tbd",
-  "c": "ufc",
-  "d": "2027-02-20",
-  "day": "Sat",
-  "f": "TBD vs TBD",
-  "t": "",
-  "v": "Kia Center, Orlando, FL",
-  "w": "TBA",
-  "auto": 1,
-  "card": [
-   {
-    "sec": "Main card",
-    "b": [
-     [
-      "TBD",
-      "",
-      "TBD",
-      "",
-      ""
-     ]
-    ]
-   }
-  ],
-  "utc": "2027-02-20T22:00:00Z",
-  "lab": "Main card"
- },
- {
   "id": "2027-02-27-ennis-kelly",
   "c": "boxing",
   "d": "2027-02-27",
   "day": "Sat",
-  "f": "Matchroom Boxing event (Ennis VS Kelly)",
+  "f": "Ennis vs Kelly",
   "t": "",
   "v": "State Farm Arena, Atlanta, Georgia, USA",
   "w": "TBA",
