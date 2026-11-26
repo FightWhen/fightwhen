@@ -1,3 +1,821 @@
 {
- "_last_full_run": "2026-11-26T15:24:25.620328+00:00"
+ "_last_full_run": "2026-11-26T16:17:39.211252+00:00",
+ "wiki-ufc": {
+  "fp": "7f873667aab8967a",
+  "events": [
+   {
+    "name": "UFC 337",
+    "date": "2027-02-20",
+    "start_utc": null,
+    "venue": "Kia Center, Orlando, Florida, U.S.",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC Fight Night: Pyfer vs. Nickal",
+    "date": "2027-02-13",
+    "start_utc": null,
+    "venue": "Rocket Arena, Cleveland, Ohio, U.S.",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC Fight Night: Salkilld vs. Saint Denis",
+    "date": "2027-02-07",
+    "start_utc": null,
+    "venue": "Afterpay Arena, Sydney, Australia",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC 336: Van vs. Kape",
+    "date": "2027-01-30",
+    "start_utc": null,
+    "venue": "Scotiabank Arena, Toronto, Ontario, Canada",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC Fight Night: Bonfim vs. Brady",
+    "date": "2027-01-23",
+    "start_utc": null,
+    "venue": "Meta Apex, Las Vegas, Nevada, U.S.",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC Fight Night: Rodríguez vs. Garcia",
+    "date": "2027-01-16",
+    "start_utc": null,
+    "venue": "American Airlines Center, Dallas, Texas, U.S.",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC 335: Oliveira vs. Lopes",
+    "date": "2026-12-12",
+    "start_utc": null,
+    "venue": "T-Mobile Arena, Las Vegas, Nevada, U.S.",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   },
+   {
+    "name": "UFC Fight Night: Adesanya vs. Magomedov",
+    "date": "2026-12-05",
+    "start_utc": null,
+    "venue": "anb Arena, Riyadh, Saudi Arabia",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "ufc"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "wiki-bkfc-year": {
+  "fp": "cf1c500990393eeb",
+  "events": [
+   {
+    "name": "BKFC Fight Night Hershey: Pague vs. Richman",
+    "date": "2026-12-04",
+    "start_utc": null,
+    "venue": "Giant Center, Hershey, Pennsylvania, United States",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "bkfc"
+   },
+   {
+    "name": "BKFC 97 Hollywood, FL: Henry vs. Collard",
+    "date": "2026-12-11",
+    "start_utc": null,
+    "venue": "Seminole Hard Rock Hotel & Casino Hollywood, Hollywood, Florida, United States",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "bkfc"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "wiki-rizin-year": {
+  "fp": "27fe96a9c3c3709b",
+  "events": [
+   {
+    "name": "Super Rizin 6",
+    "date": "2026-12-31",
+    "start_utc": null,
+    "venue": "Vantelin Dome Nagoya, Nagoya, Japan",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "rizin"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "wiki-pfl": {
+  "fp": "f2fc2380b6112d40",
+  "events": [
+   {
+    "name": "PFL Lyon: Lapilus vs. McKee",
+    "date": "2026-12-19",
+    "start_utc": null,
+    "venue": "LDLC Arena, Décines-Charpieu, France",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Lapilus",
+      "b": "McKee",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "pfl"
+   },
+   {
+    "name": "PFL Africa 4",
+    "date": "2026-12-12",
+    "start_utc": null,
+    "venue": "BK Arena, Kigali, Rwanda",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   },
+   {
+    "name": "PFL MENA 12",
+    "date": "2026-12-11",
+    "start_utc": null,
+    "venue": "Dhahran Expo, Al Khobar, Saudi Arabia",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "wiki-one": {
+  "fp": "eacf1a9b0eb2a008",
+  "events": [
+   {
+    "name": "ONE Fight Night 49",
+    "date": "2026-12-12",
+    "start_utc": null,
+    "venue": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "one"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "ufc": {
+  "fp": "86417abf56413ec7",
+  "events": [
+   {
+    "name": "Adesanya vs Magomedov",
+    "date": "2026-12-05",
+    "start_utc": "2026-12-06T02:00:00Z",
+    "venue": "Riyadh, Saudi Arabia",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Adesanya",
+      "b": "Magomedov",
+      "weight": "Middleweight",
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "Oliveira vs Lopes",
+    "date": "2026-12-12",
+    "start_utc": "2026-12-13T01:00:00Z",
+    "venue": "T-Mobile Arena, Las Vegas, NV",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Oliveira",
+      "b": "Lopes",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "Rodriguez vs Garcia",
+    "date": "2027-01-16",
+    "start_utc": "2027-01-17T01:00:00Z",
+    "venue": "American Airlines Center, Dallas, TX",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Rodriguez",
+      "b": "Garcia",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "Brady vs Bonfim",
+    "date": "2027-01-23",
+    "start_utc": "2027-01-24T02:00:00Z",
+    "venue": "Meta APEX, Las Vegas, NV",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Brady",
+      "b": "Bonfim",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "Van vs Kape",
+    "date": "2027-01-30",
+    "start_utc": "2027-01-31T01:00:00Z",
+    "venue": "Scotiabank Arena, Toronto ON",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Van",
+      "b": "Kape",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "Salkilld vs Saint Denis",
+    "date": "2027-02-06",
+    "start_utc": "2027-02-06T22:00:00Z",
+    "venue": "Afterpay Arena, Sydney Olympic Park NSW",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Salkilld",
+      "b": "Saint Denis",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "Pyfer vs Nickal",
+    "date": "2027-02-13",
+    "start_utc": "2027-02-13T22:00:00Z",
+    "venue": "Rocket Arena, Cleveland, OH",
+    "broadcaster": "Paramount+",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Pyfer",
+      "b": "Nickal",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   },
+   {
+    "name": "TBD vs TBD",
+    "date": "2027-02-20",
+    "start_utc": null,
+    "venue": "Kia Center, Orlando, FL",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "TBD",
+      "b": "TBD",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "ufc"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "pfl": {
+  "fp": "d3ef9ca36653c5f8",
+  "events": [
+   {
+    "name": "PFL MENA 12",
+    "date": "2026-12-11",
+    "start_utc": null,
+    "venue": "Dhahran Expo, Khobar, Saudi Arabia",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   },
+   {
+    "name": "PFL Africa: Kigali",
+    "date": "2026-12-12",
+    "start_utc": "2026-12-12T16:00:00Z",
+    "venue": "BK Arena, Kigali, Rwanda",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   },
+   {
+    "name": "PFL Lyon",
+    "date": "2026-12-19",
+    "start_utc": "2026-12-19T20:00:00Z",
+    "venue": "LDLC Arena, Lyon, France",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   },
+   {
+    "name": "PFL Dubai",
+    "date": "2026-11-26",
+    "start_utc": null,
+    "venue": null,
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   },
+   {
+    "name": "PFL San Juan",
+    "date": "2026-11-26",
+    "start_utc": null,
+    "venue": null,
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "pfl"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "one": {
+  "fp": "2847c8ab14033fb3",
+  "events": [],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "bkfc": {
+  "fp": "ddf074914396de0e",
+  "events": [
+   {
+    "name": "BKFC FIGHT NIGHT HERSHEY PAGUE vs RICHMAN",
+    "date": "2026-12-04",
+    "start_utc": null,
+    "venue": "Giant Center - Hershey, PA",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Dustin Pague",
+      "b": "Mike Richman",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "bkfc"
+   },
+   {
+    "name": "BKFC 97 HOLLYWOOD HENRY vs COLLARD",
+    "date": "2026-12-11",
+    "start_utc": null,
+    "venue": "Hard Rock Live - Hollywood, FL",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Bryce Henry",
+      "b": "Clay Collard",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "bkfc"
+   },
+   {
+    "name": "BKFSEA BRUISE CRUISE STEWART vs DURAN",
+    "date": "2027-01-23",
+    "start_utc": null,
+    "venue": "Norwegian Jewel - Bahamas",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Kai Stewart",
+      "b": "Bryan Duran",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "bkfc"
+   },
+   {
+    "name": "BKFC FIGHT NIGHT PALM DESERT KURDANOV vs PERALTA",
+    "date": "2027-02-05",
+    "start_utc": null,
+    "venue": "Acrisure Arena - Palm Desert, CA",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Evgenii Kurdanov",
+      "b": "Robbie Peralta",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "bkfc"
+   },
+   {
+    "name": "BKFC 99 SHEFFIELD BONNER vs FRANCO",
+    "date": "2027-02-13",
+    "start_utc": null,
+    "venue": "Utilita Arena - Sheffield, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Ben Bonner",
+      "b": "Rico Franco",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "bkfc"
+   },
+   {
+    "name": "KNUCKLEMANIA VII",
+    "date": "2027-02-27",
+    "start_utc": null,
+    "venue": "Kaseya Center - Miami, FL",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [],
+    "c": "bkfc"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "matchroom": {
+  "fp": "b15f27f282e894c6",
+  "events": [
+   {
+    "name": "Walker VS Rocha",
+    "date": "2026-12-05",
+    "start_utc": null,
+    "venue": "Civic Hall, Wolverhampton, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Walker",
+      "b": "Rocha",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Diaz VS Chaves",
+    "date": "2026-12-10",
+    "start_utc": null,
+    "venue": "Caribe Royale, Orlando, Florida, USA",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Diaz",
+      "b": "Chaves",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Fury VS Joshua",
+    "date": "2026-12-11",
+    "start_utc": null,
+    "venue": "Principality Stadium, Cardiff, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Fury",
+      "b": "Joshua",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Bivol VS Smith",
+    "date": "2026-12-12",
+    "start_utc": null,
+    "venue": "UMMC Arena, Yekaterinburg, Russia",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Bivol",
+      "b": "Smith",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Soro VS Liddard",
+    "date": "2026-12-12",
+    "start_utc": null,
+    "venue": "Salle des Étoiles, Monte Carlo, Monaco",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Soro",
+      "b": "Liddard",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Miller VS Yoka",
+    "date": "2026-12-20",
+    "start_utc": null,
+    "venue": "The Grand Arena, Accra, Ghana",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Miller",
+      "b": "Yoka",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Ennis VS Kelly",
+    "date": "2027-02-27",
+    "start_utc": null,
+    "venue": "State Farm Arena, Atlanta, Georgia, USA",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Ennis",
+      "b": "Kelly",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "pbc": {
+  "fp": "bccb8620d384c950",
+  "events": [
+   {
+    "name": "Fight Night",
+    "date": "2026-12-05",
+    "start_utc": "2026-12-06T01:00:00Z",
+    "venue": "Desert Diamond Arena, Glendale, AZ",
+    "broadcaster": "DAZN and Prime Video",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "David Benavidez",
+      "b": "Michal Cieslak",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Vergil Ortiz Jr.",
+      "b": "Brian Mendoza",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Emiliano Vargas",
+      "b": "Omar Juarez",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Nikita Tszyu",
+      "b": "Roberto Valenzuela Jr.",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Marco Romero",
+      "b": "Cruse Stewart",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Elijah Garcia",
+      "b": "Thomas O'Toole",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Luis Nunez",
+      "b": "Toshiki Shimomachi",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Fight Night",
+    "date": "2026-12-12",
+    "start_utc": "2026-12-13T00:30:00Z",
+    "venue": "Cbus Super Stadium, Gold Coast, Queensland, Australia",
+    "broadcaster": "DAZN",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Erislandy Lara",
+      "b": "Tim Tszyu",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Jermell Charlo",
+      "b": "Brock Jarvis",
+      "weight": null,
+      "title": false
+     },
+     {
+      "a": "Elnur Samedov",
+      "b": "Liam Wilson",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "goldenboy": {
+  "fp": "d81bd3d977967175",
+  "events": [
+   {
+    "name": "Barboza vs. Duarte",
+    "date": "2027-01-23",
+    "start_utc": null,
+    "venue": "Honda Center, Anaheim, CA",
+    "broadcaster": "DAZN",
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Barboza",
+      "b": "Duarte",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ },
+ "queensberry": {
+  "fp": "b11a8be54d34a017",
+  "events": [
+   {
+    "name": "New Year's Retribution",
+    "date": "2027-01-30",
+    "start_utc": null,
+    "venue": "Co-Op Live Arena, Manchester, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Daniel Dubois",
+      "b": "Joseph Parker",
+      "weight": null,
+      "title": true
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Bad Blood",
+    "date": "2026-11-28",
+    "start_utc": null,
+    "venue": "Mekur Spiel Arena, Dusseldorf, Germany",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Agit Kabayel",
+      "b": "Nelson Hysa",
+      "weight": null,
+      "title": true
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Finally",
+    "date": "2026-12-11",
+    "start_utc": null,
+    "venue": "Principality Stadium, Cardiff, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Tyson Fury",
+      "b": "Anthony Joshua",
+      "weight": null,
+      "title": false
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Weight For It",
+    "date": "2026-12-19",
+    "start_utc": null,
+    "venue": "O2 Arena, Belfast, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Anthony Cacace",
+      "b": "Nick Ball",
+      "weight": "Super-Featherweight",
+      "title": true
+     }
+    ],
+    "c": "boxing"
+   },
+   {
+    "name": "Coastal Chaos",
+    "date": "2027-01-09",
+    "start_utc": null,
+    "venue": "Bournemouth International Centre, Bournemouth, UK",
+    "broadcaster": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Ryan Garner",
+      "b": "Jazza Dickens",
+      "weight": "Super-Featherweight",
+      "title": true
+     }
+    ],
+    "c": "boxing"
+   }
+  ],
+  "checked": "2026-11-26T16:17:39.211252+00:00"
+ }
 }
