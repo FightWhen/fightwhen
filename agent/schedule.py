@@ -27,7 +27,7 @@ import requests
 
 from common import (AGENT, FIGHTS_PATH, NOW, TODAY, ask_json, domain, fetch_page, fight_start,
                     fingerprint, in_source, load_json, main_event, norm, same_bout, same_fighter,
-                    save_json, slug, stamp, surname, wiki_clean, wiki_wikitext)
+                    save_json, slug, stamp, surname, wiki_clean, wiki_search, wiki_wikitext)
 
 SOURCES = load_json(AGENT / "sources.json", {}).get("schedule", [])
 CACHE_PATH = AGENT / "schedule_cache.json"
@@ -234,7 +234,27 @@ def apply(fights, groups):
 
         if idx is None:
             if len(doms) < 2:
-                log(f"- Seen on one site only, waiting for a second: {lead['name']} ({lead['date']}, {names})")
+                main = ev_main(lead)
+                if doms <= {"wikipedia.org"} or not main[0] or lead.get("status") != "scheduled":
+                    log(f"- Seen on one site only, waiting for a second: {lead['name']} ({lead['date']}, {names})")
+                    continue
+                # Listed only by the promotion running it (common in boxing, which has no
+                # shared schedule): that is a good source, but it waits for your OK.
+                fid = f"{lead['date']}-{slug(main[0])}-{slug(main[1])}"[:80]
+                if fid in seen_ids:
+                    continue
+                seen_ids.add(fid)
+                rows = [bout_row(b) for b in lead["bouts"]] or [[main[0], "", main[1], "", ""]]
+                new = {"id": fid, "c": lead["c"], "d": lead["date"], "day": weekday(lead["date"]),
+                       "f": lead["name"] if " vs" in lead["name"].lower() or " v " in lead["name"].lower()
+                       else f"{main[0]} vs {main[1]}: {lead['name']}", "t": rows[0][4], "v": lead.get("venue") or "Venue TBA",
+                       "w": lead.get("broadcaster") or "TBA", "auto": 1,
+                       "card": [{"sec": "Main card", "b": rows}]}
+                if lead.get("start_utc"):
+                    new.update(utc=lead["start_utc"], lab="Main card")
+                risky(f"**{lead['name']}** ({lead['date']}): {main[0]} vs {main[1]}, listed only by the "
+                      f"promoter ({names}). Approving adds it to the schedule.",
+                      lambda fs, new=new: fs.append(copy.deepcopy(new)))
                 continue
             date = agreed(group, lambda e: e["date"])
             if not date:
@@ -366,6 +386,92 @@ def remove_bout(fight, old):
         s["b"] = [row for row in s.get("b", []) if not same_bout((row[0], row[2]), old)]
 
 
+# ---------- full fight cards ----------
+
+CARD = """You read one Wikipedia article about a combat sports event on {date} and list every
+announced bout on its fight card. Use ONLY this page. For each bout give:
+{{"a": fighter, "b": fighter, "weight": weight class or null,
+ "title": true only if the page says a title is on the line,
+ "sec": "Main card" or "Prelims" or "Early prelims" or "Undercard", as the page groups it,
+ "words": the exact words from the page naming both fighters, copied character for character}}
+Main event first. Skip bouts the page marks as cancelled or scrapped.
+Reply with JSON only: {{"bouts": [ ... ]}}. If the page has no fight card yet, reply {{"bouts": []}}."""
+
+CARD_DAYS = int(os.environ.get("CARD_DAYS_AHEAD", "30"))
+
+
+def event_page(fight):
+    """The Wikipedia article for this event, if one exists: (title, text)."""
+    a, b = main_event(fight)
+    queries = [fight.get("f", "")] + ([f"{a} vs. {b}"] if a and b else [])
+    for q in queries:
+        try:
+            titles = wiki_search(q, limit=3)
+        except requests.RequestException:
+            continue
+        for t in titles:
+            if t.startswith("List of") or " in " in t[:12]:
+                continue
+            try:
+                text = wiki_clean(wiki_wikitext(t))
+            except requests.RequestException:
+                continue
+            n = norm(text)
+            if a and b and surname(a) in n and surname(b) in n and fight["d"][:4] in text:
+                i = max(n.find("fight card"), 0)
+                return t, text[i:i + 20000] if i else text[:20000]
+    return None, ""
+
+
+def fill_cards(fights, proposed, cache):
+    """Add undercard bouts from each upcoming event's own Wikipedia article.
+    One source, so they go to your approval pull request, never straight live."""
+    soon = (TODAY + dt.timedelta(days=CARD_DAYS)).isoformat()
+    added = 0
+    for f in fights:
+        if not (TODAY.isoformat() <= f["d"] <= soon):
+            continue
+        title, text = event_page(f)
+        if not text:
+            continue
+        key = "card:" + title
+        fp = fingerprint(text)
+        if cache.get(key, {}).get("fp") == fp and not FORCE:
+            bouts = cache[key]["bouts"]
+        else:
+            data = ask_json(CARD.format(date=f["d"]), f"Article: {title}\n\n{text}", max_tokens=12000) or {}
+            page, bouts = norm(text), []
+            for b in data.get("bouts", []):
+                words = norm(b.get("words", ""))
+                if b.get("a") and b.get("b") and in_source(words, page) \
+                        and surname(b["a"]) in words and surname(b["b"]) in words:
+                    bouts.append({k: b.get(k) for k in ("a", "b", "weight", "title", "sec")})
+            cache[key] = {"fp": fp, "bouts": bouts, "checked": NOW.isoformat()}
+        target = by_id(proposed, f["id"])
+        have = [(r[0], r[2]) for s in target.get("card", []) for r in s.get("b", [])]
+        new = [b for b in bouts if not any(same_bout((b["a"], b["b"]), h) for h in have)]
+        if not new:
+            continue
+        for b in new:
+            sec = b.get("sec") or "Main card"
+            card = target.setdefault("card", [])
+            section = next((s for s in card if s["sec"] == sec), None)
+            if not section:
+                section = {"sec": sec, "b": []}
+                card.append(section)
+            section["b"].append(bout_row(b))
+        added += len(new)
+        review_notes.append(f"**{f['f']}**: {len(new)} more bouts from Wikipedia's “{title}” "
+                            f"({', '.join(b['a'].split()[-1] + ' vs ' + b['b'].split()[-1] for b in new[:6])}"
+                            f"{'…' if len(new) > 6 else ''}).")
+    order = {"Main card": 0, "Undercard": 1, "Prelims": 1, "Early prelims": 2}
+    for f in proposed:
+        if f.get("card"):
+            f["card"].sort(key=lambda s: order.get(s["sec"], 1))
+    log(f"- Fight cards: {added} more bouts found on event pages.")
+    return added
+
+
 # ---------- main ----------
 
 def fight_week(fights):
@@ -406,6 +512,10 @@ def main():
 
     groups = cluster(sightings)
     proposed, safe, review = apply(fights, groups)
+    try:
+        review += fill_cards(fights, proposed, cache)
+    except Exception as e:
+        log(f"- Couldn't fill in fight cards: {e.__class__.__name__}")
     fights.sort(key=lambda f: f["d"])
     proposed.sort(key=lambda f: f["d"])
     save_json(FIGHTS_PATH, fights)
@@ -420,7 +530,8 @@ def main():
             "edit `site/data/fights.json` in the pull request first.\n")
         report.extend(f"- {n}" for n in review_notes)
     log("\nSources: Wikipedia (CC BY-SA) and the promotions' own schedule pages. "
-        "A change is only made when two different websites agree.")
+        "Changes only go live by themselves when two different websites agree; "
+        "anything from a single source waits in this pull request.")
     REPORT_PATH.write_text("\n".join(report) + "\n")
     with open(AGENT / "schedule_review_count", "w") as fh:
         fh.write(str(review))
