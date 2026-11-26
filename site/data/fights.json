@@ -316,6 +316,31 @@
   "auto": 1
  },
  {
+  "id": "2026-12-11-henry-collard",
+  "c": "bkfc",
+  "d": "2026-12-11",
+  "day": "Fri",
+  "f": "BKFC 97 Hollywood, FL: Henry vs. Collard",
+  "t": "",
+  "v": "Venue TBA",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Henry",
+      "",
+      "Collard",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "c": "boxing",
   "d": "2026-12-12",
   "day": "Sat",
@@ -706,5 +731,105 @@
   "utc": "2026-12-31T05:00:00Z",
   "lab": "Start, approx.",
   "id": "2026-12-31-rizin-new-year-s-eve"
+ },
+ {
+  "id": "2027-01-16-rodriguez-garcia",
+  "c": "ufc",
+  "d": "2027-01-16",
+  "day": "Sat",
+  "f": "UFC Fight Night: Rodríguez vs. Garcia",
+  "t": "",
+  "v": "American Airlines Center, Dallas, Texas, U.S.",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Rodríguez",
+      "",
+      "Garcia",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-01-23-bonfim-brady",
+  "c": "ufc",
+  "d": "2027-01-23",
+  "day": "Sat",
+  "f": "UFC Fight Night: Bonfim vs. Brady",
+  "t": "",
+  "v": "Meta Apex, Las Vegas, Nevada, U.S.",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Bonfim",
+      "",
+      "Brady",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-01-30-van-kape",
+  "c": "ufc",
+  "d": "2027-01-30",
+  "day": "Sat",
+  "f": "UFC 336: Van vs. Kape",
+  "t": "",
+  "v": "Scotiabank Arena, Toronto, Ontario, Canada",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Van",
+      "",
+      "Kape",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-02-13-pyfer-nickal",
+  "c": "ufc",
+  "d": "2027-02-13",
+  "day": "Sat",
+  "f": "UFC Fight Night: Pyfer vs. Nickal",
+  "t": "",
+  "v": "Rocket Arena, Cleveland, Ohio, U.S.",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Pyfer",
+      "",
+      "Nickal",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
  }
 ]
