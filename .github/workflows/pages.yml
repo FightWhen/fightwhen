@@ -3,7 +3,7 @@ name: Publish website
 on:
   push:
     branches: [main]
-    paths: ["site/**"]
+    paths: ["site/**", "agent/pages.py"]
   workflow_run:
     workflows: ["News agent", "Schedule agent", "Results agent"]
     types: [completed]
@@ -28,6 +28,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Build one page per fight, plus the sitemap
+        run: python3 agent/pages.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
