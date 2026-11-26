@@ -229,7 +229,7 @@ def read_source(name, source_text):
     if not claude or not source_text:
         return {}
     msg = claude.messages.create(
-        model=MODEL, max_tokens=500, system=READ_PROMPT,
+        model=MODEL, max_tokens=4000, system=READ_PROMPT,
         messages=[{"role": "user", "content": f"Fighter: {name}\n\nSource:\n{source_text}"}])
     raw = "".join(b.text for b in msg.content if b.type == "text")  # skip thinking blocks
     try:

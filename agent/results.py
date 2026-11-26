@@ -132,7 +132,7 @@ Reply with JSON only: {{"results": [ ... ]}}"""
 
 def read_results(fight, where, text, bouts):
     listing = "\n".join(f"- {b[0]} vs {b[2]}" for b in bouts)
-    data = ask_json(READ.format(date=fight["d"], bouts=listing), f"Page: {where}\n\n{text}", max_tokens=3000)
+    data = ask_json(READ.format(date=fight["d"], bouts=listing), f"Page: {where}\n\n{text}", max_tokens=8000)
     if not data:
         return []
     page, out = norm(text), []

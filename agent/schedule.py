@@ -103,7 +103,7 @@ reply {{"events": []}}."""
 def extract(src, text, where):
     until = TODAY + dt.timedelta(days=DAYS_AHEAD)
     data = ask_json(EXTRACT.format(today=TODAY.isoformat(), until=until.isoformat()),
-                    f"Page: {where}\n\n{text}", max_tokens=8000)
+                    f"Page: {where}\n\n{text}", max_tokens=16000)
     if not data:
         return []
     page = norm(text)
