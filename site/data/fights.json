@@ -1,5 +1,30 @@
 [
  {
+  "id": "2026-11-28-agit-kabayel-nelson-hysa",
+  "c": "boxing",
+  "d": "2026-11-28",
+  "day": "Sat",
+  "f": "Agit Kabayel vs Nelson Hysa: Bad Blood",
+  "t": "Heavyweight · title fight",
+  "v": "Mekur Spiel Arena, Dusseldorf, Germany",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Agit Kabayel",
+      "",
+      "Nelson Hysa",
+      "",
+      "Heavyweight · title fight"
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "c": "one",
   "d": "2026-12-02",
   "day": "Wed",
@@ -206,6 +231,56 @@
   "v": "Venue TBA",
   "w": "Paramount+",
   "id": "2026-12-05-ufc-fight-night-adesanya-vs-m"
+ },
+ {
+  "id": "2026-12-05-walker-rocha",
+  "c": "boxing",
+  "d": "2026-12-05",
+  "day": "Sat",
+  "f": "Matchroom Boxing event (Walker VS Rocha)",
+  "t": "",
+  "v": "Civic Hall, Wolverhampton, UK",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Walker",
+      "",
+      "Rocha",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2026-12-10-diaz-chaves",
+  "c": "boxing",
+  "d": "2026-12-10",
+  "day": "Thu",
+  "f": "Matchroom Boxing event (Diaz VS Chaves)",
+  "t": "",
+  "v": "Caribe Royale, Orlando, Florida, USA",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Diaz",
+      "",
+      "Chaves",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
  },
  {
   "id": "fj",
@@ -560,6 +635,31 @@
   "cn": "Prelim lineup is still filling out."
  },
  {
+  "id": "2026-12-12-soro-liddard",
+  "c": "boxing",
+  "d": "2026-12-12",
+  "day": "Sat",
+  "f": "Matchroom Boxing event (Soro VS Liddard)",
+  "t": "",
+  "v": "Salle des Étoiles, Monte Carlo, Monaco",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Soro",
+      "",
+      "Liddard",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "c": "boxing",
   "d": "2026-12-13",
   "day": "Sun",
@@ -693,6 +793,31 @@
   "id": "2026-12-19-pfl-lyon"
  },
  {
+  "id": "2026-12-19-anthony-cacace-nick-ball",
+  "c": "boxing",
+  "d": "2026-12-19",
+  "day": "Sat",
+  "f": "Anthony Cacace vs Nick Ball: Weight For It",
+  "t": "Super-Featherweight · title fight",
+  "v": "O2 Arena, Belfast, UK",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Anthony Cacace",
+      "",
+      "Nick Ball",
+      "",
+      "Super-Featherweight · title fight"
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "c": "boxing",
   "d": "2026-12-20",
   "day": "Sun",
@@ -710,7 +835,21 @@
   "t": "Cruiserweight · 8 rounds",
   "v": "Coca-Cola Arena, Dubai",
   "w": "TBA",
-  "id": "2026-12-24-jake-paul-vs-cedric-doumbe"
+  "id": "2026-12-24-jake-paul-vs-cedric-doumbe",
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Jake Paul",
+      "",
+      "Cédric Doumbé",
+      "",
+      "Cruiserweight"
+     ]
+    ]
+   }
+  ]
  },
  {
   "c": "k1",
@@ -733,6 +872,31 @@
   "utc": "2026-12-31T05:00:00Z",
   "lab": "Start, approx.",
   "id": "2026-12-31-rizin-new-year-s-eve"
+ },
+ {
+  "id": "2027-01-09-ryan-garner-jazza-dickens",
+  "c": "boxing",
+  "d": "2027-01-09",
+  "day": "Sat",
+  "f": "Ryan Garner vs Jazza Dickens: Coastal Chaos",
+  "t": "Super-Featherweight · title fight",
+  "v": "Bournemouth International Centre, Bournemouth, UK",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Ryan Garner",
+      "",
+      "Jazza Dickens",
+      "",
+      "Super-Featherweight · title fight"
+     ]
+    ]
+   }
+  ]
  },
  {
   "id": "2027-01-16-rodriguez-garcia",
@@ -785,6 +949,56 @@
   ]
  },
  {
+  "id": "2027-01-23-kai-stewart-bryan-duran",
+  "c": "bkfc",
+  "d": "2027-01-23",
+  "day": "Sat",
+  "f": "BKFSEA BRUISE CRUISE STEWART vs DURAN",
+  "t": "",
+  "v": "NORWEGIAN JEWEL - BAHAMAS",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "KAI STEWART",
+      "",
+      "BRYAN DURAN",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-01-23-barboza-duarte",
+  "c": "boxing",
+  "d": "2027-01-23",
+  "day": "Sat",
+  "f": "Barboza vs. Duarte",
+  "t": "",
+  "v": "Honda Center, Anaheim, CA",
+  "w": "DAZN",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Barboza",
+      "",
+      "Duarte",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "id": "2027-01-30-van-kape",
   "c": "ufc",
   "d": "2027-01-30",
@@ -802,6 +1016,56 @@
       "Van",
       "",
       "Kape",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-01-30-daniel-dubois-joseph-parker",
+  "c": "boxing",
+  "d": "2027-01-30",
+  "day": "Sat",
+  "f": "Daniel Dubois vs Joseph Parker: New Year's Retribution",
+  "t": "Heavyweight · title fight",
+  "v": "Co-Op Live Arena, Manchester, UK",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Daniel Dubois",
+      "",
+      "Joseph Parker",
+      "",
+      "Heavyweight · title fight"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-02-05-evgenii-kurdanov-robbie-peralta",
+  "c": "bkfc",
+  "d": "2027-02-05",
+  "day": "Fri",
+  "f": "BKFC FIGHT NIGHT PALM DESERT KURDANOV vs PERALTA",
+  "t": "",
+  "v": "ACRIURE ARENA - PALM DESERT, CA",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "EVGENII KURDANOV",
+      "",
+      "ROBBIE PERALTA",
       "",
       ""
      ]
@@ -852,6 +1116,83 @@
       "Pyfer",
       "",
       "Nickal",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-02-13-ben-bonner-rico-franco",
+  "c": "bkfc",
+  "d": "2027-02-13",
+  "day": "Sat",
+  "f": "BKFC 99 SHEFFIELD BONNER vs FRANCO",
+  "t": "",
+  "v": "UTILITA ARENA - SHEFFIELD, UK",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "BEN BONNER",
+      "",
+      "RICO FRANCO",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2027-02-20-tbd-tbd",
+  "c": "ufc",
+  "d": "2027-02-20",
+  "day": "Sat",
+  "f": "TBD vs TBD",
+  "t": "",
+  "v": "Kia Center, Orlando, FL",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "TBD",
+      "",
+      "TBD",
+      "",
+      ""
+     ]
+    ]
+   }
+  ],
+  "utc": "2027-02-20T22:00:00Z",
+  "lab": "Main card"
+ },
+ {
+  "id": "2027-02-27-ennis-kelly",
+  "c": "boxing",
+  "d": "2027-02-27",
+  "day": "Sat",
+  "f": "Matchroom Boxing event (Ennis VS Kelly)",
+  "t": "",
+  "v": "State Farm Arena, Atlanta, Georgia, USA",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Ennis",
+      "",
+      "Kelly",
       "",
       ""
      ]
