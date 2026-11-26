@@ -1,0 +1,394 @@
+{
+ "dustin-pague": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "mike-richman": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1985-06-23",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "benjamin-moser": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "julian-valencia": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "hunter-starner": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "blaine-shutt": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "david-benavidez": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1996-12-17",
+   "height_in": 74.0,
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "https://www.premierboxingchampions.com/david-benavidez"
+  ]
+ },
+ "michal-cieslak": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1989-04-19",
+   "height_in": 75.0,
+   "country": "POL"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "vergil-ortiz-jr": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1998-03-25",
+   "height_in": 70.0,
+   "reach_in": 70.0,
+   "stance": "Orthodox",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Vergil Ortiz Jr."
+  ]
+ },
+ "keith-thurman": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1988-11-23",
+   "height_in": 67.5,
+   "reach_in": 69.0,
+   "stance": "Orthodox",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Keith Thurman",
+   "https://www.premierboxingchampions.com/keith-thurman"
+  ]
+ },
+ "elijah-garcia": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "2003-04-26",
+   "height_in": 72.0,
+   "reach_in": 72.0,
+   "stance": "Southpaw",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.premierboxingchampions.com/elijah-garcia"
+  ]
+ },
+ "thomas-otoole": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "luis-nunez": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "toshiki-shimomachi": {
+  "checked": "2026-11-26",
+  "values": {
+   "country": "JPN"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "tyson-fury": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1988-08-12",
+   "height_in": 81.0,
+   "country": "GBR"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "anthony-joshua": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1989-10-15",
+   "height_in": 79.0,
+   "country": "GBR"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "deontay-wilder": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1985-10-22",
+   "height_in": 79.5,
+   "reach_in": 83.0,
+   "stance": "Orthodox",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Deontay Wilder"
+  ]
+ },
+ "martin-bakole": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1993-06-01",
+   "height_in": 78.0,
+   "country": "COD"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "damazion-vanhouter": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "michael-essomba": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "dmitry-bivol": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1990-12-18",
+   "height_in": 72.0
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "callum-smith": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1990-04-23",
+   "height_in": 75.0,
+   "country": "GBR"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "charles-oliveira": {
+  "checked": "2026-11-26",
+  "values": {
+   "height_in": 70.0,
+   "reach_in": 74.0,
+   "country": "BRA"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.ufc.com/athlete/charles-oliveira"
+  ]
+ },
+ "diego-lopes": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1994-12-30",
+   "height_in": 71.0,
+   "country": "BRA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "alex-pereira": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1987-07-07",
+   "height_in": 76.5,
+   "country": "BRA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "sergei-pavlovich": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1992-05-13",
+   "height_in": 75.0,
+   "country": "RUS"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "bo-nickal": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "joe-pyfer": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1996-09-17",
+   "height_in": 74.0,
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "brandon-moreno": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1993-12-07",
+   "height_in": 67.0,
+   "reach_in": 70.0,
+   "country": "MEX"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Brandon Moreno"
+  ]
+ },
+ "charles-johnson": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1991-01-10",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "maycee-barber": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1998-05-18",
+   "height_in": 65.0,
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "carli-judice": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1999-03-02",
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata"
+  ]
+ },
+ "chase-demoor": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "andrei-arlovski": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "kade-ruotolo": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "2003-01-22",
+   "height_in": 71.0,
+   "reach_in": 75.0,
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Kade Ruotolo",
+   "https://www.onefc.com/athletes/kade-ruotolo/"
+  ]
+ },
+ "ok-rae-yoon": {
+  "checked": "2026-11-26",
+  "values": {
+   "dob": "1991-03-23",
+   "height_in": 72.0,
+   "reach_in": 75.0,
+   "country": "KOR"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Ok Rae-yoon",
+   "https://www.onefc.com/athletes/ok-rae-yoon/"
+  ]
+ },
+ "maurice-abevi": {
+  "checked": "2026-11-26",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "dzhabir-dzhabrailov": {
+  "checked": "2026-11-26",
+  "values": {
+   "height_in": 74.0,
+   "country": "TUR"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.onefc.com/athletes/dzhabir-dzhabrailov/"
+  ]
+ }
+}
