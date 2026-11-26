@@ -153,10 +153,38 @@ def name_bout(name):
     return a, b
 
 
+PLACEHOLDER = re.compile(r"^(tbd|tba|tbc|to be (announced|determined)|opponent)\b", re.I)
+KEEP_CAPS = {"UFC", "PFL", "BKFC", "ONE", "RIZIN", "K-1", "MMA", "UK", "US", "USA", "WBA", "WBC",
+             "IBF", "WBO", "CA", "FL", "NY", "NV", "TX", "AZ", "PA", "II", "III", "IV", "V", "VI",
+             "VII", "VIII", "IX", "X", "XI", "XII"}
+
+
 def ev_main(ev):
     if ev["bouts"]:
-        return ev["bouts"][0]["a"], ev["bouts"][0]["b"]
+        a, b = ev["bouts"][0]["a"], ev["bouts"][0]["b"]
+        if PLACEHOLDER.match(a.strip()) or PLACEHOLDER.match(b.strip()):
+            return None, None
+        return a, b
     return name_bout(ev.get("name"))
+
+
+def tidy(text):
+    """Turn SHOUTING page text into normal case, keeping league names and states."""
+    if not text or sum(c.isupper() for c in text) < 0.7 * sum(c.isalpha() for c in text):
+        return text
+    return " ".join("vs" if w.lower().strip(".") == "vs" else w if w.strip(",.:()") in KEEP_CAPS or any(c.isdigit() for c in w)
+                    else w.capitalize() for w in text.split()).replace(" - ", ", ")
+
+
+def event_title(name, main):
+    """A readable title. Generic names like "Matchroom Boxing event (A VS B)" become "A vs B"."""
+    name = tidy(name or "")
+    if not name or re.search(r"\bevent\b\s*\(", name, re.I):
+        return f"{tidy(main[0])} vs {tidy(main[1])}"
+    name = re.sub(r"\s+VS\.?\s+", " vs ", name)
+    if " vs" in name.lower() or " v " in name.lower():
+        return name
+    return f"{tidy(main[0])} vs {tidy(main[1])}: {name}"
 
 
 def same_event(x, y):
@@ -251,8 +279,7 @@ def apply(fights, groups):
                 seen_ids.add(fid)
                 rows = [bout_row(b) for b in lead["bouts"]] or [[main[0], "", main[1], "", ""]]
                 new = {"id": fid, "c": lead["c"], "d": lead["date"], "day": weekday(lead["date"]),
-                       "f": lead["name"] if " vs" in lead["name"].lower() or " v " in lead["name"].lower()
-                       else f"{main[0]} vs {main[1]}: {lead['name']}", "t": rows[0][4], "v": lead.get("venue") or "Venue TBA",
+                       "f": event_title(lead["name"], main), "t": rows[0][4], "v": tidy(lead.get("venue")) or "Venue TBA",
                        "w": lead.get("broadcaster") or "TBA", "auto": 1,
                        **({"wp": lead["price"]} if lead.get("price") else {}),
                        "card": [{"sec": "Main card", "b": rows}]}
