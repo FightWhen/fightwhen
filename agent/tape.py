@@ -231,7 +231,7 @@ def read_source(name, source_text):
     msg = claude.messages.create(
         model=MODEL, max_tokens=500, system=READ_PROMPT,
         messages=[{"role": "user", "content": f"Fighter: {name}\n\nSource:\n{source_text}"}])
-    raw = msg.content[0].text
+    raw = "".join(b.text for b in msg.content if b.type == "text")  # skip thinking blocks
     try:
         data = json.loads(raw[raw.index("{"):raw.rindex("}") + 1])
     except ValueError:

@@ -169,7 +169,7 @@ def ask_json(system, user, max_tokens=4000, model=None):
         return None
     msg = c.messages.create(model=model or FAST_MODEL, max_tokens=max_tokens, system=system,
                             messages=[{"role": "user", "content": user}])
-    raw = msg.content[0].text
+    raw = "".join(b.text for b in msg.content if b.type == "text")  # skip thinking blocks
     start = min([i for i in (raw.find("{"), raw.find("[")) if i >= 0], default=-1)
     if start < 0:
         return None
