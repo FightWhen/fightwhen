@@ -136,8 +136,22 @@ def extract(src, text, where):
 
 # ---------- matching ----------
 
+def name_bout(name):
+    """The two fighters in an event name like "UFC 336: Van vs. Kape", or (None, None)."""
+    part = (name or "").split(":")[-1]
+    m = re.search(r"(.+?)\s+(?:vs\.?|v\.?)\s+(.+)", part, re.I)
+    if not m:
+        return None, None
+    a, b = m.group(1).strip(" ,-"), re.split(r"\s+[-–|(]", m.group(2))[0].strip(" ,-")
+    if not a or not b or "tbd" in (a + b).lower() or "tba" in (a + b).lower():
+        return None, None
+    return a, b
+
+
 def ev_main(ev):
-    return (ev["bouts"][0]["a"], ev["bouts"][0]["b"]) if ev["bouts"] else (None, None)
+    if ev["bouts"]:
+        return ev["bouts"][0]["a"], ev["bouts"][0]["b"]
+    return name_bout(ev.get("name"))
 
 
 def same_event(x, y):
@@ -223,6 +237,11 @@ def apply(fights, groups):
                 log(f"- Seen on one site only, waiting for a second: {lead['name']} ({lead['date']}, {names})")
                 continue
             date = agreed(group, lambda e: e["date"])
+            if not date:
+                # Sites a day apart usually differ only by time zone. The promotion's
+                # own page knows its event best, so its date wins.
+                official = [e["date"] for d, e in group if d != "wikipedia.org"]
+                date = official[0] if official else None
             main = agreed(group, ev_main, same_bout)
             if not date or not main:
                 log(f"- Two sites mention {lead['name']} but disagree on the date or main event; left out.")
@@ -231,11 +250,16 @@ def apply(fights, groups):
             if status in ("cancelled", "postponed"):
                 continue
             bouts = [b for b in lead["bouts"] if confirmed_bout(group, (b["a"], b["b"]))]
-            fid = f"{date}-{slug(lead['name'])}"[:80]
+            fid = f"{date}-{slug(main[0])}-{slug(main[1])}"[:80]
             if fid in seen_ids:
                 continue
             seen_ids.add(fid)
-            new = {"id": fid, "c": lead["c"], "d": date, "day": weekday(date), "f": lead["name"],
+            name = max((e["name"] for _, e in group), key=len)
+            if not bouts:
+                bouts = max((e["bouts"] for _, e in group), key=len)
+                bouts = [b for b in bouts if confirmed_bout(group, (b["a"], b["b"]))] or \
+                        [{"a": main[0], "b": main[1], "weight": None, "title": False}]
+            new = {"id": fid, "c": lead["c"], "d": date, "day": weekday(date), "f": name,
                    "t": (bouts[0].get("weight") if bouts else None) or "", "v": agreed(group, lambda e: e["venue"], lambda a, b: norm(a)[:12] == norm(b)[:12]) or "Venue TBA",
                    "w": agreed(group, lambda e: e["broadcaster"], lambda a, b: norm(a) == norm(b)) or "TBA",
                    "auto": 1}
