@@ -1,5 +1,5 @@
 {
- "_last_full_run": "2026-11-26T19:15:06.852686+00:00",
+ "_last_full_run": "2026-11-26T21:14:02.271916+00:00",
  "wiki-ufc": {
   "fp": "7f873667aab8967a",
   "events": [
@@ -519,10 +519,10 @@
   "checked": "2026-11-26T19:15:06.852686+00:00"
  },
  "matchroom": {
-  "fp": "9c3f2a83d2156fb1",
+  "fp": "4ad17ef5023d245a",
   "events": [
    {
-    "name": "Matchroom Boxing event (Walker VS Rocha)",
+    "name": "Walker VS Rocha",
     "date": "2026-12-05",
     "start_utc": null,
     "venue": "Civic Hall, Wolverhampton, UK",
@@ -540,7 +540,7 @@
     "c": "boxing"
    },
    {
-    "name": "Matchroom Boxing event (Diaz VS Chaves)",
+    "name": "Diaz VS Chaves",
     "date": "2026-12-10",
     "start_utc": null,
     "venue": "Caribe Royale, Orlando, Florida, USA",
@@ -558,7 +558,7 @@
     "c": "boxing"
    },
    {
-    "name": "Matchroom Boxing event (Fury VS Joshua)",
+    "name": "Fury VS Joshua",
     "date": "2026-12-11",
     "start_utc": null,
     "venue": "Principality Stadium, Cardiff, UK",
@@ -576,7 +576,7 @@
     "c": "boxing"
    },
    {
-    "name": "Matchroom Boxing event (Bivol VS Smith)",
+    "name": "Bivol VS Smith",
     "date": "2026-12-12",
     "start_utc": null,
     "venue": "UMMC Arena, Yekaterinburg, Russia",
@@ -594,7 +594,7 @@
     "c": "boxing"
    },
    {
-    "name": "Matchroom Boxing event (Soro VS Liddard)",
+    "name": "Soro VS Liddard",
     "date": "2026-12-12",
     "start_utc": null,
     "venue": "Salle des Étoiles, Monte Carlo, Monaco",
@@ -612,7 +612,7 @@
     "c": "boxing"
    },
    {
-    "name": "Matchroom Boxing event (Miller VS Yoka)",
+    "name": "Miller VS Yoka",
     "date": "2026-12-20",
     "start_utc": null,
     "venue": "The Grand Arena, Accra, Ghana",
@@ -630,7 +630,7 @@
     "c": "boxing"
    },
    {
-    "name": "Matchroom Boxing event (Ennis VS Kelly)",
+    "name": "Ennis VS Kelly",
     "date": "2027-02-27",
     "start_utc": null,
     "venue": "State Farm Arena, Atlanta, Georgia, USA",
@@ -648,7 +648,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-26T21:14:02.271916+00:00"
  },
  "pbc": {
   "fp": "bccb8620d384c950",
@@ -930,5 +930,33 @@
    }
   ],
   "checked": "2026-11-26T19:15:06.852686+00:00"
+ },
+ "card:Nelson Hysa": {
+  "fp": "3d487a590b4c1cc1",
+  "bouts": [],
+  "checked": "2026-11-26T21:14:02.271916+00:00"
+ },
+ "card:Alexis Rocha": {
+  "fp": "a5d868fe74e3c693",
+  "bouts": [
+   {
+    "a": "Alexis Rocha",
+    "b": "Conah Walker",
+    "weight": "Welterweight",
+    "title": false,
+    "sec": null
+   }
+  ],
+  "checked": "2026-11-26T21:14:02.271916+00:00"
+ },
+ "card:Keith Thurman": {
+  "fp": "2805a052dffd33a0",
+  "bouts": [],
+  "checked": "2026-11-26T21:14:02.271916+00:00"
+ },
+ "card:Nick Ball (boxer)": {
+  "fp": "d30c1d2cda47a5cc",
+  "bouts": [],
+  "checked": "2026-11-26T21:14:02.271916+00:00"
  }
 }
