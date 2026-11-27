@@ -270,6 +270,8 @@ def read_source(name, source_text, sport=""):
             if not m:
                 continue
             value = f"{m[1]}-{m[2]}" + (f"-{m[3]}" if m[3] and m[3] != "0" else "")
+            if value == "0-0":     # a debut, or a page that hasn't been filled in: show nothing
+                continue
         out[field] = value
     return out
 
