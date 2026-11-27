@@ -1,5 +1,5 @@
 {
- "_last_full_run": "2026-11-27T11:14:08.325761+00:00",
+ "_last_full_run": "2026-11-27T11:25:38.262404+00:00",
  "wiki-ufc": {
   "fp": "7f873667aab8967a",
   "events": [
@@ -92,7 +92,7 @@
     "c": "ufc"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "wiki-bkfc-year": {
   "fp": "cf1c500990393eeb",
@@ -120,7 +120,7 @@
     "c": "bkfc"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "wiki-rizin-year": {
   "fp": "27fe96a9c3c3709b",
@@ -129,7 +129,7 @@
     "name": "Super Rizin 6",
     "date": "2026-12-31",
     "start_utc": null,
-    "venue": "Vantelin Dome Nagoya, Nagoya, Japan",
+    "venue": "Vantelin Dome Nagoya, Nagoya",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -137,7 +137,7 @@
     "c": "rizin"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "wiki-pfl": {
   "fp": "f2fc2380b6112d40",
@@ -150,7 +150,14 @@
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
-    "bouts": [],
+    "bouts": [
+     {
+      "a": "Lapilus",
+      "b": "McKee",
+      "weight": null,
+      "title": false
+     }
+    ],
     "c": "pfl"
    },
    {
@@ -176,7 +183,7 @@
     "c": "pfl"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "wiki-one": {
   "fp": "eacf1a9b0eb2a008",
@@ -193,7 +200,7 @@
     "c": "one"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "ufc": {
   "fp": "86417abf56413ec7",
@@ -274,7 +281,7 @@
     "name": "Van vs Kape",
     "date": "2027-01-30",
     "start_utc": "2027-01-31T02:00:00Z",
-    "venue": "Scotiabank Arena, Toronto ON, Canada",
+    "venue": "Scotiabank Arena, Toronto ON",
     "broadcaster": "Paramount+",
     "price": null,
     "status": "scheduled",
@@ -292,7 +299,7 @@
     "name": "Salkilld vs Saint Denis",
     "date": "2027-02-06",
     "start_utc": "2027-02-07T01:00:00Z",
-    "venue": "Afterpay Arena, Sydney Olympic Park NSW, Australia",
+    "venue": "Afterpay Arena, Sydney Olympic Park NSW",
     "broadcaster": "Paramount+",
     "price": null,
     "status": "scheduled",
@@ -332,18 +339,11 @@
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
-    "bouts": [
-     {
-      "a": "TBD",
-      "b": "TBD",
-      "weight": null,
-      "title": false
-     }
-    ],
+    "bouts": [],
     "c": "ufc"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "pfl": {
   "fp": "675a22910a5f657a",
@@ -404,12 +404,12 @@
     "c": "pfl"
    }
   ],
-  "checked": "2026-11-27T00:14:58.779828+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "one": {
   "fp": "de23fe5b5a54a04b",
   "events": [],
-  "checked": "2026-11-27T11:14:08.325761+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "bkfc": {
   "fp": "ddf074914396de0e",
@@ -418,7 +418,7 @@
     "name": "BKFC FIGHT NIGHT HERSHEY PAGUE vs RICHMAN",
     "date": "2026-12-04",
     "start_utc": null,
-    "venue": "GIANT CENTER - HERSHEY, PA",
+    "venue": "Giant Center, Hershey, PA",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -436,7 +436,7 @@
     "name": "BKFC 97 HOLLYWOOD HENRY vs COLLARD",
     "date": "2026-12-11",
     "start_utc": null,
-    "venue": "HARD ROCK LIVE - HOLLYWOOD, FL",
+    "venue": "Hard Rock Live, Hollywood, FL",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -454,7 +454,7 @@
     "name": "BKFSEA BRUISE CRUISE STEWART vs DURAN",
     "date": "2027-01-23",
     "start_utc": null,
-    "venue": "NORWEGIAN JEWEL - BAHAMAS",
+    "venue": "Norwegian Jewel, Bahamas",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -472,7 +472,7 @@
     "name": "BKFC FIGHT NIGHT PALM DESERT KURDANOV vs PERALTA",
     "date": "2027-02-05",
     "start_utc": null,
-    "venue": "ACRIURE ARENA - PALM DESERT, CA",
+    "venue": "Acrisure Arena, Palm Desert, CA",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -490,7 +490,7 @@
     "name": "BKFC 99 SHEFFIELD BONNER vs FRANCO",
     "date": "2027-02-13",
     "start_utc": null,
-    "venue": "UTILITA ARENA - SHEFFIELD, UK",
+    "venue": "Utilita Arena, Sheffield, UK",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -508,7 +508,7 @@
     "name": "KNUCKLEMANIA VII",
     "date": "2027-02-27",
     "start_utc": null,
-    "venue": "KASEYA CENTER - MIAMI, FL",
+    "venue": "Kaseya Center, Miami, FL",
     "broadcaster": null,
     "price": null,
     "status": "scheduled",
@@ -516,7 +516,7 @@
     "c": "bkfc"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "matchroom": {
   "fp": "d80830a029b1c8d9",
@@ -648,7 +648,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-27T11:14:08.325761+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "pbc": {
   "fp": "bccb8620d384c950",
@@ -738,7 +738,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "goldenboy": {
   "fp": "d81bd3d977967175",
@@ -762,7 +762,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "queensberry": {
   "fp": "b11a8be54d34a017",
@@ -779,7 +779,7 @@
      {
       "a": "Daniel Dubois",
       "b": "Joseph Parker",
-      "weight": "Heavyweight",
+      "weight": null,
       "title": true
      }
     ],
@@ -797,7 +797,7 @@
      {
       "a": "Agit Kabayel",
       "b": "Nelson Hysa",
-      "weight": "Heavyweight",
+      "weight": null,
       "title": true
      }
     ],
@@ -858,7 +858,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Mike Richman": {
   "fp": "7c8c648861ea76c7",
@@ -871,52 +871,52 @@
     "sec": "Main card"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:David Benavidez": {
   "fp": "930fe0c20bf1af65",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:UFC Fight Night: Adesanya vs. Magomedov": {
   "fp": "93f3dcb0214c1aa0",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Tyson Fury vs. Anthony Joshua": {
   "fp": "2d6d8cd9b6cbeb76",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Bare Knuckle Fighting Championship": {
   "fp": "c7295b16ef0bf1b8",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Dmitry Bivol": {
   "fp": "ddac0deab2beec2b",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:UFC 335": {
   "fp": "de8d652718a48076",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Tim Tszyu vs. Erislandy Lara": {
   "fp": "6ade29dc9bf12246",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Chase DeMoor": {
   "fp": "d3129f1300e730b1",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Jarrell Miller": {
   "fp": "a82becc4cbcad7b9",
   "bouts": [],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Jake Paul vs. Cédric Doumbé": {
   "fp": "c779b99cbe684b20",
@@ -929,12 +929,12 @@
     "sec": "Main card"
    }
   ],
-  "checked": "2026-11-26T19:15:06.852686+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Nelson Hysa": {
   "fp": "3d487a590b4c1cc1",
   "bouts": [],
-  "checked": "2026-11-26T21:14:02.271916+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Alexis Rocha": {
   "fp": "a5d868fe74e3c693",
@@ -947,16 +947,16 @@
     "sec": null
    }
   ],
-  "checked": "2026-11-26T21:14:02.271916+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Keith Thurman": {
   "fp": "2805a052dffd33a0",
   "bouts": [],
-  "checked": "2026-11-26T21:14:02.271916+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:Nick Ball (boxer)": {
   "fp": "d30c1d2cda47a5cc",
   "bouts": [],
-  "checked": "2026-11-26T21:14:02.271916+00:00"
+  "checked": "2026-11-27T11:25:38.262404+00:00"
  }
 }
