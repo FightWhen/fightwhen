@@ -355,8 +355,12 @@ def main():
     live_ids = {s["id"] for s in published}
     # Drafts you never approved expire after two days.
     keep_after = NOW - dt.timedelta(hours=CONFIG.get("draft_expiry_hours", 48))
+    # A story that was live and then taken down was removed on purpose: never offer it again.
+    removed = set(state.get("live", [])) - live_ids
     state["pending"] = [s for s in state["pending"]
-                        if s["id"] not in live_ids and parse_time(s["published"]) >= keep_after]
+                        if s["id"] not in live_ids and s["id"] not in removed
+                        and parse_time(s["published"]) >= keep_after]
+    state["live"] = sorted(live_ids)
 
     if not should_run(state, fights):
         print("Quiet period, nothing to do.")
