@@ -42,14 +42,14 @@ REPORT_PATH = AGENT / "tape_report.md"
 
 CONFIG = json.loads((AGENT / "channels.json").read_text())
 MODEL = CONFIG.get("screen_model", "claude-haiku-5-5")
-DAYS_AHEAD = int(os.environ.get("TAPE_DAYS_AHEAD", "35"))
-MAX_FIGHTERS = int(os.environ.get("TAPE_MAX_FIGHTERS", "60"))
-REFRESH_DAYS = 30   # look a fighter up again after this many days
+DAYS_AHEAD = int(os.environ.get("TAPE_DAYS_AHEAD", "90"))
+MAX_FIGHTERS = int(os.environ.get("TAPE_MAX_FIGHTERS", "120"))
+REFRESH_DAYS = 14   # look a fighter up again after this many days (records change)
 UA = "FightWhenBot/1.0 (+https://fightwhen.com/about; stats for fight cards)"
 NOW = dt.datetime.now(dt.timezone.utc)
 TODAY = NOW.date()
 
-FIELDS = ["dob", "height_in", "reach_in", "stance", "country"]
+FIELDS = ["dob", "height_in", "reach_in", "stance", "country", "record"]
 STANCES = {"orthodox": "Orthodox", "southpaw": "Southpaw", "switch": "Switch"}
 
 # Promotion athlete pages, by schedule category. {slug} is the fighter's name
@@ -221,16 +221,20 @@ Reply with JSON only:
  "height_in": {"value": number of inches, "evidence": "..."} or null,
  "reach_in": {"value": number of inches, "evidence": "..."} or null,
  "stance": {"value": "Orthodox" | "Southpaw" | "Switch", "evidence": "..."} or null,
- "country": {"value": "ISO 3166 alpha-3 code of the country they represent", "evidence": "..."} or null}
+ "country": {"value": "ISO 3166 alpha-3 code of the country they represent", "evidence": "..."} or null,
+ "record": {"value": "wins-losses or wins-losses-draws, e.g. 32-0 or 28-2-1", "evidence": ["...", "..."]} or null}
+"record" is their professional record in the sport named below only (a boxer's pro boxing record, an
+MMA fighter's pro MMA record), never amateur or another sport. Its evidence is a list of the exact
+spans that show each number, e.g. ["wins = 32", "losses = 0"].
 Convert centimetres to inches (divide by 2.54, round to the nearest half inch)."""
 
 
-def read_source(name, source_text):
+def read_source(name, source_text, sport=""):
     if not claude or not source_text:
         return {}
     msg = claude.messages.create(
         model=MODEL, max_tokens=4000, system=READ_PROMPT,
-        messages=[{"role": "user", "content": f"Fighter: {name}\n\nSource:\n{source_text}"}])
+        messages=[{"role": "user", "content": f"Fighter: {name}\nSport: {sport or 'combat sports'}\n\nSource:\n{source_text}"}])
     raw = "".join(b.text for b in msg.content if b.type == "text")  # skip thinking blocks
     try:
         data = json.loads(raw[raw.index("{"):raw.rindex("}") + 1])
@@ -241,8 +245,8 @@ def read_source(name, source_text):
         item = data.get(field)
         if not isinstance(item, dict) or item.get("value") in (None, ""):
             continue
-        ev = norm(str(item.get("evidence", "")))
-        if len(ev) < 2 or ev not in src:
+        spans = item.get("evidence") if isinstance(item.get("evidence"), list) else [item.get("evidence", "")]
+        if not spans or any(len(norm(str(x))) < 2 or norm(str(x)) not in src for x in spans):
             log(f"- Threw out {field} for {name}: the quoted words aren't in the source.")
             continue
         value = item["value"]
@@ -261,6 +265,11 @@ def read_source(name, source_text):
             continue
         if field == "country" and not re.fullmatch(r"[A-Z]{3}", str(value)):
             continue
+        if field == "record":
+            m = re.fullmatch(r"(\d{1,3})-(\d{1,3})(?:-(\d{1,2}))?", str(value).strip())
+            if not m:
+                continue
+            value = f"{m[1]}-{m[2]}" + (f"-{m[3]}" if m[3] and m[3] != "0" else "")
         out[field] = value
     return out
 
@@ -334,7 +343,8 @@ def main():
                         continue
                     key = slug(name)
                     entry = cache.get(key, {})
-                    stale = not entry or (TODAY - dt.date.fromisoformat(entry["checked"])).days >= REFRESH_DAYS
+                    stale = (not entry or entry.get("v") != 2   # v2 added records
+                             or (TODAY - dt.date.fromisoformat(entry["checked"])).days >= REFRESH_DAYS)
                     if stale and looked_up < MAX_FIGHTERS:
                         looked_up += 1
                         readings = []
@@ -343,15 +353,15 @@ def main():
                             if facts:
                                 readings.append(("Wikidata", facts))
                             if title:
-                                readings.append((f"Wikipedia: {title}", read_source(name, wikipedia_infobox(title))))
+                                readings.append((f"Wikipedia: {title}", read_source(name, wikipedia_infobox(title), fight["c"])))
                             url, text = promo_page(fight["c"], name)
                             if url:
-                                readings.append((url, read_source(name, text)))
+                                readings.append((url, read_source(name, text, fight["c"])))
                         except (requests.RequestException, anthropic.APIError, KeyError) as e:
                             log(f"- Couldn't look up {name}: {e}")
                             continue
                         values, conflicts = combine(name, [r for r in readings if r[1]])
-                        entry = {"checked": TODAY.isoformat(), "values": values, "conflicts": conflicts,
+                        entry = {"v": 2, "checked": TODAY.isoformat(), "values": values, "conflicts": conflicts,
                                  "sources": [label for label, r in readings if r]}
                         cache[key] = entry
                         time.sleep(1)
@@ -371,6 +381,10 @@ def main():
                         if new[i] and (not current[i] or (i == 0 and vals.get("dob"))) and current[i] != new[i]:
                             current[i] = new[i]
                             changed += 1
+                    # Records: only fill an empty box. The results robot keeps them current after fights.
+                    if vals.get("record") and not bout[idx + 1]:
+                        bout[idx + 1] = vals["record"]
+                        changed += 1
                     if vals.get("country") and not extra.get("c" + side):
                         extra["c" + side] = vals["country"]
                         changed += 1

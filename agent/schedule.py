@@ -168,6 +168,14 @@ def ev_main(ev):
     return name_bout(ev.get("name"))
 
 
+def only_one(group, key):
+    """(value, source) when the sites that list `key` all give the same value, else (None, "")."""
+    seen = [(d, e.get(key)) for d, e in group if e.get(key)]
+    if not seen or any(norm(str(v)) != norm(str(seen[0][1])) for _, v in seen):
+        return None, ""
+    return seen[0][1], ", ".join(sorted({d for d, _ in seen}))
+
+
 def tidy(text):
     """Turn SHOUTING page text into normal case, keeping league names and states."""
     if not text or sum(c.isupper() for c in text) < 0.7 * sum(c.isalpha() for c in text):
@@ -351,10 +359,21 @@ def apply(fights, groups):
             else:
                 risky(f"**{title}**: start time {fight['utc']} → {start} ({names}).",
                       lambda fs, fid=fid, s=start: by_id(fs, fid).update(utc=s))
+        elif not start and not fight.get("utc"):
+            # Often only the promoter posts the time. Show it to you rather than drop it.
+            s, who = only_one(group, "start_utc")
+            if s:
+                risky(f"**{title}**: start time {s}, listed only by {who}. Check it before approving.",
+                      lambda fs, fid=fid, s=s: by_id(fs, fid).update(utc=s, lab=by_id(fs, fid).get("lab") or "Main card"))
 
         for key, field in (("broadcaster", "w"), ("price", "wp"), ("venue", "v")):
             val = agreed(group, lambda e, k=key: e.get(k), lambda a, b: norm(a) == norm(b))
             cur = fight.get(field, "")
+            if not val and (not cur or cur in ("TBA", "Venue TBA")):
+                one, who = only_one(group, key)
+                if one:
+                    risky(f"**{title}**: {key} \"{one}\", listed only by {who}.",
+                          lambda fs, fid=fid, f=field, v=one: by_id(fs, fid).update({f: v}))
             if val and norm(val) != norm(cur):
                 if not cur or cur in ("TBA", "Venue TBA"):
                     both(lambda fs, fid=fid, f=field, v=val: by_id(fs, fid).update({f: v}))
