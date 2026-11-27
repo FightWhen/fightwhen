@@ -15,10 +15,28 @@
     "b": [
      [
       "Agit Kabayel",
-      "",
+      "27-0",
       "Nelson Hysa",
-      "",
-      "Heavyweight · title fight"
+      "25-0",
+      "Heavyweight · title fight",
+      {
+       "tape": {
+        "a": [
+         "34",
+         "6′3″",
+         "80″",
+         "Orthodox"
+        ],
+        "b": [
+         "42",
+         "6′5″",
+         "79″",
+         "Orthodox"
+        ]
+       },
+       "ca": "DEU",
+       "cb": "ALB"
+      }
      ]
     ]
    }
@@ -50,7 +68,7 @@
     "b": [
      [
       "Dustin Pague",
-      "",
+      "6-2",
       "Mike Richman",
       "",
       "Middleweight · main event",
@@ -68,24 +86,40 @@
          "41",
          "5′8″",
          "70.5″",
-         ""
+         "Southpaw"
         ]
        }
       }
      ],
      [
       "Benjamin Moser",
-      "",
+      "0-0",
       "Julian Valencia",
       "",
       "",
-      {}
+      {
+       "tape": {
+        "a": [
+         "",
+         "",
+         "",
+         ""
+        ],
+        "b": [
+         "",
+         "",
+         "67″",
+         ""
+        ]
+       },
+       "cb": "USA"
+      }
      ],
      [
       "Hunter Starner",
-      "",
+      "0-0",
       "Blaine Shutt",
-      "",
+      "0-0",
       "",
       {}
      ]
@@ -168,7 +202,7 @@
     "b": [
      [
       "Elijah Garcia",
-      "",
+      "18-2",
       "Thomas O’Toole",
       "",
       "Super middleweight · 10 rounds",
@@ -193,7 +227,7 @@
      ],
      [
       "Luis Nunez",
-      "",
+      "24-0",
       "Toshiki Shimomachi",
       "",
       "Title eliminator",
@@ -251,7 +285,8 @@
       "",
       "Rocha",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -276,7 +311,8 @@
       "",
       "Chaves",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -436,7 +472,7 @@
       "Dmitry Bivol",
       "25-1",
       "Callum Smith",
-      "",
+      "31-2",
       "Light heavyweight · WBA, IBF and WBO titles · 12 rounds",
       {
        "ca": "RUS",
@@ -517,9 +553,9 @@
      ],
      [
       "Alex Pereira",
-      "",
+      "13-4",
       "Sergei Pavlovich",
-      "",
+      "21-3",
       "Heavyweight · 5 rounds",
       {
        "ca": "BRA",
@@ -653,7 +689,8 @@
       "",
       "Liddard",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -684,7 +721,7 @@
     "b": [
      [
       "Chase DeMoor",
-      "",
+      "5-1",
       "Andrei Arlovski",
       "",
       "Misfits heavyweight title",
@@ -753,9 +790,9 @@
      ],
      [
       "Maurice Abevi",
-      "",
+      "6-0",
       "Dzhabir Dzhabrailov",
-      "",
+      "4-0",
       "",
       {
        "ca": "SUI",
@@ -808,10 +845,28 @@
     "b": [
      [
       "Anthony Cacace",
-      "",
+      "25-1",
       "Nick Ball",
-      "",
-      "Super-Featherweight · title fight"
+      "23-1-1",
+      "Super-Featherweight · title fight",
+      {
+       "tape": {
+        "a": [
+         "37",
+         "5′10″",
+         "71″",
+         "Southpaw"
+        ],
+        "b": [
+         "29",
+         "5′2″",
+         "65″",
+         "Orthodox"
+        ]
+       },
+       "ca": "GBR",
+       "cb": "GBR"
+      }
      ]
     ]
    }
@@ -842,10 +897,27 @@
     "b": [
      [
       "Jake Paul",
-      "",
+      "12-2",
       "Cédric Doumbé",
-      "",
-      "Cruiserweight"
+      "1-0",
+      "Cruiserweight",
+      {
+       "tape": {
+        "a": [
+         "29",
+         "",
+         "76″",
+         "Orthodox"
+        ],
+        "b": [
+         "34",
+         "",
+         "73″",
+         ""
+        ]
+       },
+       "ca": "USA"
+      }
      ]
     ]
    }
@@ -889,10 +961,27 @@
     "b": [
      [
       "Ryan Garner",
-      "",
+      "20-0",
       "Jazza Dickens",
-      "",
-      "Super-Featherweight · title fight"
+      "37-6",
+      "Super-Featherweight · title fight",
+      {
+       "tape": {
+        "a": [
+         "29",
+         "5′6″",
+         "",
+         "Orthodox"
+        ],
+        "b": [
+         "35",
+         "5′5″",
+         "63″",
+         "Southpaw"
+        ]
+       },
+       "cb": "GBR"
+      }
      ]
     ]
    }
@@ -917,7 +1006,8 @@
       "",
       "Garcia",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -942,7 +1032,8 @@
       "",
       "Brady",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -964,10 +1055,28 @@
     "b": [
      [
       "Kai Stewart",
-      "",
+      "10-0",
       "Bryan Duran",
+      "9-1",
       "",
-      ""
+      {
+       "tape": {
+        "a": [
+         "26",
+         "5′8″",
+         "70″",
+         ""
+        ],
+        "b": [
+         "",
+         "5′7″",
+         "70″",
+         "Southpaw"
+        ]
+       },
+       "ca": "USA",
+       "cb": "CUB"
+      }
      ]
     ]
    }
@@ -992,7 +1101,8 @@
       "",
       "Duarte",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -1017,7 +1127,8 @@
       "",
       "Kape",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -1039,10 +1150,28 @@
     "b": [
      [
       "Daniel Dubois",
-      "",
+      "24-3",
       "Joseph Parker",
-      "",
-      "Heavyweight · title fight"
+      "36-4",
+      "Heavyweight · title fight",
+      {
+       "tape": {
+        "a": [
+         "29",
+         "6′5″",
+         "78″",
+         "Orthodox"
+        ],
+        "b": [
+         "35",
+         "6′4″",
+         "76″",
+         "Orthodox"
+        ]
+       },
+       "ca": "GBR",
+       "cb": "NZL"
+      }
      ]
     ]
    }
@@ -1067,7 +1196,25 @@
       "",
       "Robbie Peralta",
       "",
-      ""
+      "",
+      {
+       "tape": {
+        "a": [
+         "",
+         "5′9″",
+         "",
+         ""
+        ],
+        "b": [
+         "",
+         "5′7″",
+         "69″",
+         ""
+        ]
+       },
+       "ca": "RUS",
+       "cb": "USA"
+      }
      ]
     ]
    }
@@ -1092,7 +1239,8 @@
       "",
       "Saint Denis",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -1117,7 +1265,8 @@
       "",
       "Nickal",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
@@ -1139,10 +1288,28 @@
     "b": [
      [
       "Ben Bonner",
-      "",
+      "6-2",
       "Rico Franco",
+      "11-3",
       "",
-      ""
+      {
+       "tape": {
+        "a": [
+         "",
+         "",
+         "65″",
+         ""
+        ],
+        "b": [
+         "",
+         "5′8″",
+         "69″",
+         ""
+        ]
+       },
+       "ca": "GBR",
+       "cb": "GBR"
+      }
      ]
     ]
    }
