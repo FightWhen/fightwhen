@@ -1,72 +1,119 @@
 {
  "dustin-pague": {
-  "checked": "2026-11-26",
-  "values": {},
-  "conflicts": [],
-  "sources": []
- },
- "mike-richman": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
-   "dob": "1985-06-23",
-   "country": "USA"
+   "height_in": 69.0,
+   "reach_in": 73.5,
+   "country": "USA",
+   "record": "6-2"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "https://www.bkfc.com/fighters/dustin-pague"
+  ]
+ },
+ "mike-richman": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1985-06-23",
+   "reach_in": 71.0,
+   "stance": "Southpaw",
+   "country": "USA"
+  },
+  "conflicts": [
+   "height: 69.0 (Wikipedia: Mike Richman), 68.0 (https://www.bkfc.com/fighters/mike-richman)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Mike Richman",
+   "https://www.bkfc.com/fighters/mike-richman"
   ]
  },
  "benjamin-moser": {
-  "checked": "2026-11-26",
-  "values": {},
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "record": "0-0"
+  },
   "conflicts": [],
-  "sources": []
+  "sources": [
+   "https://www.bkfc.com/fighters/benjamin-moser"
+  ]
  },
  "julian-valencia": {
-  "checked": "2026-11-26",
-  "values": {},
-  "conflicts": [],
-  "sources": []
- },
- "hunter-starner": {
-  "checked": "2026-11-26",
-  "values": {},
-  "conflicts": [],
-  "sources": []
- },
- "blaine-shutt": {
-  "checked": "2026-11-26",
-  "values": {},
-  "conflicts": [],
-  "sources": []
- },
- "david-benavidez": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
-   "dob": "1996-12-17",
-   "height_in": 74.0,
+   "reach_in": 67.0,
    "country": "USA"
   },
   "conflicts": [],
   "sources": [
+   "https://www.bkfc.com/fighters/julian-valencia"
+  ]
+ },
+ "hunter-starner": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "record": "0-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/hunter-starner"
+  ]
+ },
+ "blaine-shutt": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "record": "0-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/blaine-shutt"
+  ]
+ },
+ "david-benavidez": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1996-12-17",
+   "reach_in": 74.5,
+   "stance": "Orthodox",
+   "country": "USA",
+   "record": "32-0"
+  },
+  "conflicts": [
+   "height: 74.0 (Wikidata), 73.0 (Wikipedia: David Benavidez)"
+  ],
+  "sources": [
    "Wikidata",
+   "Wikipedia: David Benavidez",
    "https://www.premierboxingchampions.com/david-benavidez"
   ]
  },
  "michal-cieslak": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1989-04-19",
    "height_in": 75.0,
+   "reach_in": 79.0,
+   "stance": "Orthodox",
    "country": "POL"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Michał Cieślak (boxer)"
   ]
  },
  "vergil-ortiz-jr": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1998-03-25",
    "height_in": 70.0,
@@ -81,13 +128,15 @@
   ]
  },
  "keith-thurman": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1988-11-23",
    "height_in": 67.5,
    "reach_in": 69.0,
    "stance": "Orthodox",
-   "country": "USA"
+   "country": "USA",
+   "record": "31-2"
   },
   "conflicts": [],
   "sources": [
@@ -97,13 +146,15 @@
   ]
  },
  "elijah-garcia": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "2003-04-26",
    "height_in": 72.0,
    "reach_in": 72.0,
    "stance": "Southpaw",
-   "country": "USA"
+   "country": "USA",
+   "record": "18-2"
   },
   "conflicts": [],
   "sources": [
@@ -111,19 +162,31 @@
   ]
  },
  "thomas-otoole": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {},
   "conflicts": [],
   "sources": []
  },
  "luis-nunez": {
-  "checked": "2026-11-26",
-  "values": {},
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1999-09-24",
+   "height_in": 67.0,
+   "reach_in": 65.0,
+   "stance": "Orthodox",
+   "country": "DOM",
+   "record": "24-0"
+  },
   "conflicts": [],
-  "sources": []
+  "sources": [
+   "https://www.premierboxingchampions.com/luis-nunez"
+  ]
  },
  "toshiki-shimomachi": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "country": "JPN"
   },
@@ -133,97 +196,131 @@
   ]
  },
  "tyson-fury": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1988-08-12",
    "height_in": 81.0,
-   "country": "GBR"
+   "reach_in": 85.0,
+   "stance": "Orthodox",
+   "country": "GBR",
+   "record": "36-2-1"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Tyson Fury"
   ]
  },
  "anthony-joshua": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1989-10-15",
-   "height_in": 79.0,
-   "country": "GBR"
+   "reach_in": 82.0,
+   "stance": "Orthodox",
+   "country": "GBR",
+   "record": "30-4"
   },
-  "conflicts": [],
+  "conflicts": [
+   "height: 79.0 (Wikidata), 78.0 (Wikipedia: Anthony Joshua)"
+  ],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Anthony Joshua"
   ]
  },
  "deontay-wilder": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1985-10-22",
    "height_in": 79.5,
    "reach_in": 83.0,
    "stance": "Orthodox",
-   "country": "USA"
+   "country": "USA",
+   "record": "45-4-1"
   },
   "conflicts": [],
   "sources": [
    "Wikidata",
-   "Wikipedia: Deontay Wilder"
+   "Wikipedia: Deontay Wilder",
+   "https://www.premierboxingchampions.com/deontay-wilder"
   ]
  },
  "martin-bakole": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1993-06-01",
    "height_in": 78.0,
-   "country": "COD"
+   "reach_in": 82.0,
+   "stance": "Orthodox",
+   "country": "COD",
+   "record": "21-2-1"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Martin Bakole"
   ]
  },
  "damazion-vanhouter": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {},
   "conflicts": [],
   "sources": []
  },
  "michael-essomba": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {},
   "conflicts": [],
   "sources": []
  },
  "dmitry-bivol": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1990-12-18",
-   "height_in": 72.0
+   "height_in": 72.0,
+   "reach_in": 72.0,
+   "stance": "Orthodox",
+   "country": "RUS",
+   "record": "25-1"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Dmitry Bivol"
   ]
  },
  "callum-smith": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1990-04-23",
    "height_in": 75.0,
-   "country": "GBR"
+   "reach_in": 78.0,
+   "stance": "Orthodox",
+   "country": "GBR",
+   "record": "31-2"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Callum Smith"
   ]
  },
  "charles-oliveira": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "height_in": 70.0,
    "reach_in": 74.0,
-   "country": "BRA"
+   "country": "BRA",
+   "record": "37-11"
   },
   "conflicts": [],
   "sources": [
@@ -231,121 +328,178 @@
   ]
  },
  "diego-lopes": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1994-12-30",
    "height_in": 71.0,
-   "country": "BRA"
-  },
-  "conflicts": [],
-  "sources": [
-   "Wikidata"
-  ]
- },
- "alex-pereira": {
-  "checked": "2026-11-26",
-  "values": {
-   "dob": "1987-07-07",
-   "height_in": 76.5,
-   "country": "BRA"
-  },
-  "conflicts": [],
-  "sources": [
-   "Wikidata"
-  ]
- },
- "sergei-pavlovich": {
-  "checked": "2026-11-26",
-  "values": {
-   "dob": "1992-05-13",
-   "height_in": 75.0,
-   "country": "RUS"
-  },
-  "conflicts": [],
-  "sources": [
-   "Wikidata"
-  ]
- },
- "bo-nickal": {
-  "checked": "2026-11-26",
-  "values": {},
-  "conflicts": [],
-  "sources": []
- },
- "joe-pyfer": {
-  "checked": "2026-11-26",
-  "values": {
-   "dob": "1996-09-17",
-   "height_in": 74.0,
-   "country": "USA"
-  },
-  "conflicts": [],
-  "sources": [
-   "Wikidata"
-  ]
- },
- "brandon-moreno": {
-  "checked": "2026-11-26",
-  "values": {
-   "dob": "1993-12-07",
-   "height_in": 67.0,
-   "reach_in": 70.0,
-   "country": "MEX"
+   "reach_in": 72.0,
+   "stance": "Orthodox",
+   "country": "BRA",
+   "record": "28-8"
   },
   "conflicts": [],
   "sources": [
    "Wikidata",
-   "Wikipedia: Brandon Moreno"
+   "Wikipedia: Diego Lopes (fighter)",
+   "https://www.ufc.com/athlete/diego-lopes"
+  ]
+ },
+ "alex-pereira": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1987-07-07",
+   "height_in": 76.5,
+   "reach_in": 79.0,
+   "stance": "Orthodox",
+   "country": "BRA",
+   "record": "13-4"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Alex Pereira",
+   "https://www.ufc.com/athlete/alex-pereira"
+  ]
+ },
+ "sergei-pavlovich": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1992-05-13",
+   "height_in": 75.0,
+   "reach_in": 84.0,
+   "stance": "Orthodox",
+   "country": "RUS",
+   "record": "21-3"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Sergei Pavlovich",
+   "https://www.ufc.com/athlete/sergei-pavlovich"
+  ]
+ },
+ "bo-nickal": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "height_in": 73.0,
+   "reach_in": 76.0
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.ufc.com/athlete/bo-nickal"
+  ]
+ },
+ "joe-pyfer": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1996-09-17",
+   "reach_in": 75.0,
+   "country": "USA",
+   "record": "16-3"
+  },
+  "conflicts": [
+   "height: 74.0 (Wikidata), 73.0 (Wikipedia: Joe Pyfer), 74.0 (https://www.ufc.com/athlete/joe-pyfer)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Joe Pyfer",
+   "https://www.ufc.com/athlete/joe-pyfer"
+  ]
+ },
+ "brandon-moreno": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1993-12-07",
+   "height_in": 67.0,
+   "reach_in": 70.0,
+   "country": "MEX",
+   "record": "24-10-2"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Brandon Moreno",
+   "https://www.ufc.com/athlete/brandon-moreno"
   ]
  },
  "charles-johnson": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
-   "dob": "1991-01-10",
-   "country": "USA"
+   "height_in": 69.0,
+   "reach_in": 70.0,
+   "record": "20-9"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "https://www.ufc.com/athlete/charles-johnson"
   ]
  },
  "maycee-barber": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1998-05-18",
    "height_in": 65.0,
-   "country": "USA"
+   "reach_in": 65.0,
+   "country": "USA",
+   "record": "15-3"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "Wikipedia: Maycee Barber",
+   "https://www.ufc.com/athlete/maycee-barber"
   ]
  },
  "carli-judice": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1999-03-02",
-   "country": "USA"
+   "height_in": 67.0,
+   "reach_in": 68.0,
+   "country": "USA",
+   "record": "7-2"
   },
   "conflicts": [],
   "sources": [
-   "Wikidata"
+   "Wikidata",
+   "https://www.ufc.com/athlete/carli-judice"
   ]
  },
  "chase-demoor": {
-  "checked": "2026-11-26",
-  "values": {},
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1996-06-12",
+   "height_in": 77.0,
+   "reach_in": 84.0,
+   "stance": "Orthodox",
+   "country": "USA",
+   "record": "5-1"
+  },
   "conflicts": [],
-  "sources": []
+  "sources": [
+   "Wikipedia: Chase DeMoor"
+  ]
  },
  "andrei-arlovski": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {},
   "conflicts": [],
   "sources": []
  },
  "kade-ruotolo": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "2003-01-22",
    "height_in": 71.0,
@@ -360,14 +514,17 @@
   ]
  },
  "ok-rae-yoon": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "dob": "1991-03-23",
    "height_in": 72.0,
    "reach_in": 75.0,
    "country": "KOR"
   },
-  "conflicts": [],
+  "conflicts": [
+   "record: 17-6 (Wikipedia: Ok Rae-yoon), 4-3 (https://www.onefc.com/athletes/ok-rae-yoon/)"
+  ],
   "sources": [
    "Wikidata",
    "Wikipedia: Ok Rae-yoon",
@@ -375,16 +532,25 @@
   ]
  },
  "maurice-abevi": {
-  "checked": "2026-11-26",
-  "values": {},
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "height_in": 72.0,
+   "country": "CHE",
+   "record": "6-0"
+  },
   "conflicts": [],
-  "sources": []
+  "sources": [
+   "https://www.onefc.com/athletes/maurice-abevi/"
+  ]
  },
  "dzhabir-dzhabrailov": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {
    "height_in": 74.0,
-   "country": "TUR"
+   "country": "TUR",
+   "record": "4-0"
   },
   "conflicts": [],
   "sources": [
@@ -392,15 +558,395 @@
   ]
  },
  "henry": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {},
   "conflicts": [],
   "sources": []
  },
  "collard": {
-  "checked": "2026-11-26",
+  "v": 2,
+  "checked": "2026-11-27",
   "values": {},
   "conflicts": [],
   "sources": []
+ },
+ "agit-kabayel": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1992-09-23",
+   "height_in": 75.0,
+   "reach_in": 80.0,
+   "stance": "Orthodox",
+   "country": "DEU",
+   "record": "27-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Agit Kabayel"
+  ]
+ },
+ "nelson-hysa": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1984-09-06",
+   "height_in": 77.0,
+   "reach_in": 79.0,
+   "stance": "Orthodox",
+   "country": "ALB",
+   "record": "25-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Nelson Hysa"
+  ]
+ },
+ "walker": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "rocha": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "diaz": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "chaves": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "soro": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "liddard": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "anthony-cacace": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1989-02-02",
+   "height_in": 70.0,
+   "reach_in": 71.0,
+   "stance": "Southpaw",
+   "country": "GBR",
+   "record": "25-1"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Anthony Cacace"
+  ]
+ },
+ "nick-ball": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1997-02-28",
+   "height_in": 62.0,
+   "reach_in": 65.0,
+   "stance": "Orthodox",
+   "country": "GBR",
+   "record": "23-1-1"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Nick Ball (boxer)"
+  ]
+ },
+ "jake-paul": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1997-01-17",
+   "reach_in": 76.0,
+   "stance": "Orthodox",
+   "country": "USA",
+   "record": "12-2"
+  },
+  "conflicts": [
+   "height: 72.0 (Wikidata), 73.0 (Wikipedia: Jake Paul)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Jake Paul"
+  ]
+ },
+ "cedric-doumbe": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1992-08-30",
+   "reach_in": 73.0,
+   "record": "1-0"
+  },
+  "conflicts": [
+   "height: 69.5 (Wikidata), 68.0 (Wikipedia: Cédric Doumbé)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Cédric Doumbé"
+  ]
+ },
+ "ryan-garner": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1998-01-05",
+   "height_in": 66.0,
+   "stance": "Orthodox",
+   "record": "20-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Ryan Garner"
+  ]
+ },
+ "jazza-dickens": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1991-04-12",
+   "height_in": 65.0,
+   "reach_in": 63.0,
+   "stance": "Southpaw",
+   "country": "GBR",
+   "record": "37-6"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Jazza Dickens"
+  ]
+ },
+ "rodriguez": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "garcia": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "bonfim": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "brady": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "kai-stewart": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "2000-06-17",
+   "height_in": 68.0,
+   "reach_in": 70.0,
+   "country": "USA",
+   "record": "10-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Kai Stewart",
+   "https://www.bkfc.com/fighters/kai-stewart"
+  ]
+ },
+ "bryan-duran": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "height_in": 67.0,
+   "reach_in": 70.0,
+   "stance": "Southpaw",
+   "country": "CUB",
+   "record": "9-1"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/bryan-duran"
+  ]
+ },
+ "barboza": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "duarte": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "van": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "kape": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "daniel-dubois": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1997-09-06",
+   "height_in": 77.0,
+   "reach_in": 78.0,
+   "stance": "Orthodox",
+   "country": "GBR",
+   "record": "24-3"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Daniel Dubois"
+  ]
+ },
+ "joseph-parker": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "dob": "1992-01-09",
+   "height_in": 76.0,
+   "reach_in": 76.0,
+   "stance": "Orthodox",
+   "country": "NZL",
+   "record": "36-4"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Joseph Parker"
+  ]
+ },
+ "evgenii-kurdanov": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "height_in": 69.0,
+   "country": "RUS"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/evgenii-kurdanov"
+  ]
+ },
+ "robbie-peralta": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "height_in": 67.0,
+   "reach_in": 69.0,
+   "country": "USA"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/robbie-peralta"
+  ]
+ },
+ "salkilld": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "saint-denis": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "pyfer": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "nickal": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "ben-bonner": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "reach_in": 65.0,
+   "country": "GBR",
+   "record": "6-2"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/ben-bonner"
+  ]
+ },
+ "rico-franco": {
+  "v": 2,
+  "checked": "2026-11-27",
+  "values": {
+   "height_in": 68.0,
+   "reach_in": 69.0,
+   "country": "GBR",
+   "record": "11-3"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.bkfc.com/fighters/rico-franco"
+  ]
  }
 }
