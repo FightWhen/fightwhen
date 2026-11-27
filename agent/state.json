@@ -282,9 +282,174 @@
   "yPPnP19CJ8E",
   "5LMSK7zOTHQ",
   "rnHbzIWDZ8Y",
-  "_Y3Dynzm-N0"
+  "_Y3Dynzm-N0",
+  "1U0rjO-jlLw",
+  "NitKUGnWEpI",
+  "fnz0L_3xlrU",
+  "CExEWZ7JMsU",
+  "3l5vPQiupJE",
+  "HxI-ieTnfjo",
+  "ME8A8X1aSjI",
+  "CdMoMMcOzvg",
+  "9IwtgSYgVCY",
+  "-KAwMLNNNGM",
+  "IFZ9TBfhM04",
+  "tGeKqfmaXUo",
+  "WE-htg7EJjQ",
+  "zmEMEXHQ0uE",
+  "3jUUsqXZyr8",
+  "jUpmAT2W7OI",
+  "fS3lNalf5Ok",
+  "jhZNIEwJ9Q8",
+  "qzIOc9agJlw",
+  "QJbfgaPJeqo",
+  "2dc0deed17Q",
+  "sRofD-KRc3I",
+  "xKWuKm506wA",
+  "EgWCKk7jdGQ",
+  "X5PngJQXoO0"
  ],
  "pending": [
+  {
+   "fid": "fj",
+   "c": "boxing",
+   "mood": "Bad blood",
+   "h": "Hearn Accuses Dana White Of Mocking British Fans Over Fury-Joshua",
+   "sum": "Hearn claims Dana White barely promoted Fury-Joshua in America and doesn't want it to succeed because it's staying in the UK.",
+   "tags": [
+    "Eddie Hearn",
+    "Dana White",
+    "Tyson Fury",
+    "Anthony Joshua"
+   ],
+   "q": "I think Dana White's taking the piss out of the British fans.",
+   "who": "Eddie Hearn",
+   "ctx": "Interview with iFL TV, two weeks before Fury vs Joshua",
+   "ev": "FURY VS JOSHUA",
+   "body": [
+    "Eddie Hearn went after Dana White in an interview with iFL TV. He said White and Nick Khan are advising on the Fury-Joshua event and that the undercard shows what they are doing. In his words: “They don't know what they're doing.”",
+    "Hearn pointed to the late ring time, which he says is aimed at American viewers. He asked who has been promoting the fight in America and said the answer was Dana White, with what he called one post. He claimed they don't want it to succeed because they are annoyed it is still in the UK.",
+    "Hearn said he is not involved in promoting the fight, though he has a fighter on the card. He said that if he were running it, the buildup would have been far bigger. “No one drives content like us.” He also said he believes Netflix will overturn the undercard order and move Cordina vs Lara onto the main card.",
+    "Why it matters: Fury vs Joshua is two weeks away, and the biggest promoter in British boxing is publicly accusing the UFC boss of undermining the build. That adds a promotional feud to fight week."
+   ],
+   "id": "hearn-accuses-dana-white-of-mocking-british-fans-over-fury-j-nitkug",
+   "src": "iFL TV",
+   "url": "https://www.youtube.com/watch?v=NitKUGnWEpI&t=1231s",
+   "clip": "https://www.youtube.com/watch?v=NitKUGnWEpI",
+   "vid": "NitKUGnWEpI",
+   "published": "2026-11-27T20:38:14.334684Z"
+  },
+  {
+   "fid": null,
+   "c": "misfits",
+   "mood": "Callout",
+   "h": "Sauerland Offers Hearn And White 10 Million Each To Fight",
+   "sum": "Promoter Kalle Sauerland says he has agreed terms with Eddie Hearn, while Dana White would only do it in a gym. He wants charity money added.",
+   "tags": [
+    "Kalle Sauerland",
+    "Eddie Hearn",
+    "Dana White"
+   ],
+   "q": "So my solution would be you know we'll do it in a gym.",
+   "who": "Kalle Sauerland",
+   "ctx": "Interview with iFL TV",
+   "ev": "HEARN VS WHITE",
+   "body": [
+    "Kalle Sauerland confirmed he has put 10 million each on the table for Eddie Hearn and Dana White to settle their beef in the ring. The host noted that Hearn had said he is worth more than that. Sauerland brushed it off as Hearn talking.",
+    "Sauerland says terms are already agreed with Hearn. He also says he heard White say in an interview that he would like to do it, but in a gym. Sauerland's answer is a gym fight sold on pay-per-view, with money added for charity. He also said a private jet has been thrown in so travel is covered.",
+    "The host pointed out that Hearn has not confirmed he would do it for charity. Sauerland said he is sure Hearn does a lot for charity and promised to put his own company's profit into it too. He said it would be “we'll add money to charity on it as well.” He pitched it as short rounds rather than a 12-round fight.",
+    "Why it matters: The Hearn and White feud has been running for weeks. This is the first concrete offer to settle it, though only Sauerland says Hearn has agreed, and White's gym-only stance is a long way from a signed deal."
+   ],
+   "id": "sauerland-offers-hearn-and-white-10-million-each-to-fight-fnz0l_",
+   "src": "iFL TV",
+   "url": "https://www.youtube.com/watch?v=fnz0L_3xlrU&t=977s",
+   "clip": "https://www.youtube.com/watch?v=fnz0L_3xlrU",
+   "vid": "fnz0L_3xlrU",
+   "published": "2026-11-27T20:38:14.334684Z"
+  },
+  {
+   "fid": "2026-11-28-agit-kabayel-nelson-hysa",
+   "c": "boxing",
+   "mood": "Hype",
+   "h": "Hysa Weighs In 15 Pounds Heavier Than Kabayel For WBC Showdown",
+   "sum": "Both heavyweights have stepped on the scale and faced off for the final time before tomorrow's 12-round WBC title fight in Kabayel's first defense.",
+   "tags": [
+    "Agit Kabayel",
+    "Nelson Hysa"
+   ],
+   "q": "",
+   "who": "Ring announcer",
+   "ctx": "Official weigh-in and final face-off",
+   "ev": "KABAYEL VS HYSA",
+   "body": [
+    "Challenger Nelson Hysa weighed in at 113.2 kg (249.5 lb). Defending WBC heavyweight champion Agit Kabayel came in at 106.4 kg (234.5 lb), so Hysa carries 15 lb more into the ring.",
+    "The announcer introduced both men as undefeated. Hysa has 25 wins, 23 by knockout, and holds the WBO global title. Kabayel has 27 wins, 19 by knockout, and is making the first defense of his world title.",
+    "The two fighters then faced off for the final time. The fight is scheduled for 12 rounds tomorrow, live worldwide on DAZN, and is promoted by Frank Warren's Queensberry with Gold Star Promotions.",
+    "Why it matters: Both men have now weighed in and the face-off is done, so the unbeaten champion and the heavy-handed challenger meet for the WBC title tomorrow, with Hysa the bigger man."
+   ],
+   "id": "hysa-weighs-in-15-pounds-heavier-than-kabayel-for-wbc-showdo-cexewz",
+   "src": "Seconds Out",
+   "url": "https://www.youtube.com/watch?v=CExEWZ7JMsU&t=79s",
+   "clip": "https://www.youtube.com/watch?v=CExEWZ7JMsU",
+   "vid": "CExEWZ7JMsU",
+   "published": "2026-11-27T20:38:14.334684Z"
+  },
+  {
+   "fid": "fj",
+   "c": "boxing",
+   "mood": "Card change",
+   "h": "Hearn Urges Fans To Push Cordina Onto Fury-Joshua Main Card",
+   "sum": "Hearn says he was baffled Cordina vs Lara wasn't on the main card and believes fan pressure will force Netflix to move it up.",
+   "tags": [
+    "Eddie Hearn",
+    "Joe Cordina",
+    "Mauricio Lara",
+    "Netflix"
+   ],
+   "q": "And I believe Netflix will have no choice but to elevate Joe Cordina to the main card.",
+   "who": "Eddie Hearn",
+   "ctx": "Matchroom Boxing video message to fans",
+   "ev": "FURY VS JOSHUA",
+   "body": [
+    "Eddie Hearn says he was \"completely baffled\" to learn that Joe Cordina's fight with Mauricio Lara was not on the main portion of the Fury vs Joshua card. He called the matchup a brilliant fight and said giving it main card billing is simple common sense.",
+    "Hearn gave two reasons Cordina is on the card at all. One is his own pushing and refusal to give up. The other is “because of the public response and support.”",
+    "He is now asking fans to keep the pressure on, repeating what he said on his story: “do your thing, guys.” Hearn says he believes Netflix will have no choice but to move Cordina up, and that they will.",
+    "Why it matters: Fans who want Cordina vs Lara on the main card are being told their noise could change the running order. Nothing has been confirmed, and for now Hearn is making a public case."
+   ],
+   "id": "hearn-urges-fans-to-push-cordina-onto-fury-joshua-main-card-jupmat",
+   "src": "Matchroom Boxing",
+   "url": "https://www.youtube.com/watch?v=jUpmAT2W7OI&t=47s",
+   "clip": "https://www.youtube.com/watch?v=jUpmAT2W7OI",
+   "vid": "jUpmAT2W7OI",
+   "published": "2026-11-27T20:38:14.334684Z"
+  },
+  {
+   "fid": null,
+   "c": "ufc",
+   "mood": "Bold prediction",
+   "h": "Pettis Says Doubters Will Be Shocked By His Wrestling Debut",
+   "sum": "Anthony Pettis says no one has seen his wrestling and expects to surprise the people counting him out against Arman Tsarukyan at RAF 15.",
+   "tags": [
+    "Anthony Pettis",
+    "Arman Tsarukyan"
+   ],
+   "q": "Might as well go against the champ. If I'm going to go try this for my first time, might as well be against the best right now.",
+   "who": "Anthony Pettis",
+   "ctx": "Interview with MMA Fighting ahead of RAF 15",
+   "ev": "PETTIS VS TSARUKYAN",
+   "body": [
+    "Anthony Pettis says he loved the switch-up that put him in a wrestling match with Arman Tsarukyan at RAF 15. He called himself a fan of Tsarukyan and praised the way he is performing in MMA and in wrestling.",
+    "Pettis said this is his first wrestling match. He wanted to get his feet wet, but when the Tsarukyan opportunity came up he decided that if he was going to try it, he might as well face the best right now.",
+    "Asked about people who think Tsarukyan will go in and run him over, Pettis told them to watch on Saturday. He said “no one's seen my wrestling” and that he has never had to do straight wrestling before. He expects people to be shocked.",
+    "Why it matters: Pettis is a big underdog by his own admission, and he is betting that a style nobody has seen from him can upset one of the sport's most in-form wrestlers."
+   ],
+   "id": "pettis-says-doubters-will-be-shocked-by-his-wrestling-debut-qzioc9",
+   "src": "MMA Fighting",
+   "url": "https://www.youtube.com/watch?v=qzIOc9agJlw&t=22s",
+   "clip": "https://www.youtube.com/watch?v=qzIOc9agJlw",
+   "vid": "qzIOc9agJlw",
+   "published": "2026-11-27T20:38:14.334684Z"
+  },
   {
    "fid": "fj",
    "c": "boxing",
@@ -595,7 +760,7 @@
   "RIZIN FIGHTING FEDERATION": "UCZZ0UGjWsRdM8_5bsqtxYaQ",
   "@FightHubTV": "UCRIuHlafHpLZ7Oo8itR-7nA"
  },
- "last_full_run": "2026-11-27T17:37:37.738554Z",
+ "last_full_run": "2026-11-27T20:38:14.334684Z",
  "last_search": "2026-11-27T17:37:37.738554Z",
  "live": [
   "aj-no-better-time",
