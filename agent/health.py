@@ -4,7 +4,7 @@ Runs every 30 minutes. If an agent has stopped working, or the site's data has
 gone stale, this check fails, and GitHub emails you about the failed run.
 
 Limits: news agent 4 hours, schedule agent 26 hours (90 minutes in fight week),
-fighter stats 30 hours, and on fight nights the results agent 40 minutes.
+fighter stats 30 hours, news watch 3 hours, and on fight nights the results agent 40 minutes.
 """
 
 import datetime as dt
@@ -40,7 +40,7 @@ def main():
     tonight = any(fight_start(f) - dt.timedelta(minutes=15) <= NOW <= fight_start(f) + dt.timedelta(hours=9) for f in fights)
 
     limits = [("agent.yml", "News agent", 4), ("schedule.yml", "Schedule agent", 1.5 if week else 26),
-              ("tape.yml", "Fighter stats agent", 30)]
+              ("tape.yml", "Fighter stats agent", 30), ("wire.yml", "News watch", 3)]
     if tonight:
         limits.append(("results.yml", "Results agent", 0.67))
     for wf, name, hours in limits:

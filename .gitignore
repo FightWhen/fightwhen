@@ -5,3 +5,5 @@ agent/__pycache__/
 site/fight/
 site/sitemap.xml
 site/robots.txt
+agent/wire_review.json
+agent/wire_report.md

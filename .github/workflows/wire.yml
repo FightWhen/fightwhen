@@ -1,0 +1,61 @@
+name: News watch
+
+on:
+  schedule:
+    - cron: "41 * * * *"   # hourly: withdrawals and replacements from news feeds
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: fights-data
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: agent/requirements.txt
+
+      - run: pip install -r agent/requirements.txt
+
+      - name: Read the news feeds
+        working-directory: agent
+        run: python wire.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_FAST_MODEL: ${{ vars.CLAUDE_FAST_MODEL }}
+
+      - name: Save what it has read
+        run: |
+          git config user.name "fightwhen-agent"
+          git config user.email "fightwhen-agent@users.noreply.github.com"
+          for f in agent/wire_cache.json site/data/status.json; do [ -f "$f" ] && git add "$f"; done; true
+          git diff --cached --quiet && exit 0
+          git commit -m "News watch: update memory"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
+
+      - name: Put fight changes in a pull request
+        if: hashFiles('agent/wire_review.json') != ''
+        run: cp agent/wire_review.json site/data/fights.json
+
+      - uses: peter-evans/create-pull-request@v7
+        if: hashFiles('agent/wire_review.json') != ''
+        with:
+          branch: agent/news-watch
+          base: main
+          add-paths: site/data/fights.json
+          commit-message: "News watch: fight changes to review"
+          title: "Fight changes in the news (check before approving)"
+          body-path: agent/wire_report.md
+          delete-branch: true
