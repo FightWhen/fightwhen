@@ -478,6 +478,27 @@ def event_page(fight):
     return None, ""
 
 
+def swap_opponent(f, target, b, title):
+    """If the page pairs a fighter we list with someone new, that's a replacement
+    (an injury, a withdrawal). Propose the swap for review instead of adding a second bout."""
+    for section in target.get("card", []):
+        for row in section.get("b", []):
+            for keep, new_name in ((b["a"], b["b"]), (b["b"], b["a"])):
+                for i, j in ((0, 2), (2, 0)):
+                    if same_fighter(row[i], keep) and not same_fighter(row[j], new_name):
+                        old = row[j]
+                        row[j], row[j + 1] = new_name, ""
+                        if len(row) > 5 and isinstance(row[5], dict):
+                            row[5].pop("tape", None)          # the old opponent's stats
+                            row[5].pop("c" + ("b" if j == 2 else "a"), None)
+                        review_notes.append(
+                            f"**{f['f']}**: opponent change: **{old} is out, {new_name} is in** against "
+                            f"{row[i]}, per Wikipedia's “{title}”. Check the news before approving; "
+                            f"if the site already has the newer name and Wikipedia is behind, remove this from the PR.")
+                        return True
+    return False
+
+
 def fill_cards(fights, proposed, cache):
     """Add undercard bouts from each upcoming event's own Wikipedia article.
     One source, so they go to your approval pull request, never straight live."""
@@ -505,6 +526,7 @@ def fill_cards(fights, proposed, cache):
         target = by_id(proposed, f["id"])
         have = [(r[0], r[2]) for s in target.get("card", []) for r in s.get("b", [])]
         new = [b for b in bouts if not any(same_bout((b["a"], b["b"]), h) for h in have)]
+        new = [b for b in new if not swap_opponent(f, target, b, title)]
         if not new:
             continue
         for b in new:
