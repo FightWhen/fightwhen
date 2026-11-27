@@ -7,7 +7,7 @@
   "f": "Agit Kabayel vs Nelson Hysa: Bad Blood",
   "t": "Heavyweight · title fight",
   "v": "Merkur Spiel-Arena, Düsseldorf, Germany",
-  "w": "TBA",
+  "w": "DAZN",
   "auto": 1,
   "card": [
    {
@@ -22,7 +22,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "utc": "2026-11-28T17:00:00Z",
+  "lab": "Card start"
  },
  {
   "c": "one",
