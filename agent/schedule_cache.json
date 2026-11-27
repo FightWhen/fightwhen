@@ -1,5 +1,5 @@
 {
- "_last_full_run": "2026-11-27T19:22:41.877015+00:00",
+ "_last_full_run": "2026-11-27T20:19:38.580191+00:00",
  "wiki-ufc": {
   "fp": "7f873667aab8967a",
   "events": [
@@ -519,7 +519,7 @@
   "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "matchroom": {
-  "fp": "0e1a6ab1aadb7176",
+  "fp": "9c3f2a83d2156fb1",
   "events": [
    {
     "name": "Walker VS Rocha",
@@ -634,7 +634,7 @@
     "date": "2027-02-27",
     "start_utc": null,
     "venue": "State Farm Arena, Atlanta, Georgia, USA",
-    "broadcaster": null,
+    "broadcaster": "fight pass",
     "price": null,
     "status": "scheduled",
     "bouts": [
@@ -648,7 +648,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-27T18:09:00.211901+00:00"
+  "checked": "2026-11-27T20:19:38.580191+00:00"
  },
  "pbc": {
   "fp": "bccb8620d384c950",
@@ -899,9 +899,66 @@
   "checked": "2026-11-27T11:25:38.262404+00:00"
  },
  "card:UFC 335": {
-  "fp": "de8d652718a48076",
-  "bouts": [],
-  "checked": "2026-11-27T11:25:38.262404+00:00"
+  "fp": "fc35c64e098d7b13",
+  "bouts": [
+   {
+    "a": "Charles Oliveira",
+    "b": "Diego Lopes",
+    "weight": "Lightweight",
+    "title": true,
+    "sec": "Main card"
+   },
+   {
+    "a": "Sergei Pavlovich",
+    "b": "Alex Pereira",
+    "weight": "Heavyweight",
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Brandon Moreno",
+    "b": "Charles Johnson",
+    "weight": "Flyweight",
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Damian Pinas",
+    "b": "Baisangur Susurkaev",
+    "weight": "Middleweight",
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Kyler Phillips",
+    "b": "Ethyn Ewing",
+    "weight": "Bantamweight",
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Jacqueline Cavalcanti",
+    "b": "Michelle Montague",
+    "weight": "Women's Bantamweight",
+    "title": false,
+    "sec": "Prelims"
+   },
+   {
+    "a": "Quentin Pasley",
+    "b": "Junior Tafa",
+    "weight": "Light Heavyweight",
+    "title": false,
+    "sec": "Prelims"
+   },
+   {
+    "a": "Roque Conceição Jr.",
+    "b": "Nilson Rojas",
+    "weight": "Flyweight",
+    "title": false,
+    "sec": "Prelims"
+   }
+  ],
+  "checked": "2026-11-27T20:19:38.580191+00:00"
  },
  "card:Tim Tszyu vs. Erislandy Lara": {
   "fp": "6ade29dc9bf12246",
