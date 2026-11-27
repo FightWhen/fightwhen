@@ -160,11 +160,17 @@ def new_videos(channel, state):
 def fight_week_names(fights):
     """Fighters in headline bouts happening in the next 7 days."""
     names = []
-    for f in fights:
-        day = dt.date.fromisoformat(f["d"])
-        if 0 <= (day - NOW.date()).days <= 7 and (f.get("big") or f.get("card")):
-            name = re.sub(r"^[A-Za-z0-9 -]+: ", "", f["f"])
-            names += [s.strip() for s in re.split(r"\s+vs\.?\s+", name) if s.strip()]
+    soon = sorted((f for f in fights if 0 <= (dt.date.fromisoformat(f["d"]) - NOW.date()).days <= 7
+                   and (f.get("big") or f.get("card"))), key=lambda f: (f["d"], not f.get("big")))
+    for f in soon:
+        main = next((s["b"][0] for s in f.get("card", []) if s.get("b")), None)
+        if main:                 # the real fighter names, never an event nickname like "Bad Blood"
+            pair = [main[0], main[2]]
+        else:
+            part = max(f["f"].split(":"), key=lambda p: " vs" in p.lower())
+            pair = re.split(r"\s+vs\.?\s+", part.strip())
+        names += [n.strip() for n in pair if n.strip() and n.strip().lower() not in ("tba", "tbd")
+                  and n.strip() not in names]
     return names
 
 
@@ -349,8 +355,12 @@ def main():
     live_ids = {s["id"] for s in published}
     # Drafts you never approved expire after two days.
     keep_after = NOW - dt.timedelta(hours=CONFIG.get("draft_expiry_hours", 48))
+    # A story that was live and then taken down was removed on purpose: never offer it again.
+    removed = set(state.get("live", [])) - live_ids
     state["pending"] = [s for s in state["pending"]
-                        if s["id"] not in live_ids and parse_time(s["published"]) >= keep_after]
+                        if s["id"] not in live_ids and s["id"] not in removed
+                        and parse_time(s["published"]) >= keep_after]
+    state["live"] = sorted(live_ids)
 
     if not should_run(state, fights):
         print("Quiet period, nothing to do.")
