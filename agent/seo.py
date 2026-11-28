@@ -15,6 +15,7 @@ import unicodedata
 from zoneinfo import ZoneInfo
 
 import pages as P
+import cal
 
 ET = ZoneInfo("America/New_York")
 SPORT_PAGES = {
@@ -193,7 +194,7 @@ def fighter_page(slug, apps, stories, now):
         tv_txt = f' · {e(f["w"])}' if f.get("w") and f["w"] != "TBA" else ""
         hero = (f'<section class="box"><h2>Next fight</h2><p class="big" style="font-size:28px;margin:0">vs {e(opp)}</p>'
                 f'<p class="muted" style="margin:6px 0 0">{e(P.nice_date(f["d"]))}{" · " + e(weight) if weight else ""}{tv_txt}</p>'
-                f'{time_html}<a class="btn" href="/fight/{e(P.page_slug(f))}/">Start time, full card &amp; where to watch</a></section>')
+                f'{time_html}<a class="btn" href="/fight/{e(P.page_slug(f))}/">Start time, full card &amp; where to watch</a>{cal.buttons(f)}</section>')
         qa.append((f"When is {name}'s next fight?", next_txt))
         qa.append((f"Who is {name} fighting next?", f"{name} is scheduled to face {opp} on {P.nice_date(f['d'])}."))
         if f.get("w") and f["w"] != "TBA":
@@ -265,7 +266,7 @@ def when_pages(fights, now):
         listld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{P.BASE}/fight/{P.page_slug(f)}/", "name": f["f"]} for i, f in enumerate(items)]}
         inner = (f'<p class="kick">Updated {e(now.astimezone(ET).strftime("%a %b %-d, %-I:%M %p ET"))}</p><h1>{e(h1)}</h1>'
-                 f'<p class="dek">{e(desc)}</p>{listing}{faq_html(qa)}')
+                 f'<p class="dek">{e(desc)}</p>{listing}{cal.subscribe_box(None, "big")}{faq_html(qa)}')
         out[slug] = shell(title, desc, f"{P.BASE}/{slug}/", inner, (faq_ld(qa), listld))
 
     page("fights-tonight", "Fights tonight", "Is There a Fight Tonight? Boxing & UFC Start Times Tonight | FightWhen",
@@ -302,6 +303,7 @@ def sport_pages(fights, now):
                  f'<p class="dek">Every upcoming {e(word)} card with dates, start times in your time zone, the full fight card and where to watch. Updated automatically.</p>'
                  + (f'<ul class="list">{"".join(row(f) for f in items)}</ul>' if items else '<p class="muted">No upcoming cards announced yet.</p>')
                  + (f'<section><h2>Recent results</h2><ul class="list">{"".join(row(f, res_extra(f)) for f in done)}</ul></section>' if done else "")
+                 + cal.subscribe_box(c, word)
                  + (faq_html(qa) if qa else ""))
         listld = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{P.BASE}/fight/{P.page_slug(f)}/", "name": f["f"]} for i, f in enumerate(items)]}

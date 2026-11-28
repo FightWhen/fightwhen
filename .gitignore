@@ -15,3 +15,5 @@ site/fighter/
 site/*-schedule/
 site/fights-tonight/
 site/fights-this-weekend/
+site/cal/
+site/fight/**/fight.ics

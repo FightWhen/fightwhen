@@ -155,6 +155,7 @@ def card_html(f):
 
 
 def page(f, stories, bars, others, image=None):
+    import cal
     name = short_name(f)
     sport = CATS.get(f["c"], f["c"].upper())
     date_txt = nice_date(f["d"])
@@ -243,12 +244,14 @@ def page(f, stories, bars, others, image=None):
 <h1>{e(h1)}</h1>
 <p class="dek">{e(answer)}.</p>
 <div class="ticket"><div class="in">{title_tag}{big_time}{cd}</div></div>
+{"" if result else cal.buttons(f)}
 <p class="where">{e(f.get('v') or 'Venue TBA')}</p>
 <section class="box" id="watch"><h2>Where to watch</h2>{watch_html(f)}
 {'<a class="btn" href="#bars">Watch it at a bar near you</a>' if bars_for(f, bars) else ''}</section>
 {card_html(f)}
 {bars_html(f, bars)}
 {news_html}
+{"" if result else cal.subscribe_box(f["c"], sport.lower() if sport not in ("UFC","PFL","ONE","RIZIN") else sport)}
 {faq_section}
 <section><h2>More fights</h2><ul class="more">{more}</ul></section>
 <p class="muted foot">Times are shown in your own time zone once the page loads. Ring walks are estimates and move with the undercard. Every detail is confirmed by two sources before it goes live. <a href="/">FightWhen</a> · When’s the fight?</p>
@@ -406,6 +409,10 @@ details[open] summary::after{content:"−"}
 details p{color:#C8BFAE;margin:8px 0 0}
 .sitenav{display:flex;flex-wrap:wrap;gap:6px 14px;margin:30px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:14px}.foot{margin:40px 0 30px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
 """
+CSS += (".calbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}"
+        ".cbtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:8px;"
+        "border:1px solid var(--gold);color:var(--ink);font-weight:600;font-size:14px;text-decoration:none}"
+        ".cbtn:hover{background:var(--gold);color:var(--bg)}")
 JS = """
 (()=>{const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;const f=(iso,o)=>new Intl.DateTimeFormat("en-US",{timeZone:tz,...o}).format(new Date(iso));
 const ab=iso=>new Intl.DateTimeFormat("en-US",{timeZone:tz,timeZoneName:"short"}).formatToParts(new Date(iso)).find(p=>p.type==="timeZoneName").value;
@@ -532,6 +539,8 @@ def main():
            [f"{BASE}/fighter/{seo.fslug(n)}/" for f in upcoming if f["d"] <= soon
             for s in f.get("card", [])[:1] for b in s.get("b", [])[:2] for n in (b[0], b[2]) if seo.fslug(n) in FIGHTERS]
     (SITE / "urls.txt").write_text("\n".join(dict.fromkeys(ping)) + "\n")
+    import cal
+    cal.build(fights)
     add_analytics()
     print(f"Built {len(urls)} pages (fights, news, about, home) and the sitemap.")
 
