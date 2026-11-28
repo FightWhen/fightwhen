@@ -132,6 +132,31 @@
   "id": "2026-12-04-dustin-pague-vs-mike-richman"
  },
  {
+  "id": "2026-12-04-aaron-mckenna-jevgenijs-aleksejevs",
+  "c": "boxing",
+  "d": "2026-12-04",
+  "day": "Fri",
+  "f": "Aaron McKenna vs Jevgenijs Aleksejevs: Riyadh Season Zuffa Boxing 14",
+  "t": "title fight",
+  "v": "The Venue, Riyadh, Saudi Arabia",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Aaron McKenna",
+      "",
+      "Jevgenijs Aleksejevs",
+      "",
+      "title fight"
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "id": "ben",
   "c": "boxing",
   "d": "2026-12-05",
