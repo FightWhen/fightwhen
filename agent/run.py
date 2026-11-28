@@ -138,6 +138,9 @@ def new_videos(channel, state):
                 "maxResults": 15, "key": YT_KEY},
         timeout=30,
     )
+    if r.status_code == 404:
+        # A wrong or changed channel id. Forget it so the next run looks the channel up again.
+        state.get("channel_ids", {}).pop(channel.get("handle") or channel["name"], None)
     r.raise_for_status()
     cutoff = NOW - dt.timedelta(days=CONFIG.get("max_video_age_days", 3))
     out = []
