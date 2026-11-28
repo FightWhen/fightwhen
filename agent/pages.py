@@ -14,6 +14,7 @@ import pathlib
 import re
 import shutil
 import sys
+import unicodedata
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -22,6 +23,7 @@ import cards  # noqa: E402
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 DATA = SITE / "data"
 BASE = "https://fightwhen.com"
+SPECIAL = str.maketrans({"ł": "l", "Ł": "L", "ø": "o", "Ø": "O", "đ": "d", "ß": "ss", "æ": "ae"})
 # Email shown to bars that want to be listed. Leave empty to hide the line.
 CONTACT = "hello@fightwhen.com"
 
@@ -53,7 +55,8 @@ def page_slug(f):
     """The fight's page address. Old short ids (like "fj") get a readable one."""
     if re.match(r"^\d{4}-\d{2}-\d{2}-", f["id"]):
         return f["id"]
-    words = re.sub(r"[^a-z0-9]+", "-", short_name(f).split(":")[-1].lower()).strip("-")
+    plain = unicodedata.normalize("NFKD", short_name(f).split(":")[-1].translate(SPECIAL))
+    words = re.sub(r"[^a-z0-9]+", "-", plain.encode("ascii", "ignore").decode().lower()).strip("-")
     return f"{f['d']}-{words}"[:80]
 
 
