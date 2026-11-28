@@ -253,7 +253,21 @@
   "w": "Paramount+",
   "id": "2026-12-05-ufc-fight-night-adesanya-vs-m",
   "utc": "2026-12-05T18:00:00Z",
-  "lab": "Main card"
+  "lab": "Main card",
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Adesanya",
+      "",
+      "Magomedov",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
  },
  {
   "id": "2026-12-05-walker-rocha",
