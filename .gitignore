@@ -11,3 +11,7 @@ site/about/
 agent/fonts/
 site/news/
 site/urls.txt
+site/fighter/
+site/*-schedule/
+site/fights-tonight/
+site/fights-this-weekend/

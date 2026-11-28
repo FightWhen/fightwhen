@@ -68,6 +68,10 @@ def nice_date(d):
 def short_name(f):
     """'UFC 335: Charles Oliveira vs Diego Lopes' -> 'UFC 335: Oliveira vs Lopes'."""
     name = f["f"]
+    # "A vs B: Nickname" -> keep "A vs B"; "UFC 335: A vs B" -> keep the event prefix
+    parts = name.split(":")
+    if len(parts) > 1 and re.search(r"\svs\.?\s", parts[0], re.I):
+        name = parts[0].strip()
     m = re.match(r"^(.*?:\s*)?(.+?)\s+vs\.?\s+(.+)$", name)
     if not m:
         return name
@@ -109,6 +113,16 @@ def bars_html(f, bars):
     return f'<section class="box" id="bars"><h2>Watch it at a bar</h2>{body}{ask}</section>'
 
 
+FIGHTERS = set()      # filled by main() so cards can link to fighter pages
+SITENAV = ""          # links to the schedule pages, filled by main()
+
+
+def fname(n):
+    import seo
+    slug = seo.fslug(n)
+    return f'<a href="/fighter/{slug}/">{e(n)}</a>' if slug in FIGHTERS else e(n)
+
+
 def card_html(f):
     secs = f.get("card") or []
     if not secs:
@@ -129,8 +143,8 @@ def card_html(f):
             rows.append(
                 f'<li>{f"<span class=lab>{lab}</span>" if lab else ""}'
                 f'{"<span class=belt>Title</span>" if TITLE_RE.search(wt or "") else ""}'
-                f'<p class="bout"><b>{e(a)}</b>{f" <em>{e(ra)}</em>" if ra else ""} <span class="vs">vs</span> '
-                f'<b>{e(bb)}</b>{f" <em>{e(rb)}</em>" if rb else ""}</p>'
+                f'<p class="bout"><b>{fname(a)}</b>{f" <em>{e(ra)}</em>" if ra else ""} <span class="vs">vs</span> '
+                f'<b>{fname(bb)}</b>{f" <em>{e(rb)}</em>" if rb else ""}</p>'
                 f'{f"<small>{e(wt)}</small>" if wt else ""}{f"<small class=res>{e(result)}</small>" if result else ""}</li>')
         if not rows:
             rows.append('<li><small>Bouts to be announced</small></li>')
@@ -160,8 +174,32 @@ def page(f, stories, bars, others, image=None):
         zones = '<p class="muted">We add the start time as soon as two sources confirm it.</p>'
         cd = ""
     watch_plain = f.get("w") if f.get("w") and f["w"] != "TBA" else ""
+    main_b = next((s["b"][0] for s in f.get("card", []) if s.get("b")), None)
+    res = main_b[5].get("res") if main_b and len(main_b) > 5 and isinstance(main_b[5], dict) else None
+    import seo
+    result = seo.result_text(main_b, res) if res else ""
     desc = f"{answer}{', live on ' + watch_plain if watch_plain else ''}. Full card and where to watch, in your time zone."
     title = f"What time is {name}? Start time, full card & where to watch | FightWhen"
+    h1 = f"What time is {name}?"
+    if result:
+        title = f"{name} Result: Who Won? Full Card Results | FightWhen"
+        h1 = f"{name} result"
+        answer = f"{result}. {f['f']} took place on {date_txt}"
+        desc = f"{answer}. Full card results, records and fight-week news."
+    qa = [(f"What time is {name}?", answer + ".")] if not result else [(f"Who won {name}?", result + "."), (f"When was {name}?", f"{f['f']} took place on {date_txt}.")]
+    if utc and not result:
+        world = "; ".join(f"{z} {when(utc, tz, False)}" for z, tz in
+                          (("Eastern", "America/New_York"), ("Central", "America/Chicago"), ("Pacific", "America/Los_Angeles")))
+        qa.append((f"What time is {name} in the US?", f"{world} on {when(utc, 'America/New_York').split(',')[0]}."))
+        qa.append((f"What time is {name} in the UK?", f"{when(utc, 'Europe/London')} UK time."))
+        qa.append((f"What time is {name} in Australia?", f"{when(utc, 'Australia/Sydney')} in Sydney and Melbourne (AEDT), {when(utc, 'Australia/Perth', False)} in Perth."))
+        qa.append((f"What time is {name} in Mexico?", f"{when(utc, 'America/Mexico_City')} Mexico City time."))
+    if watch_plain:
+        qa.append((f"Where can I watch {name}?", f"{f['f']} is on {watch_plain}{' (' + f['wp'] + ')' if f.get('wp') else ''}."))
+    if main_b and not result:
+        qa.append((f"Who is fighting in {name}?", f"The main event is {main_b[0]}{' (' + main_b[1] + ')' if main_b[1] else ''} vs {main_b[2]}{' (' + main_b[3] + ')' if main_b[3] else ''}."))
+    faq_section = "<section><h2>Questions</h2>" + "".join(
+        f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa) + "</section>"
     url = f"{BASE}/fight/{page_slug(f)}/"
     news = [s for s in stories if s.get("fid") == f["id"]]
     news_html = ("<section><h2>In the news</h2><ul class=news>" + "".join(
@@ -174,11 +212,9 @@ def page(f, stories, bars, others, image=None):
           "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
           "location": {"@type": "Place", "name": f.get("v") or "TBA", "address": f.get("v") or "TBA"}}
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-        {"@type": "Question", "name": f"What time is {name}?",
-         "acceptedAnswer": {"@type": "Answer", "text": answer + "."}}] + ([
-        {"@type": "Question", "name": f"Where can I watch {name}?",
-         "acceptedAnswer": {"@type": "Answer", "text": f"{f['f']} is on {watch_plain}{' (' + f['wp'] + ')' if f.get('wp') else ''}."}}]
-        if watch_plain else [])}
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
+    if result:
+        ld["eventStatus"] = "https://schema.org/EventScheduled"
     title_tag = '<span class="belt">Title fight</span>' if TITLE_RE.search((f.get("t") or "") + " " + (f.get("u") or "")) else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -204,7 +240,7 @@ def page(f, stories, bars, others, image=None):
 <nav><div class="wrap"><a class="logo" href="/">{LOGO}<span>Fight<b>When</b></span></a><a class="all" href="/#fight-{e(f['id'])}">All fights</a></div></nav>
 <main class="wrap">
 <p class="kick">{e(sport)}{' · ' + e(f['t']) if f.get('t') else ''}</p>
-<h1>What time is {e(name)}?</h1>
+<h1>{e(h1)}</h1>
 <p class="dek">{e(answer)}.</p>
 <div class="ticket"><div class="in">{title_tag}{big_time}{cd}</div></div>
 <p class="where">{e(f.get('v') or 'Venue TBA')}</p>
@@ -213,8 +249,10 @@ def page(f, stories, bars, others, image=None):
 {card_html(f)}
 {bars_html(f, bars)}
 {news_html}
+{faq_section}
 <section><h2>More fights</h2><ul class="more">{more}</ul></section>
 <p class="muted foot">Times are shown in your own time zone once the page loads. Ring walks are estimates and move with the undercard. Every detail is confirmed by two sources before it goes live. <a href="/">FightWhen</a> · When’s the fight?</p>
+{SITENAV}
 </main>
 <script>{JS}</script>
 </body>
@@ -308,6 +346,8 @@ def prerender_home(fights, stories, today):
     if ".pre{" not in html:
         html = html.replace("</style>", ".pre{list-style:none;padding:10px 0;border-bottom:1px solid #2A261D;color:#A39A86;font-size:15px}"
                             ".pre a{color:#F2EBDD;text-decoration:none}</style>", 1)
+    if 'class="sitenav"' not in html and SITENAV:
+        html = html.replace("</div></footer>", SITENAV.replace('class="sitenav"', 'class="sitenav" style="display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:14px"') + "</div></footer>", 1)
     home.write_text(html)
 
 
@@ -357,7 +397,14 @@ h3 .t{color:var(--ink)}
 .bars li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
 .bars small{display:block;color:var(--soft);font-size:13px}
 .news li,.more li{padding:10px 0;border-bottom:1px solid var(--line)}.more small{display:block;color:var(--soft);font-size:13px}
-.muted{color:var(--soft);font-size:14px}.foot{margin:40px 0 30px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
+.muted{color:var(--soft);font-size:14px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:700;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold)}
+details[open] summary::after{content:"−"}
+details p{color:#C8BFAE;margin:8px 0 0}
+.sitenav{display:flex;flex-wrap:wrap;gap:6px 14px;margin:30px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:14px}.foot{margin:40px 0 30px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
 """
 JS = """
 (()=>{const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;const f=(iso,o)=>new Intl.DateTimeFormat("en-US",{timeZone:tz,...o}).format(new Date(iso));
@@ -427,6 +474,11 @@ def main():
     today = dt.date.today().isoformat()
     upcoming = sorted((f for f in fights if f.get("d", "") >= today), key=lambda f: f["d"])
     urls = [(f"{BASE}/", today), (f"{BASE}/about/", today)]
+    import seo
+    global SITENAV
+    seo_urls, fset, SITENAV = seo.build(fights, stories)
+    FIGHTERS.update(fset)
+    urls += seo_urls
     (SITE / "about").mkdir(exist_ok=True)
     (SITE / "about" / "index.html").write_text(ABOUT.format(base=BASE, css=CSS, logo=LOGO, mail=CONTACT))
     for f in fights:
@@ -475,7 +527,10 @@ def main():
     # IndexNow (Bing, Yandex, Naver…): only pages that change often, so pings stay meaningful.
     soon = (dt.date.today() + dt.timedelta(days=14)).isoformat()
     ping = [f"{BASE}/"] + [f"{BASE}/fight/{page_slug(f)}/" for f in upcoming if f["d"] <= soon] + \
-           [f"{BASE}/news/{n['id']}/" for n in stories if (n.get("published") or "")[:10] >= (dt.date.today() - dt.timedelta(days=2)).isoformat()]
+           [f"{BASE}/news/{n['id']}/" for n in stories if (n.get("published") or "")[:10] >= (dt.date.today() - dt.timedelta(days=2)).isoformat()] + \
+           [u for u, _ in seo_urls if "/fighter/" not in u] + \
+           [f"{BASE}/fighter/{seo.fslug(n)}/" for f in upcoming if f["d"] <= soon
+            for s in f.get("card", [])[:1] for b in s.get("b", [])[:2] for n in (b[0], b[2]) if seo.fslug(n) in FIGHTERS]
     (SITE / "urls.txt").write_text("\n".join(dict.fromkeys(ping)) + "\n")
     add_analytics()
     print(f"Built {len(urls)} pages (fights, news, about, home) and the sitemap.")
