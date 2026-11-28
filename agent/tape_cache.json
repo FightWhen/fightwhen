@@ -1116,5 +1116,52 @@
   "sources": [
    "https://www.ufc.com/athlete/nilson-rojas"
   ]
+ },
+ "aaron-mckenna": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1999-07-06",
+   "height_in": 75.0,
+   "reach_in": 75.0,
+   "stance": "Orthodox",
+   "country": "IRL"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Aaron McKenna"
+  ]
+ },
+ "jevgenijs-aleksejevs": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1993-07-06",
+   "height_in": 72.0,
+   "reach_in": 72.0,
+   "stance": "Orthodox",
+   "country": "LVA",
+   "record": "19-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Jevgenijs Aleksejevs"
+  ]
+ },
+ "adesanya": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "magomedov": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {},
+  "conflicts": [],
+  "sources": []
  }
 }
