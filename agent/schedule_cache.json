@@ -1,5 +1,5 @@
 {
- "_last_full_run": "2026-11-28T04:47:48.187159+00:00",
+ "_last_full_run": "2026-11-28T07:39:16.340872+00:00",
  "wiki-ufc": {
   "fp": "7f873667aab8967a",
   "events": [
@@ -568,7 +568,7 @@
   "checked": "2026-11-28T04:47:48.187159+00:00"
  },
  "matchroom": {
-  "fp": "0e1a6ab1aadb7176",
+  "fp": "498a5c26ef7974bb",
   "events": [
    {
     "name": "Walker VS Rocha",
@@ -697,7 +697,7 @@
     "c": "boxing"
    }
   ],
-  "checked": "2026-11-28T04:47:48.187159+00:00"
+  "checked": "2026-11-28T07:39:16.340872+00:00"
  },
  "pbc": {
   "fp": "bccb8620d384c950",
@@ -946,9 +946,9 @@
   "checked": "2026-11-28T04:47:48.187159+00:00"
  },
  "card:Tim Tszyu vs. Erislandy Lara": {
-  "fp": "28f0dcb1173f285f",
+  "fp": "31577417b20aa438",
   "bouts": [],
-  "checked": "2026-11-28T04:47:48.187159+00:00"
+  "checked": "2026-11-28T07:39:16.340872+00:00"
  },
  "card:Chase DeMoor": {
   "fp": "d3129f1300e730b1",
@@ -1029,5 +1029,168 @@
    }
   ],
   "checked": "2026-11-28T04:47:48.187159+00:00"
+ },
+ "iba": {
+  "fp": "ee4b472c803d6d51",
+  "events": [
+   {
+    "name": "IBA President's Cup finals",
+    "date": "2026-12-04",
+    "start_utc": null,
+    "venue": "Istanbul, Türkiye",
+    "broadcaster": null,
+    "price": null,
+    "status": "scheduled",
+    "bouts": [
+     {
+      "a": "Hasanboy Dusmatov",
+      "b": "Roderick Bautista",
+      "weight": null,
+      "title": true
+     }
+    ],
+    "c": "boxing"
+   }
+  ],
+  "checked": "2026-11-28T07:39:16.340872+00:00"
+ },
+ "card:Zuffa Boxing": {
+  "fp": "0809bf6763ae9d1a",
+  "bouts": [
+   {
+    "a": "Canelo Álvarez",
+    "b": "Terence Crawford",
+    "weight": "super middleweight",
+    "title": true,
+    "sec": "Main card"
+   },
+   {
+    "a": "Bek Nurmaganbet",
+    "b": "Steven Sumpter",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Anthony Olascuaga",
+    "b": "Juan Carlos Camacho",
+    "weight": "flyweight",
+    "title": true,
+    "sec": "Main card"
+   },
+   {
+    "a": "Callum Walsh",
+    "b": "Carlos Ocampo",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "José Valenzuela",
+    "b": "Diego Torres",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Efe Ajagba",
+    "b": "Charles Martin",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Jai Opetaia",
+    "b": "Brandon Glanton",
+    "weight": "cruiserweight",
+    "title": true,
+    "sec": "Main card"
+   },
+   {
+    "a": "Andres Cortes",
+    "b": "Eridson Garcia",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Tyson Fury",
+    "b": "Arslanbek Makhmudov",
+    "weight": "heavyweight",
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Shane Mosley Jr.",
+    "b": "Serhii Bohachuk",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Chris Billam-Smith",
+    "b": "Ryan Rozicki",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Edwin De Los Santos",
+    "b": "José Valenzuela",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Edgar Berlanga",
+    "b": "Steven Butler",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Aaron McKenna",
+    "b": "Etinosa Oliha",
+    "weight": "middleweight",
+    "title": true,
+    "sec": "Main card"
+   },
+   {
+    "a": "Ryan Garcia",
+    "b": "Conor Benn",
+    "weight": "welterweight",
+    "title": true,
+    "sec": "Main card"
+   },
+   {
+    "a": "Johnny Fisher",
+    "b": "Michael Pirotton",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Chris Billam-Smith",
+    "b": "Cheavon Clarke",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Carlos Adames",
+    "b": "Gerome Warburton",
+    "weight": null,
+    "title": false,
+    "sec": "Main card"
+   },
+   {
+    "a": "Aaron McKenna",
+    "b": "Jevgenijs Aleksejevs",
+    "weight": "middleweight",
+    "title": true,
+    "sec": "Main card"
+   }
+  ],
+  "checked": "2026-11-28T07:39:16.340872+00:00"
  }
 }
