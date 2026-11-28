@@ -95,7 +95,7 @@
      ],
      [
       "Benjamin Moser",
-      "",
+      "0-0",
       "Julian Valencia",
       "",
       "",
@@ -119,9 +119,9 @@
      ],
      [
       "Hunter Starner",
-      "",
+      "0-0",
       "Blaine Shutt",
-      "",
+      "0-0",
       "",
       {}
      ]
@@ -203,7 +203,22 @@
       "23-5",
       "Middleweight · 10 rounds",
       {
-       "ca": "USA"
+       "ca": "USA",
+       "tape": {
+        "a": [
+         "28",
+         "5′10″",
+         "70″",
+         "Orthodox"
+        ],
+        "b": [
+         "32",
+         "5′10″",
+         "70″",
+         "Orthodox"
+        ]
+       },
+       "cb": "USA"
       }
      ]
     ],
@@ -656,17 +671,52 @@
      ],
      [
       "Damian Pinas",
-      "",
+      "11-1",
       "Baisangur Susurkaev",
-      "",
-      "Middleweight"
+      "12-0",
+      "Middleweight",
+      {
+       "tape": {
+        "a": [
+         "24",
+         "6′1″",
+         "79″",
+         ""
+        ],
+        "b": [
+         "",
+         "6′2″",
+         "79″",
+         ""
+        ]
+       },
+       "cb": "RUS"
+      }
      ],
      [
       "Kyler Phillips",
-      "",
+      "12-5",
       "Ethyn Ewing",
-      "",
-      "Bantamweight"
+      "10-2",
+      "Bantamweight",
+      {
+       "tape": {
+        "a": [
+         "31",
+         "5′8″",
+         "72″",
+         "Orthodox"
+        ],
+        "b": [
+         "28",
+         "5′6½″",
+         "69.5″",
+         ""
+        ]
+       },
+       "ca": "USA",
+       "cb": "USA"
+      }
      ]
     ],
     "w": "Paramount+"
@@ -702,24 +752,75 @@
      ],
      [
       "Jacqueline Cavalcanti",
-      "",
+      "10-2",
       "Michelle Montague",
       "",
-      "Women's Bantamweight"
+      "Women's Bantamweight",
+      {
+       "tape": {
+        "a": [
+         "29",
+         "5′8″",
+         "70″",
+         ""
+        ],
+        "b": [
+         "",
+         "5′9″",
+         "68.5″",
+         ""
+        ]
+       },
+       "cb": "NZL"
+      }
      ],
      [
       "Quentin Pasley",
-      "",
+      "1-0",
       "Junior Tafa",
-      "",
-      "Light Heavyweight"
+      "7-6",
+      "Light Heavyweight",
+      {
+       "tape": {
+        "a": [
+         "",
+         "6′4″",
+         "78″",
+         ""
+        ],
+        "b": [
+         "30",
+         "6′3″",
+         "",
+         "Orthodox"
+        ]
+       },
+       "ca": "USA"
+      }
      ],
      [
       "Roque Conceição Jr.",
       "",
       "Nilson Rojas",
-      "",
-      "Flyweight"
+      "9-1",
+      "Flyweight",
+      {
+       "tape": {
+        "a": [
+         "",
+         "",
+         "",
+         ""
+        ],
+        "b": [
+         "",
+         "5′5″",
+         "",
+         ""
+        ]
+       },
+       "cb": "PER"
+      }
      ]
     ],
     "w": "Paramount+"

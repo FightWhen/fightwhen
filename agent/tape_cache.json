@@ -948,5 +948,173 @@
   "sources": [
    "https://www.bkfc.com/fighters/rico-franco"
   ]
+ },
+ "brian-mendoza": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1994-02-13",
+   "height_in": 70.0,
+   "reach_in": 70.0,
+   "stance": "Orthodox",
+   "country": "USA",
+   "record": "23-5"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Brian Mendoza",
+   "https://www.premierboxingchampions.com/brian-mendoza"
+  ]
+ },
+ "damian-pinas": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "2002-03-12",
+   "height_in": 73.0,
+   "reach_in": 79.0,
+   "record": "11-1"
+  },
+  "conflicts": [
+   "country: SUR (Wikidata), ABW (https://www.ufc.com/athlete/damian-pinas)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Damian Pinas",
+   "https://www.ufc.com/athlete/damian-pinas"
+  ]
+ },
+ "baisangur-susurkaev": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "height_in": 74.0,
+   "reach_in": 79.0,
+   "country": "RUS",
+   "record": "12-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.ufc.com/athlete/baisangur-susurkaev"
+  ]
+ },
+ "kyler-phillips": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1995-06-12",
+   "height_in": 68.0,
+   "reach_in": 72.0,
+   "stance": "Orthodox",
+   "country": "USA",
+   "record": "12-5"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Kyler Phillips",
+   "https://www.ufc.com/athlete/kyler-phillips"
+  ]
+ },
+ "ethyn-ewing": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1998-02-16",
+   "height_in": 66.5,
+   "reach_in": 69.5,
+   "country": "USA",
+   "record": "10-2"
+  },
+  "conflicts": [],
+  "sources": [
+   "Wikidata",
+   "https://www.ufc.com/athlete/ethyn-ewing"
+  ]
+ },
+ "jacqueline-cavalcanti": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1997-08-29",
+   "height_in": 68.0,
+   "reach_in": 70.0,
+   "record": "10-2"
+  },
+  "conflicts": [
+   "country: PRT (Wikidata), BRA (https://www.ufc.com/athlete/jacqueline-cavalcanti)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Jacqueline Cavalcanti",
+   "https://www.ufc.com/athlete/jacqueline-cavalcanti"
+  ]
+ },
+ "michelle-montague": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "height_in": 69.0,
+   "reach_in": 68.5,
+   "country": "NZL"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.ufc.com/athlete/michelle-montague"
+  ]
+ },
+ "quentin-pasley": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "height_in": 76.0,
+   "reach_in": 78.0,
+   "country": "USA",
+   "record": "1-0"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.ufc.com/athlete/quentin-pasley"
+  ]
+ },
+ "junior-tafa": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "dob": "1996-09-21",
+   "height_in": 75.0,
+   "stance": "Orthodox",
+   "record": "7-6"
+  },
+  "conflicts": [
+   "reach: 72.0 (Wikipedia: Junior Tafa), 75.0 (https://www.ufc.com/athlete/junior-tafa)",
+   "country: NZL (Wikidata), AUS (Wikipedia: Junior Tafa)"
+  ],
+  "sources": [
+   "Wikidata",
+   "Wikipedia: Junior Tafa",
+   "https://www.ufc.com/athlete/junior-tafa"
+  ]
+ },
+ "roque-conceicao-jr": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {},
+  "conflicts": [],
+  "sources": []
+ },
+ "nilson-rojas": {
+  "v": 2,
+  "checked": "2026-11-28",
+  "values": {
+   "height_in": 65.0,
+   "country": "PER",
+   "record": "9-1"
+  },
+  "conflicts": [],
+  "sources": [
+   "https://www.ufc.com/athlete/nilson-rojas"
+  ]
  }
 }
