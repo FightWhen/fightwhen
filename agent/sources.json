@@ -1,5 +1,5 @@
 {
- "_how": "Where the schedule and results agents look. 'c' is the site's category. 'wiki' entries are Wikipedia page titles ({year} and {next_year} are filled in). 'url' entries are official pages, read only where robots.txt allows. BoxRec, Tapology and ESPN are deliberately not on this list. Wikipedia has no yearly boxing schedule page, so boxing comes from the promoters' own pages. If the run log says a page answered 404, fix or remove its line.",
+ "_how": "Where the schedule and results agents look. 'c' is the site's category. 'wiki' entries are Wikipedia page titles ({year} and {next_year} are filled in). 'url' entries are official pages, read only where robots.txt allows. BoxRec, Tapology and ESPN are deliberately not on this list. Wikipedia has no yearly boxing schedule page, so boxing comes from the promoters' own pages, plus IBA.PRO for cards in Russia and Central Asia. If the run log says a page answered 404, fix or remove its line.",
  "schedule": [
   {
    "id": "wiki-ufc",
@@ -85,6 +85,11 @@
    "id": "zuffa",
    "c": "boxing",
    "url": "https://www.ufc.com/zuffaboxing"
+  },
+  {
+   "id": "iba",
+   "c": "boxing",
+   "url": "https://www.iba.sport/category/iba-pro/"
   }
  ],
  "results": [
@@ -117,6 +122,11 @@
    "id": "pbc",
    "c": "boxing",
    "url": "https://www.premierboxingchampions.com/boxing-results"
+  },
+  {
+   "id": "iba",
+   "c": "boxing",
+   "url": "https://www.iba.sport/category/iba-pro/"
   }
  ]
 }
