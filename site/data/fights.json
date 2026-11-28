@@ -182,8 +182,26 @@
       "Aaron McKenna",
       "",
       "Jevgenijs Aleksejevs",
-      "",
-      "title fight"
+      "19-0",
+      "title fight",
+      {
+       "tape": {
+        "a": [
+         "27",
+         "6′3″",
+         "75″",
+         "Orthodox"
+        ],
+        "b": [
+         "33",
+         "6′0″",
+         "72″",
+         "Orthodox"
+        ]
+       },
+       "ca": "IRL",
+       "cb": "LVA"
+      }
      ]
     ]
    }
@@ -336,7 +354,8 @@
       "",
       "Magomedov",
       "",
-      ""
+      "",
+      {}
      ]
     ]
    }
