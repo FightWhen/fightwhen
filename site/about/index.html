@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About FightWhen · Contact</title>
+<meta name="description" content="FightWhen shows when every big boxing, UFC, MMA and bare knuckle fight starts in your time zone, where to watch it, and the news around it.">
+<link rel="canonical" href="https://fightwhen.com/about/">
+<meta name="theme-color" content="#0F0E0C">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0F0E0C;--card:#1A1815;--ink:#F2EBDD;--soft:#A39A86;--line:#2A261D;--line2:#3A3323;--red:#E03A3E;--gold:#C9A24A}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+a{color:var(--gold)}a:hover{color:#e2c57a}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+nav{border-bottom:1px solid var(--line);padding:10px 0}nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:26px/1 Anton,Impact,sans-serif;text-transform:uppercase}
+.logo b{color:var(--red);font-weight:400}.all{font-weight:600;font-size:14px}
+.kick{font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:26px 0 0}
+h1{font:clamp(36px,7vw,56px)/1.02 Anton,Impact,sans-serif;text-transform:uppercase;margin:8px 0 0;text-wrap:balance}
+.dek{color:#C8BFAE;margin:10px 0 0}
+.ticket{background:var(--red);padding:4px;border-radius:10px;margin:20px 0 0}
+.ticket .in{border:2px solid var(--bg);border-radius:7px;padding:18px 20px}
+.big{font:600 clamp(34px,7vw,48px)/1.1 'IBM Plex Mono',monospace;margin:4px 0 0}
+.lab2{font:600 13px Inter;color:var(--bg);margin:4px 0 0;letter-spacing:.04em}
+.cd{display:inline-block;font:600 13px 'IBM Plex Mono',monospace;background:var(--bg);color:var(--ink);padding:6px 10px;border-radius:4px;margin:12px 0 0}
+.cd:empty{display:none}
+.belt{display:inline-block;font:600 11px 'IBM Plex Mono',monospace;color:var(--bg);background:var(--gold);padding:3px 7px;border-radius:3px;letter-spacing:.06em;text-transform:uppercase}
+.where{color:var(--soft);font-size:14px;margin:10px 0 0}
+section{margin:32px 0 0}
+h2{font:26px/1 Anton,Impact,sans-serif;text-transform:uppercase;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.box{background:var(--card);border:1px solid var(--line2);border-radius:10px;padding:18px}
+.box h2{border:0;padding:0}
+h3{font:600 13px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:18px 0 6px;display:flex;justify-content:space-between}
+h3 .t{color:var(--ink)}
+.zones{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.zones li{background:var(--card);border-radius:8px;padding:10px 12px}.zones span{display:block;font:600 11px Inter;color:var(--soft)}
+.zones b{font:600 18px 'IBM Plex Mono',monospace}
+.wrow{display:flex;gap:12px;align-items:center;padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;margin-top:8px}
+.wico{width:40px;height:40px;border-radius:8px;background:var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.wrow b{display:block}.wrow small{color:var(--soft)}
+.btn{display:flex;align-items:center;justify-content:center;min-height:46px;margin-top:14px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none}
+.btn:hover{color:var(--bg);filter:brightness(1.08)}
+.card,.bars,.news,.more{list-style:none;margin:0;padding:0}
+.card li{padding:12px 0;border-bottom:1px solid var(--line)}
+.card .bout{margin:2px 0 0;font-size:16px}.card em{font-style:normal;color:var(--soft);font-size:13px}.vs{color:var(--soft);font-size:13px}
+.card small{display:block;color:var(--soft);font-size:13px}.card .res{color:var(--gold)}
+.lab{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-right:8px}
+.bars li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.bars small{display:block;color:var(--soft);font-size:13px}
+.news li,.more li{padding:10px 0;border-bottom:1px solid var(--line)}.more small{display:block;color:var(--soft);font-size:13px}
+.muted{color:var(--soft);font-size:14px}.foot{margin:40px 0 30px;padding-top:16px;border-top:1px solid var(--line);font-size:13px}
+
+.prose p,.prose li{color:#C8BFAE}.prose b{color:var(--ink)}.prose ul{padding-left:20px}
+.mail{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;margin-top:6px}
+.mail:hover{color:var(--bg);filter:brightness(1.08)}</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/"><svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#0F0E0C"/><circle cx="60" cy="60" r="50" fill="none" stroke="#C9A24A" stroke-width="4"/><text x="60" y="74" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="36" fill="#F2EBDD">FW</text><circle cx="60" cy="26" r="5" fill="#E03A3E"/></svg><span>Fight<b>When</b></span></a><a class="all" href="/">All fights</a></div></nav>
+<main class="wrap prose">
+<p class="kick">About</p>
+<h1>When’s the fight?</h1>
+<p class="dek">FightWhen answers that in one place: every big boxing, UFC, MMA, kickboxing and bare knuckle fight, in your own time zone, with where to watch it, the full card, the tale of the tape and the news around it.</p>
+
+<section><h2>How it stays up to date</h2>
+<ul>
+<li><b>Schedules</b> come from promoters’ own sites and public event pages. A date or time goes live only when two sources agree; anything less is checked by a person first.</li>
+<li><b>Breaking changes</b> like withdrawals and replacements are picked up from news headlines within the hour and checked before they go live.</li>
+<li><b>Fighter stats and records</b> come from public sources, and each number must match the source’s own words. If sources disagree, we leave it blank rather than guess.</li>
+<li><b>News</b> is written from fighters’ and promoters’ own interviews and videos, and every story credits and links its source.</li>
+</ul></section>
+
+<section><h2>Contact</h2>
+<p>Spotted something wrong, want your channel credited differently, or want to work together? Email us.</p>
+<a class="mail" href="mailto:hello@fightwhen.com">hello@fightwhen.com</a>
+<ul>
+<li><b>Corrections:</b> tell us the fight and what’s wrong; we fix it fast.</li>
+<li><b>Creators:</b> if we summarize your video and you’d like it credited differently or removed, just ask.</li>
+<li><b>Bars and restaurants:</b> showing a big fight? <a href="mailto:hello@fightwhen.com?subject=List%20my%20bar">Get listed</a> on that fight’s card.</li>
+<li><b>Advertising and partnerships:</b> we’re open to it.</li>
+</ul></section>
+
+<p class="muted foot">FightWhen isn’t affiliated with any promoter, league or broadcaster. Fight times are shown in your own time zone and can change; check the broadcaster on the night. <a href="/">Back to all fights</a></p>
+</main>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abc123"}'></script>
+</body>
+</html>
