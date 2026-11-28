@@ -372,92 +372,141 @@
   "usG7JeSTPa8",
   "hZAaXTTaocI",
   "quyHlB0KxCg",
-  "H-2RAqIKCw8"
+  "H-2RAqIKCw8",
+  "wUuFsl7IUWk",
+  "rKxaRzU4S8I",
+  "E8QMSJAU-Mg",
+  "_Y_78gTONCM",
+  "MpzavUOnLbA",
+  "zV_rGco8ls4",
+  "PDBvQFlotGA",
+  "rcuTMt4_kng",
+  "9tuqbueS_As",
+  "mLhgUpYj0_k",
+  "itXr_7Q1SS4",
+  "0YqopCOpAXg",
+  "li0LKQC0feI",
+  "MlxG5z9Q6jI",
+  "U0ikLL4z8Co",
+  "Dai2FfGkXqA",
+  "VJhqDurXg0o",
+  "l-vCZDq1iVU",
+  "SfSl4DfLHfU",
+  "tSbhfeVYXLY",
+  "CqZRACNA1Kk",
+  "RLhYbtjXhvk",
+  "dZbVxtBy1dk"
  ],
  "pending": [
   {
-   "fid": "2026-12-13-erislandy-lara-vs-tim-tszyu",
+   "fid": null,
    "c": "boxing",
-   "mood": "Mind games",
-   "h": "Tszyu Admits He's Rage Baiting Charlo Ahead Of Lara Fight",
-   "sum": "Tszyu laughs off Charlo's criticism, calls Lara a master of traps, shows interest in Vergil Ortiz and picks Joshua to knock out Fury.",
-   "tags": [
-    "Tim Tszyu",
-    "Jermell Charlo",
-    "Erislandy Lara",
-    "Vergil Ortiz"
-   ],
-   "q": "So how does how does that make sense that I don't deserve a world title shot?",
-   "who": "Tim Tszyu",
-   "ctx": "Interview with Marcos Villegas of Fight Hub TV",
-   "ev": "TSZYU VS LARA",
-   "body": [
-    "Tszyu says he finds Jermell Charlo's constant reactions funny and compares poking him to poking a bear. Asked if he is rage baiting his old rival, he agreed with \"Basically, yeah.\" He says he has nothing against Charlo and gives him respect as a former undisputed champion.",
-    "Charlo has said Lara will beat Tszyu and that Tszyu hasn't earned this title shot. Tszyu fired back by asking how he can be undeserving, and said Charlo's call for Lara is “It's just rage bait, man.” He did say Lara is the more technical fighter. A Charlo fight after Lara is possible, he said, but he will sit down with his team first.",
-    "On Lara, Tszyu calls it a thinking fight against a very sneaky puncher who sets traps constantly. He expects Lara to come forward, and wants to drag him into deep waters and make it a tough, dirty fight. He also says making 154 had become a nightmare, calls 160 the way to go, and says a fight with Vergil Ortiz definitely interests him. On Fury vs Joshua, he says: “I reckon Joshua by knockout.”",
-    "Why it matters: Tszyu is chasing a second division title and already has Charlo and Ortiz in mind as possible next fights. Lara is the test he calls one of the trickiest of his career."
-   ],
-   "id": "tszyu-admits-he-s-rage-baiting-charlo-ahead-of-lara-fight-p3hpcw",
-   "src": "Fight Hub TV",
-   "url": "https://www.youtube.com/watch?v=p3HpCWYn8Tw&t=316s",
-   "clip": "https://www.youtube.com/watch?v=p3HpCWYn8Tw",
-   "vid": "p3HpCWYn8Tw",
-   "published": "2026-11-28T03:50:09.189318Z"
-  },
-  {
-   "fid": null,
-   "c": "ufc",
-   "mood": "Mind games",
-   "h": "Song Says Cejudo Drinks More Than He Trains Before RAF 15",
-   "sum": "Song brushes off Cejudo's roast and predicts an easy win in their RAF 15 main event, while Cejudo says he'll show him real wrestling.",
-   "tags": [
-    "Song Yadong",
-    "Henry Cejudo"
-   ],
-   "q": "I think he don't train like he drink every day. I beat him easy.",
-   "who": "Song Yadong",
-   "ctx": "RAF 15 press conference in Chicago",
-   "ev": "CEJUDO VS SONG",
-   "body": [
-    "Henry Cejudo opened the RAF 15 press conference with a long comedy roast of the promotion, its stars and its guests. Then he turned to Song Yadong, the man he faces in the main event.",
-    "Cejudo said he still carries a mark from their earlier fight. “I still have a freaking scar on my eye because of it.” He promised to make sure the rules are followed this time and said he gets to show Song what wrestling is. “I get a chance to show him what the sport of wrestling is.”",
-    "Song stayed calm. He called it his dream match, said wrestling is the hardest part of MMA, and said he wants to challenge himself in freestyle wrestling. When asked about Cejudo's gold-medal background, he took a shot at Cejudo's preparation and predicted an easy win.",
-    "Why it matters: Cejudo is a wrestling gold medalist, but Song already has an MMA win over him. The fight is under wrestling rules, so Song is stepping into Cejudo's world and betting he can still win there."
-   ],
-   "id": "song-says-cejudo-drinks-more-than-he-trains-before-raf-15-hh7pvb",
-   "src": "MMA Fighting",
-   "url": "https://www.youtube.com/watch?v=HH7PvBoAdKk&t=749s",
-   "clip": "https://www.youtube.com/watch?v=HH7PvBoAdKk",
-   "vid": "HH7PvBoAdKk",
-   "published": "2026-11-28T03:50:09.189318Z"
-  },
-  {
-   "fid": null,
-   "c": "ufc",
    "mood": "Callout",
-   "h": "Tsarukyan Calls Out Cejudo And Mocks His Comedy Career",
-   "sum": "Days before facing Pettis at RAF 15, Tsarukyan says he wants Cejudo next and rips him for leaning into comedy over competing.",
+   "h": "Diaz Accepts Emiliano Vargas Callout For Boxing Fight Next",
+   "sum": "JoJo Diaz says yes to a boxing callout and wants Emiliano Vargas right after his December BKB fight.",
    "tags": [
-    "Arman Tsarukyan",
-    "Henry Cejudo",
-    "Anthony Pettis"
+    "JoJo Diaz",
+    "Emiliano Vargas"
    ],
-   "q": "How Olympic champion can lose to MMA fighter is ridiculous.",
-   "who": "Arman Tsarukyan",
-   "ctx": "RAF 15 press conference in Chicago",
-   "ev": "TSARUKYAN VS PETTIS",
+   "q": "Emiliano, let's make it happen, man. I think that uh that's the fight that I want next after this my next BKB fight.",
+   "who": "JoJo Diaz",
+   "ctx": "Interview with FightHype's Frankie Martinez",
+   "ev": "DIAZ VS VARGAS",
    "body": [
-    "Asked at the RAF 15 press conference whether he wanted a piece of Henry Cejudo after his match with Anthony Pettis, Arman Tsarukyan first had to find Cejudo in the room. Once the crowd pointed him out in the front row, Tsarukyan asked him to stand up on a chair so he could see him.",
-    "Pressed on whether he really wants to wrestle Cejudo, Tsarukyan didn't hedge. “Of course, I do want to wrestle him,” he said.",
-    "He then took shots at Cejudo's career. Tsarukyan claimed that “he's only caring about comedy stuff” and that Cejudo knows he can't wrestle at the same level anymore. He also pointed to a loss Cejudo took to an MMA fighter.",
-    "Why it matters: Tsarukyan is the face of RAF and is about to face another former UFC champion in Pettis. Naming Cejudo as his next target gives the promotion a possible follow-up, and it adds to the back-and-forth already building around the card."
+    "Asked about a boxing callout, JoJo Diaz said he is ready to make a fight with Emiliano Vargas. He wants it to be his next fight after his December BKB date.",
+    "Diaz said he has to take care of that December fight first, and then he wants Vargas. He called Vargas a dangerous, fan-friendly fighter who knocks people out and gives fans what they want to see.",
+    "Diaz said he is in his prime and wants to give fans a good night of boxing. He added, “I don't shy away from any smoke,” and said everyone would be excited if the fight happens.",
+    "Why it matters: No date or venue is set, but Diaz has now publicly said yes to Vargas. Two fan-friendly punchers could make this a fight fans want."
    ],
-   "id": "tsarukyan-calls-out-cejudo-and-mocks-his-comedy-career-usg7je",
-   "src": "MMA Fighting",
-   "url": "https://www.youtube.com/watch?v=usG7JeSTPa8&t=392s",
-   "clip": "https://www.youtube.com/watch?v=usG7JeSTPa8",
-   "vid": "usG7JeSTPa8",
-   "published": "2026-11-28T03:50:09.189318Z"
+   "id": "diaz-accepts-emiliano-vargas-callout-for-boxing-fight-next-_y_78g",
+   "src": "FightHype",
+   "url": "https://www.youtube.com/watch?v=_Y_78gTONCM&t=445s",
+   "clip": "https://www.youtube.com/watch?v=_Y_78gTONCM",
+   "vid": "_Y_78gTONCM",
+   "published": "2026-11-28T06:58:35.943444Z"
+  },
+  {
+   "fid": null,
+   "c": "boxing",
+   "mood": "Callout",
+   "h": "Sanchez Says Haney Thinks He's Bigger Than Boxing Over VADA",
+   "sum": "Trainer Abel Sanchez wants mandatory testing for title fights and says Haney is putting himself above the sport by staying out of VADA.",
+   "tags": [
+    "Abel Sanchez",
+    "Devin Haney",
+    "Liam Paro"
+   ],
+   "q": "I think that he thinks he's more than what he is.",
+   "who": "Abel Sanchez, trainer",
+   "ctx": "Interview with FightHype's Frankie Martinez",
+   "ev": "HANEY VS PARO",
+   "body": [
+    "Asked about Devin Haney not being enrolled in VADA testing before his fight with Liam Paro, Sanchez said testing should be mandatory for anyone fighting for a title. His rule is simple: no testing, no fight. He said promoters have to go along with it.",
+    "Sanchez said the sport is bigger than Haney and that promoters and organizations should put their foot down. He added: “there's a lot of dirty fighters in this business and we all know it.”",
+    "The interviewer asked about Haney possibly enrolling in VADA after the fight. Sanchez said the timing makes no difference, because anything in a fighter's system would still be there a week later. He called the idea a pretense to act like he's in charge. He also pointed to Ryan Garcia's positive test as proof that dirty fighters exist.",
+    "Why it matters: Fans were already pushing back on Haney's testing stance, according to the interviewer, and a well-known trainer is now adding to the pressure with the fight about three weeks away."
+   ],
+   "id": "sanchez-says-haney-thinks-he-s-bigger-than-boxing-over-vada-zv_rgc",
+   "src": "FightHype",
+   "url": "https://www.youtube.com/watch?v=zV_rGco8ls4&t=86s",
+   "clip": "https://www.youtube.com/watch?v=zV_rGco8ls4",
+   "vid": "zV_rGco8ls4",
+   "published": "2026-11-28T06:58:35.943444Z"
+  },
+  {
+   "fid": "2026-11-27-andy-cruz-artur-subkhankulov",
+   "c": "boxing",
+   "mood": "Result",
+   "h": "Cruz Beats Subkhankulov To Win Vacant IBF Lightweight Title",
+   "sum": "Andy Cruz takes the vacant IBF lightweight belt on the scorecards. Hosts liked the win but wanted a finish and rank him behind the division's top two.",
+   "tags": [
+    "Andy Cruz",
+    "Artur Subkhankulov"
+   ],
+   "q": "I think he's the third or fourth best champion in the lightweight division.",
+   "who": "Men at Work hosts",
+   "ctx": "Live show commentary on the fight, Men at Work episode 16",
+   "ev": "CRUZ VS SUBKHANKULOV",
+   "body": [
+    "Andy Cruz is the new IBF lightweight champion. The hosts watched the fight live, and after the scorecards were read they called it a deserved win over Artur Subkhankulov for the vacant belt.",
+    "Cruz leaned on his straight right hand and had Subkhankulov's right eye closing up late. The hosts said he had a knockdown in the second round. They also said he was dropped at the end of the eighth, then steadied himself and closed strongly.",
+    "The hosts still wanted more. They said Cruz threw three punches at most in a sequence and did not follow up after the knockdown. They ranked him behind Abdullah Mason and William Zepeda, with Kid Austin also ahead of him in some of their picks.",
+    "Why it matters: Cruz now holds a world title, and the hosts said he is a free agent, which gives him a platform for a bigger fight at 135 pounds. They also said he has to prove he can finish opponents."
+   ],
+   "id": "cruz-beats-subkhankulov-to-win-vacant-ibf-lightweight-title-mlhgup",
+   "src": "Sean Zittel",
+   "url": "https://www.youtube.com/watch?v=mLhgUpYj0_k&t=761s",
+   "clip": "https://www.youtube.com/watch?v=mLhgUpYj0_k",
+   "vid": "mLhgUpYj0_k",
+   "published": "2026-11-28T06:58:35.943444Z"
+  },
+  {
+   "fid": "2026-12-04-dustin-pague-vs-mike-richman",
+   "c": "bkfc",
+   "mood": "Bold prediction",
+   "h": "Richman Sees Pague Fight Ending In Stoppage Or Decision",
+   "sum": "Mike Richman is torn on how his main event with Dustin Pague ends, and says a win won't bring him the belt.",
+   "tags": [
+    "Mike Richman",
+    "Dustin Pague",
+    "Julian Lane"
+   ],
+   "q": "He's either going to get uh TKOed or KO'ed or it's going to be a decision.",
+   "who": "Mike Richman",
+   "ctx": "Interview with Knuckles2Knives",
+   "ev": "PAGUE VS RICHMAN",
+   "body": [
+    "Mike Richman says his December 4 main event with welterweight champ Dustin Pague will end in a stoppage or a decision, and he admits he can't pick between them. He calls Pague “a tough cat” who can take punishment.",
+    "If the shots don't finish Pague, Richman says it could turn into a repeat of Pague's last fight with Julian Lane, with both men trading for five rounds and leaving it to the judges.",
+    "Richman also explained the stakes. The fight is not necessarily a title bout, and it is set at a 168-pound catch weight, which he says is closer to welterweight than middleweight. Even without the belt, he says “I know there's value in beating him”, pointing to a big fight, a good payday and a possible shot at a world title.",
+    "Why it matters: Richman is fighting the champ without a title on the line, so a win only helps if it earns him a number one contender fight or a shot at 175. His own prediction suggests Pague will be hard to put away."
+   ],
+   "id": "richman-sees-pague-fight-ending-in-stoppage-or-decision-rlhybt",
+   "src": "Knuckles2Knives",
+   "url": "https://www.youtube.com/watch?v=RLhYbtjXhvk&t=1796s",
+   "clip": "https://www.youtube.com/watch?v=RLhYbtjXhvk",
+   "vid": "RLhYbtjXhvk",
+   "published": "2026-11-28T06:58:35.943444Z"
   }
  ],
  "channel_ids": {
@@ -486,10 +535,16 @@
   "ONE Championship": "UCiormkBf3jm6mfb7k0yPbKA",
   "PFL MMA": "UCPrONRG9hO1f-OrxW-WH-xg",
   "RIZIN FIGHTING FEDERATION": "UCZZ0UGjWsRdM8_5bsqtxYaQ",
-  "@fighthub": "UCwdVyruxCCqMR4DtPLhtwlg"
+  "@fighthub": "UCwdVyruxCCqMR4DtPLhtwlg",
+  "@RadioRahimHere": "UC1OphyLkHLXVY4bxb1tXjeA",
+  "@SeanZittel": "UCcK8xvW34oBH7a7onHSPX6A",
+  "@Builtdifferentboxing": "UCECJsEvMpyQU-l51KQ8fdMQ",
+  "@FirstRoundTV": "UCEGjeto67CH7Eb9vg_J3rRQ",
+  "@WeighingInWithTravisHartman": "UC35loVsnWxmAAvtlFNaNqQg",
+  "@oneononemma": "UC2Kj_l_ZdSgwcDvwgU9E6Ng"
  },
- "last_full_run": "2026-11-28T03:50:09.189318Z",
- "last_search": "2026-11-28T00:34:54.088054Z",
+ "last_full_run": "2026-11-28T06:58:35.943444Z",
+ "last_search": "2026-11-28T06:58:35.943444Z",
  "live": [
   "aj-no-better-time",
   "aj-trust",
@@ -531,11 +586,14 @@
   "richman-believes-he-can-put-pague-away-in-hershey-main-event-g36pne",
   "sauerland-offers-hearn-and-white-10-million-each-to-fight-fnz0l_",
   "shalom-vows-to-enforce-contract-over-bakole-s-wilder-fight-bzr0zr",
+  "song-says-cejudo-drinks-more-than-he-trains-before-raf-15-hh7pvb",
   "song-yadong-wants-dvalishvili-next-and-predicts-early-knocko-dw8bf0",
   "spencer-brown-says-fury-fight-is-on-despite-health-claims-smsjyh",
   "thurman-starts-rehab-after-ortiz-pullout-vows-he-s-not-done-cbaki9",
+  "tsarukyan-calls-out-cejudo-and-mocks-his-comedy-career-usg7je",
   "tsarukyan-eyes-march-or-april-title-shot-wants-covington-rem-bhl3yg",
   "tsarukyan-says-gaethje-must-drop-belt-to-face-volkanovski-jvrx_t",
+  "tszyu-admits-he-s-rage-baiting-charlo-ahead-of-lara-fight-p3hpcw",
   "woodley-wants-chimaev-rematch-and-one-more-mma-fight-kmdgj4"
  ]
 }
