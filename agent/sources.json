@@ -70,6 +70,21 @@
    "id": "queensberry",
    "c": "boxing",
    "url": "https://www.queensberry.co.uk/pages/events"
+  },
+  {
+   "id": "wiki-zuffa-year",
+   "c": "boxing",
+   "wiki": "{year} in Zuffa Boxing"
+  },
+  {
+   "id": "wiki-zuffa-next",
+   "c": "boxing",
+   "wiki": "{next_year} in Zuffa Boxing"
+  },
+  {
+   "id": "zuffa",
+   "c": "boxing",
+   "url": "https://www.ufc.com/zuffaboxing"
   }
  ],
  "results": [
