@@ -345,148 +345,119 @@
   "b3FWGsy4QIo",
   "R12RrRqdwAY",
   "wN0hsLqwZ40",
-  "qPgWHb7Ejkc"
+  "qPgWHb7Ejkc",
+  "OJbf2nzJPbc",
+  "p3HpCWYn8Tw",
+  "UEkkgJYUNSg",
+  "JkWc2iKADS0",
+  "LFdFRciXBUA",
+  "Zuihw8UdST0",
+  "334fTB0AP_U",
+  "ElFRarWienM",
+  "ugowD-0xuYQ",
+  "5lm8p92kauA",
+  "7xRtG8UQxwY",
+  "RbGjkkOv4bA",
+  "H732nRWHl5s",
+  "4srwp29Yag4",
+  "iZzd9YRSkfw",
+  "x7_7YbhY_t4",
+  "GMywXIyo3fg",
+  "iK9iAplF86U",
+  "YQwU8MN23uU",
+  "FQuGkJ1T3UM",
+  "Xh5aQo-MDXw",
+  "NskBNT83QtY",
+  "HH7PvBoAdKk",
+  "usG7JeSTPa8",
+  "hZAaXTTaocI",
+  "quyHlB0KxCg",
+  "H-2RAqIKCw8"
  ],
  "pending": [
   {
-   "fid": null,
+   "fid": "2026-12-13-erislandy-lara-vs-tim-tszyu",
    "c": "boxing",
-   "mood": "Hungry",
-   "h": "Odiase Admits He Came In Too Heavy, Eyes 2027 World Title",
-   "sum": "Odiase beat Perez over ten rounds but says he wasn't at his best. He wants a world title shot by the end of 2027 and hints at a Dubois sparring story.",
+   "mood": "Mind games",
+   "h": "Tszyu Admits He's Rage Baiting Charlo Ahead Of Lara Fight",
+   "sum": "Tszyu laughs off Charlo's criticism, calls Lara a master of traps, shows interest in Vergil Ortiz and picks Joshua to knock out Fury.",
    "tags": [
-    "Odiase",
-    "Perez",
-    "Dubois"
+    "Tim Tszyu",
+    "Jermell Charlo",
+    "Erislandy Lara",
+    "Vergil Ortiz"
    ],
-   "q": "Daniel, keep on winning. You know what happened in sparring. Uh maybe one day the world would know.",
-   "who": "Emanuel Odiase",
-   "ctx": "Post-fight interview with Seconds Out",
-   "ev": "ODIASE VS PEREZ",
+   "q": "So how does how does that make sense that I don't deserve a world title shot?",
+   "who": "Tim Tszyu",
+   "ctx": "Interview with Marcos Villegas of Fight Hub TV",
+   "ev": "TSZYU VS LARA",
    "body": [
-    "Emanuel Odiase won a ten-round points decision over Mike Perez, but he was far from happy with the performance. He says his preparation wasn't where it should have been and that he came in at 122 kg, which he called too heavy. He believes a better camp would have meant the fight didn't go the distance, though he still feels he won every round.",
-    "Asked about sparring Daniel Dubois, Odiase wouldn't give details. He said sparring is not the fight, and that he knows he can perform under the bright lights. He told Dubois to keep winning and suggested the world may one day find out what happened in those sessions.",
-    "Odiase repeated that 2027 is his year, saying he has said it many times: “2027 world champion”. He said he is ready to fight anyone and that “I know I can beat any man.” He is chasing fighters ranked above him and wants a fight in the first quarter of 2027, then two more before a world title fight at the end of the year. He said he hasn't signed for a possible next fight in his hometown.",
-    "Why it matters: Odiase is openly aiming for a world title within a year, and he's pointing at Dubois, a heavyweight champion, while admitting his own preparation has to improve."
+    "Tszyu says he finds Jermell Charlo's constant reactions funny and compares poking him to poking a bear. Asked if he is rage baiting his old rival, he agreed with \"Basically, yeah.\" He says he has nothing against Charlo and gives him respect as a former undisputed champion.",
+    "Charlo has said Lara will beat Tszyu and that Tszyu hasn't earned this title shot. Tszyu fired back by asking how he can be undeserving, and said Charlo's call for Lara is “It's just rage bait, man.” He did say Lara is the more technical fighter. A Charlo fight after Lara is possible, he said, but he will sit down with his team first.",
+    "On Lara, Tszyu calls it a thinking fight against a very sneaky puncher who sets traps constantly. He expects Lara to come forward, and wants to drag him into deep waters and make it a tough, dirty fight. He also says making 154 had become a nightmare, calls 160 the way to go, and says a fight with Vergil Ortiz definitely interests him. On Fury vs Joshua, he says: “I reckon Joshua by knockout.”",
+    "Why it matters: Tszyu is chasing a second division title and already has Charlo and Ortiz in mind as possible next fights. Lara is the test he calls one of the trickiest of his career."
    ],
-   "id": "odiase-admits-he-came-in-too-heavy-eyes-2027-world-title-dcqfqs",
-   "src": "Seconds Out",
-   "url": "https://www.youtube.com/watch?v=DcqfqsrQm_4&t=650s",
-   "clip": "https://www.youtube.com/watch?v=DcqfqsrQm_4",
-   "vid": "DcqfqsrQm_4",
-   "published": "2026-11-28T00:34:54.088054Z"
+   "id": "tszyu-admits-he-s-rage-baiting-charlo-ahead-of-lara-fight-p3hpcw",
+   "src": "Fight Hub TV",
+   "url": "https://www.youtube.com/watch?v=p3HpCWYn8Tw&t=316s",
+   "clip": "https://www.youtube.com/watch?v=p3HpCWYn8Tw",
+   "vid": "p3HpCWYn8Tw",
+   "published": "2026-11-28T03:50:09.189318Z"
   },
   {
    "fid": null,
    "c": "ufc",
-   "mood": "Hungry",
-   "h": "Garbrandt Says He's Moving On From UFC After 12 Years",
-   "sum": "Cody Garbrandt says he has nothing left to prove in the UFC and wants more RAF wrestling matches, starting with a possible December 19 date.",
-   "tags": [
-    "Cody Garbrandt",
-    "Sergio Pettis"
-   ],
-   "q": "I've done everything I wanted to do in the UFC.",
-   "who": "Cody Garbrandt",
-   "ctx": "RAF 15 press conference in Chicago",
-   "ev": "GARBRANDT VS PETTIS",
-   "body": [
-    "Asked at the RAF 15 press conference about a rumor that he would retire from MMA in February, Garbrandt didn't confirm it. He said he spent 12 years in the UFC, put on a lot of wars, and is content with what he did there.",
-    "He also kept the door open. “I'm not saying that my fighting career is done,” he said, but he added that it's time to move on from the UFC and do something else. He described returning to wrestling as a new love for something lost long ago.",
-    "Garbrandt, who faces Sergio Pettis on Saturday, said he wants to keep competing in RAF. He hopes to win and be back on the mats in Long Island on December 19, and says he's in wrestling shape. Of RAF's bosses, he said: “I'll be down.” He also said he'd love to wrestle Henry, whom he called one of the best.",
-    "Why it matters: A former UFC champion stepping away from the UFC and into RAF's wrestling format is a notable shift. If he wins Saturday, he could be back in action within weeks."
-   ],
-   "id": "garbrandt-says-he-s-moving-on-from-ufc-after-12-years-97s8wg",
-   "src": "MMA Fighting",
-   "url": "https://www.youtube.com/watch?v=97s8wGZ6R5g&t=129s",
-   "clip": "https://www.youtube.com/watch?v=97s8wGZ6R5g",
-   "vid": "97s8wGZ6R5g",
-   "published": "2026-11-28T00:34:54.088054Z"
-  },
-  {
-   "fid": null,
-   "c": "ufc",
-   "mood": "Defiant",
-   "h": "Tsarukyan Says Gaethje Must Drop Belt To Face Volkanovski",
-   "sum": "Tsarukyan insists he is the next lightweight title challenger and says the UFC told him so, whatever the Gaethje-Volkanovski rumors suggest.",
-   "tags": [
-    "Arman Tsarukyan",
-    "Justin Gaethje",
-    "Volkanovski"
-   ],
-   "q": "And if Gaethje wants to fight Volkanovski, he got to leave the belt and do like a random fight, you know, without the title because I'm contender number one",
-   "who": "Arman Tsarukyan",
-   "ctx": "Interview with MMA Fighting",
-   "ev": "TSARUKYAN VS LIGHTWEIGHT TIT",
-   "body": [
-    "Arman Tsarukyan pushed back on talk that the UFC could book Gaethje against Volkanovski for the lightweight title. Asked if he was worried, he said the next 155-pound title fight is his. He allowed that the promotion might want to do something in a different division, but said he doesn't think so.",
-    "He said that if Gaethje wants Volkanovski, he would have to give up the belt and take a non-title fight. Tsarukyan says the UFC told him directly that he is fighting for the title: “the UFC told me that I'm fighting for the belt”.",
-    "The interviewer relayed Henry Cejudo's idea of Gaethje vacating to fight Conor McGregor, then Tsarukyan facing Volkanovski for the vacant belt. Tsarukyan wasn't picky about the route or the opponent: “I don't care who is going to be against me”. He named Pettis, Pimblett, Ilia Topuria and Gaethje as possible opponents.",
-    "Why it matters: Tsarukyan is publicly staking his claim before anything is official. By his own account, the title fight is likely March or April and isn't confirmed yet, so the UFC's next move at lightweight is still open."
-   ],
-   "id": "tsarukyan-says-gaethje-must-drop-belt-to-face-volkanovski-jvrx_t",
-   "src": "MMA Fighting",
-   "url": "https://www.youtube.com/watch?v=jvrx_ttV1Lk&t=23s",
-   "clip": "https://www.youtube.com/watch?v=jvrx_ttV1Lk",
-   "vid": "jvrx_ttV1Lk",
-   "published": "2026-11-28T00:34:54.088054Z"
-  },
-  {
-   "fid": null,
-   "c": "ufc",
-   "mood": "Hungry",
-   "h": "Tsarukyan Eyes March Or April Title Shot, Wants Covington Rematch",
-   "sum": "Tsarukyan expects his UFC title fight in March or April, though nothing is confirmed. He also wants a rematch with Covington and picks Oliveira to beat Lopes.",
-   "tags": [
-    "Arman Tsarukyan",
-    "Kobe Covington",
-    "Charles Oliveira",
-    "Diego Lopes"
-   ],
-   "q": "I know I'm can beat him so easy if I'm going to be in the the best shape and I'm going to prepare.",
-   "who": "Arman Tsarukyan",
-   "ctx": "Interview with MMA Fighting's Mike Heck ahead of RAF 15 in Chicago",
-   "ev": "TSARUKYAN 2027 PLANS",
-   "body": [
-    "Tsarukyan told MMA Fighting he expects his UFC title fight to come around March or April, but he stressed that nothing is confirmed yet. He said he plans to defend the belt in the summer and again toward the end of next year. He called it the ideal year and described a heavy schedule mixing RAF and UFC fights.",
-    "Asked about a rematch with Kobe Covington on the RAF mats, Tsarukyan said he is excited. He admitted he didn't gain weight and move up last time, and said he won't take back-to-back wrestling bookings again. He called the jet lag “just excuses” but said he is confident of winning the rematch.",
-    "He also picked Charles Oliveira to beat Diego Lopes at UFC 335, saying “it's a decision.” He gave Lopes credit for better boxing and for being young, but said Oliveira is huge for the weight class and has good grappling and conditioning.",
-    "Why it matters: Tsarukyan has put a rough date on his title fight and wants a Covington rematch in between. His plans for 2027 are packed, but none of it is confirmed."
-   ],
-   "id": "tsarukyan-eyes-march-or-april-title-shot-wants-covington-rem-bhl3yg",
-   "src": "MMA Fighting",
-   "url": "https://www.youtube.com/watch?v=bHl3yG6Ow1o&t=436s",
-   "clip": "https://www.youtube.com/watch?v=bHl3yG6Ow1o",
-   "vid": "bHl3yG6Ow1o",
-   "published": "2026-11-28T00:34:54.088054Z"
-  },
-  {
-   "fid": null,
-   "c": "ufc",
-   "mood": "Bold prediction",
-   "h": "Song Yadong Wants Dvalishvili Next And Predicts Early Knockout",
-   "sum": "Song Yadong expects Merab Dvalishvili to be his next opponent and says he can finish him early. He also shrugs off the Usman Nurmagomedov cage incident.",
+   "mood": "Mind games",
+   "h": "Song Says Cejudo Drinks More Than He Trains Before RAF 15",
+   "sum": "Song brushes off Cejudo's roast and predicts an easy win in their RAF 15 main event, while Cejudo says he'll show him real wrestling.",
    "tags": [
     "Song Yadong",
-    "Merab Dvalishvili",
-    "Usman Nurmagomedov"
+    "Henry Cejudo"
    ],
-   "q": "I can knock him out. It's like first and second rounds.",
+   "q": "I think he don't train like he drink every day. I beat him easy.",
    "who": "Song Yadong",
-   "ctx": "Interview with MMA Fighting",
-   "ev": "SONG YADONG: MERAB NEXT",
+   "ctx": "RAF 15 press conference in Chicago",
+   "ev": "CEJUDO VS SONG",
    "body": [
-    "Song Yadong thinks his next fight will be against Merab Dvalishvili. Asked if that is what's coming, he said he believes it will happen, and that he has heard Dvalishvili say in interviews that he won't fight him.",
-    "Song backed it up with a bold prediction. He says nobody has knockout power like his, and that he can end the fight in the first or second round.",
-    "The interviewer also asked about the scene after Song knocked out Umar, when Usman Nurmagomedov jumped into the cage and an elbow almost landed. Song laughed it off. He called it “It's just wild.” and said he doesn't judge it, adding that “he didn't hurt me”.",
-    "Why it matters: Song is making a public case for a bout with Dvalishvili while no fight between them is announced. His knockout claim sets up a striker-versus-grappler storyline if the UFC takes it up."
+    "Henry Cejudo opened the RAF 15 press conference with a long comedy roast of the promotion, its stars and its guests. Then he turned to Song Yadong, the man he faces in the main event.",
+    "Cejudo said he still carries a mark from their earlier fight. “I still have a freaking scar on my eye because of it.” He promised to make sure the rules are followed this time and said he gets to show Song what wrestling is. “I get a chance to show him what the sport of wrestling is.”",
+    "Song stayed calm. He called it his dream match, said wrestling is the hardest part of MMA, and said he wants to challenge himself in freestyle wrestling. When asked about Cejudo's gold-medal background, he took a shot at Cejudo's preparation and predicted an easy win.",
+    "Why it matters: Cejudo is a wrestling gold medalist, but Song already has an MMA win over him. The fight is under wrestling rules, so Song is stepping into Cejudo's world and betting he can still win there."
    ],
-   "id": "song-yadong-wants-dvalishvili-next-and-predicts-early-knocko-dw8bf0",
+   "id": "song-says-cejudo-drinks-more-than-he-trains-before-raf-15-hh7pvb",
    "src": "MMA Fighting",
-   "url": "https://www.youtube.com/watch?v=dw8bf0G_H-E&t=35s",
-   "clip": "https://www.youtube.com/watch?v=dw8bf0G_H-E",
-   "vid": "dw8bf0G_H-E",
-   "published": "2026-11-28T00:34:54.088054Z"
+   "url": "https://www.youtube.com/watch?v=HH7PvBoAdKk&t=749s",
+   "clip": "https://www.youtube.com/watch?v=HH7PvBoAdKk",
+   "vid": "HH7PvBoAdKk",
+   "published": "2026-11-28T03:50:09.189318Z"
+  },
+  {
+   "fid": null,
+   "c": "ufc",
+   "mood": "Callout",
+   "h": "Tsarukyan Calls Out Cejudo And Mocks His Comedy Career",
+   "sum": "Days before facing Pettis at RAF 15, Tsarukyan says he wants Cejudo next and rips him for leaning into comedy over competing.",
+   "tags": [
+    "Arman Tsarukyan",
+    "Henry Cejudo",
+    "Anthony Pettis"
+   ],
+   "q": "How Olympic champion can lose to MMA fighter is ridiculous.",
+   "who": "Arman Tsarukyan",
+   "ctx": "RAF 15 press conference in Chicago",
+   "ev": "TSARUKYAN VS PETTIS",
+   "body": [
+    "Asked at the RAF 15 press conference whether he wanted a piece of Henry Cejudo after his match with Anthony Pettis, Arman Tsarukyan first had to find Cejudo in the room. Once the crowd pointed him out in the front row, Tsarukyan asked him to stand up on a chair so he could see him.",
+    "Pressed on whether he really wants to wrestle Cejudo, Tsarukyan didn't hedge. “Of course, I do want to wrestle him,” he said.",
+    "He then took shots at Cejudo's career. Tsarukyan claimed that “he's only caring about comedy stuff” and that Cejudo knows he can't wrestle at the same level anymore. He also pointed to a loss Cejudo took to an MMA fighter.",
+    "Why it matters: Tsarukyan is the face of RAF and is about to face another former UFC champion in Pettis. Naming Cejudo as his next target gives the promotion a possible follow-up, and it adds to the back-and-forth already building around the card."
+   ],
+   "id": "tsarukyan-calls-out-cejudo-and-mocks-his-comedy-career-usg7je",
+   "src": "MMA Fighting",
+   "url": "https://www.youtube.com/watch?v=usG7JeSTPa8&t=392s",
+   "clip": "https://www.youtube.com/watch?v=usG7JeSTPa8",
+   "vid": "usG7JeSTPa8",
+   "published": "2026-11-28T03:50:09.189318Z"
   }
  ],
  "channel_ids": {
@@ -514,9 +485,10 @@
   "BKFC Bare Knuckle Fighting Championship": "UCEeMsInLdrUbIkbEcNm7g-A",
   "ONE Championship": "UCiormkBf3jm6mfb7k0yPbKA",
   "PFL MMA": "UCPrONRG9hO1f-OrxW-WH-xg",
-  "RIZIN FIGHTING FEDERATION": "UCZZ0UGjWsRdM8_5bsqtxYaQ"
+  "RIZIN FIGHTING FEDERATION": "UCZZ0UGjWsRdM8_5bsqtxYaQ",
+  "@fighthub": "UCwdVyruxCCqMR4DtPLhtwlg"
  },
- "last_full_run": "2026-11-28T00:34:54.088054Z",
+ "last_full_run": "2026-11-28T03:50:09.189318Z",
  "last_search": "2026-11-28T00:34:54.088054Z",
  "live": [
   "aj-no-better-time",
@@ -531,6 +503,7 @@
   "dubois-says-he-ll-take-on-kabayel-and-wants-back-on-top-acaeuv",
   "fury-cleared-by-boxing-board-for-joshua-fight-davies-says-qskeaq",
   "fury-curtains",
+  "garbrandt-says-he-s-moving-on-from-ufc-after-12-years-97s8wg",
   "haney-camp-stops-pushing-voluntary-testing-before-december-1-wfbdau",
   "hearn-accuses-dana-white-of-mocking-british-fans-over-fury-j-nitkug",
   "hearn-says-fury-and-joshua-will-punch-for-ringwalk-order-ebs_ja",
@@ -548,6 +521,7 @@
   "mendoza-accepts-ortiz-fight-vows-to-deliver-next-big-upset-0-ozsx",
   "mesquita-vows-to-finish-perez-but-wants-pena-first-3mb2hg",
   "napper-says-eubank-jr-vs-brook-decision-due-in-days-iocwy-",
+  "odiase-admits-he-came-in-too-heavy-eyes-2027-world-title-dcqfqs",
   "odiase-says-joshua-needs-legendary-goat-energy-to-beat-fury-xhhk1-",
   "oliveira-next-in-line",
   "overeem-gives-verhoeven-until-2027-to-accept-a-fight-sqkywt",
@@ -557,8 +531,11 @@
   "richman-believes-he-can-put-pague-away-in-hershey-main-event-g36pne",
   "sauerland-offers-hearn-and-white-10-million-each-to-fight-fnz0l_",
   "shalom-vows-to-enforce-contract-over-bakole-s-wilder-fight-bzr0zr",
+  "song-yadong-wants-dvalishvili-next-and-predicts-early-knocko-dw8bf0",
   "spencer-brown-says-fury-fight-is-on-despite-health-claims-smsjyh",
   "thurman-starts-rehab-after-ortiz-pullout-vows-he-s-not-done-cbaki9",
+  "tsarukyan-eyes-march-or-april-title-shot-wants-covington-rem-bhl3yg",
+  "tsarukyan-says-gaethje-must-drop-belt-to-face-volkanovski-jvrx_t",
   "woodley-wants-chimaev-rematch-and-one-more-mma-fight-kmdgj4"
  ]
 }
