@@ -45,3 +45,19 @@ jobs:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Tell Bing and other IndexNow search engines what changed
+        continue-on-error: true
+        run: |
+          sleep 20
+          python3 - <<'PY'
+          import json, urllib.request
+          urls = [u for u in open("site/urls.txt").read().split() if u][:500]
+          body = json.dumps({"host": "fightwhen.com", "key": "27159deb70212d00f6e7f9ea253b96a2",
+                             "keyLocation": "https://fightwhen.com/27159deb70212d00f6e7f9ea253b96a2.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              print("IndexNow:", urllib.request.urlopen(req, timeout=30).status, len(urls), "pages")
+          except Exception as e:
+              print("IndexNow skipped:", e)
+          PY
