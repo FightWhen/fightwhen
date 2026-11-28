@@ -7,6 +7,7 @@ no keys and no extra packages, and runs on every deploy, so the pages always mat
 the schedule.
 """
 import datetime as dt
+import os
 import html
 import json
 import pathlib
@@ -18,7 +19,7 @@ SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 DATA = SITE / "data"
 BASE = "https://fightwhen.com"
 # Email shown to bars that want to be listed. Leave empty to hide the line.
-CONTACT = ""
+CONTACT = "hello@fightwhen.com"
 
 CATS = {"boxing": "Boxing", "ufc": "UFC", "pfl": "PFL", "one": "ONE", "bkfc": "Bare knuckle",
         "misfits": "Misfits", "k1": "Kickboxing", "rizin": "RIZIN"}
@@ -272,6 +273,54 @@ const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e
 """
 
 
+ABOUT = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About FightWhen · Contact</title>
+<meta name="description" content="FightWhen shows when every big boxing, UFC, MMA and bare knuckle fight starts in your time zone, where to watch it, and the news around it.">
+<link rel="canonical" href="{base}/about/">
+<meta name="theme-color" content="#0F0E0C">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
+<style>{css}
+.prose p,.prose li{{color:#C8BFAE}}.prose b{{color:var(--ink)}}.prose ul{{padding-left:20px}}
+.mail{{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:8px;background:var(--gold);color:var(--bg);font-weight:700;text-decoration:none;margin-top:6px}}
+.mail:hover{{color:var(--bg);filter:brightness(1.08)}}</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/">{logo}<span>Fight<b>When</b></span></a><a class="all" href="/">All fights</a></div></nav>
+<main class="wrap prose">
+<p class="kick">About</p>
+<h1>When’s the fight?</h1>
+<p class="dek">FightWhen answers that in one place: every big boxing, UFC, MMA, kickboxing and bare knuckle fight, in your own time zone, with where to watch it, the full card, the tale of the tape and the news around it.</p>
+
+<section><h2>How it stays up to date</h2>
+<ul>
+<li><b>Schedules</b> come from promoters’ own sites and public event pages. A date or time goes live only when two sources agree; anything less is checked by a person first.</li>
+<li><b>Breaking changes</b> like withdrawals and replacements are picked up from news headlines within the hour and checked before they go live.</li>
+<li><b>Fighter stats and records</b> come from public sources, and each number must match the source’s own words. If sources disagree, we leave it blank rather than guess.</li>
+<li><b>News</b> is written from fighters’ and promoters’ own interviews and videos, and every story credits and links its source.</li>
+</ul></section>
+
+<section><h2>Contact</h2>
+<p>Spotted something wrong, want your channel credited differently, or want to work together? Email us.</p>
+<a class="mail" href="mailto:{mail}">{mail}</a>
+<ul>
+<li><b>Corrections:</b> tell us the fight and what’s wrong; we fix it fast.</li>
+<li><b>Creators:</b> if we summarize your video and you’d like it credited differently or removed, just ask.</li>
+<li><b>Bars and restaurants:</b> showing a big fight? <a href="mailto:{mail}?subject=List%20my%20bar">Get listed</a> on that fight’s card.</li>
+<li><b>Advertising and partnerships:</b> we’re open to it.</li>
+</ul></section>
+
+<p class="muted foot">FightWhen isn’t affiliated with any promoter, league or broadcaster. Fight times are shown in your own time zone and can change; check the broadcaster on the night. <a href="/">Back to all fights</a></p>
+</main>
+</body>
+</html>
+"""
+
+
 def main():
     fights = load("fights.json", [])
     stories = load("stories.json", [])
@@ -281,7 +330,9 @@ def main():
         shutil.rmtree(out)
     today = dt.date.today().isoformat()
     upcoming = sorted((f for f in fights if f.get("d", "") >= today), key=lambda f: f["d"])
-    urls = [(f"{BASE}/", today)]
+    urls = [(f"{BASE}/", today), (f"{BASE}/about/", today)]
+    (SITE / "about").mkdir(exist_ok=True)
+    (SITE / "about" / "index.html").write_text(ABOUT.format(base=BASE, css=CSS, logo=LOGO, mail=CONTACT))
     for f in fights:
         if not f.get("id") or not f.get("d") or "/" in f["id"]:
             continue
@@ -303,7 +354,22 @@ def main():
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"<url><loc>{e(u)}</loc><lastmod>{m}</lastmod></url>\n" for u, m in urls) + "</urlset>\n")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
-    print(f"Built {len(urls) - 1} fight pages and the sitemap.")
+    add_analytics()
+    print(f"Built {len(urls) - 2} fight pages, the about page and the sitemap.")
+
+
+def add_analytics():
+    """Cloudflare Web Analytics (no cookies, no banner needed). Turned on by the repository
+    variable CF_BEACON_TOKEN; the token is public by design, it only says which site counts."""
+    token = re.sub(r"[^A-Za-z0-9]", "", os.environ.get("CF_BEACON_TOKEN", ""))
+    if not token:
+        return
+    tag = ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+           f'data-cf-beacon=\'{{"token": "{token}"}}\'></script>')
+    for page in [SITE / "index.html", *SITE.glob("about/index.html"), *SITE.glob("fight/*/index.html")]:
+        html = page.read_text()
+        if "cloudflareinsights" not in html and "</body>" in html:
+            page.write_text(html.replace("</body>", tag + "\n</body>", 1))
 
 
 if __name__ == "__main__":

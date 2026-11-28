@@ -30,6 +30,8 @@ jobs:
           ref: main
       - name: Build one page per fight, plus the sitemap
         run: python3 agent/pages.py
+        env:
+          CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
