@@ -57,6 +57,11 @@ nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px}
 .filters .wrap{padding-top:16px;padding-bottom:6px}
 .pills{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
 .pills::-webkit-scrollbar{display:none}
+.ntabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 0 14px;padding:2px 0}
+.ntabs::-webkit-scrollbar{display:none}
+.ntab{flex:0 0 auto;font:600 13px Inter,sans-serif;color:var(--soft);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 12px;min-height:36px;cursor:pointer}
+.ntab span{opacity:.7;font-weight:500;margin-left:2px}
+.ntab[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--bg)}
 .pill{flex:none;display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:var(--ink);font:500 15px Inter,sans-serif;cursor:pointer;white-space:nowrap}
 .pill:hover{border-color:var(--soft)}
 .pill .dot{width:8px;height:8px;border-radius:50%}
@@ -335,6 +340,7 @@ a.clip:hover .play{background:var(--red)}
 </section>
 <section class="col" id="news" role="tabpanel" aria-labelledby="tab-news" hidden>
 <div class="head"><h2>News</h2><span>Straight from the fighters</span></div>
+<div class="ntabs" id="ntabs" role="group" aria-label="Show news for one sport"></div>
 <div class="quotes" id="quotes"></div>
 </section>
 </main>
@@ -406,12 +412,18 @@ const flag=c=>!c?"":FL[c]?`<svg class="fl" viewBox="0 0 30 20" role="img" aria-l
 const cardHtml=x=>{if(!x.card||!x.card.length)return `<p class="cnote">Full card not announced yet. Bouts are added as they’re confirmed.</p>`;const est=estTimes(x);
 return `<table class="bt"><tbody>`+x.card.map((s,si)=>`<tr class="bsec"><th colspan="4">${esc(s.sec)}${s.w?` <em>${esc(s.w)}</em>`:""}${s.t?`<span>${esc(fmt(s.t,{hour:"numeric",minute:"2-digit"}))} ${esc(abbr(s.t))}</span>`:""}</th></tr>`+(s.b.length?s.b.map((b,bi)=>{const ex=b[5]||{};const parts=(b[4]||"").split(" · ");const wt=parts[0]||"";const more=parts.slice(1).join(" · ");const lab=si===0&&bi===0?"Main event":si===0&&bi===1?"Co-main":"";const title=/title|WBA|WBO|WBC|IBF|BMF|belt/i.test(b[4]||"");const et=est.get(si+"-"+bi);const r=ex.res;const win=k=>r&&r.w===k?`<span class="won">W</span>`:"";
 return `<tr class="brow${lab?" top":""}${r?" done":""}">${lab||title?`<td class="blab">${lab?`<span class="ml">${lab}</span>`:""}${title?`<span class="belt">Title fight</span>`:""}</td>`:""}<td class="fa">${win("a")}<span class="nm">${esc(b[0])}</span>${flag(ex.ca)}${rec(b[1])}</td><td class="vs">vs</td><td class="fb">${rec(b[3])}${flag(ex.cb)}<span class="nm">${esc(b[2])}</span>${win("b")}</td><td class="wt">${esc(wt)}${more?`<small>${esc(more)}</small>`:""}${r?`<span class="res">${r.w==="d"?"Draw":r.w==="nc"?"No contest":esc((r.w==="a"?b[0]:b[2]).split(" ").pop())+" by "+esc(r.m)}${r.r?`, round ${esc(r.r)}`:""}</span>`:et?`<span class="est">Est. walkout ${esc(fmt(et,{hour:"numeric",minute:"2-digit"}))} ${esc(abbr(et))}</span>`:""}</td><td class="tp">${tapeHtml(ex.tape||{a:[],b:[]})}</td></tr>`}).join(""):`<tr class="brow"><td colspan="4" class="tbd">Bouts to be announced</td></tr>`)).join("")+`</tbody></table>`+(x.cn?`<p class="cnote">${esc(x.cn)}</p>`:"")+(Array.from(est.keys()).length?`<p class="cnote">Walkout times are estimates and shift with early finishes.</p>`:"")};
+let newsSport="all";
+document.addEventListener("click",e=>{const b=e.target.closest(".ntab");if(!b)return;newsSport=b.dataset.ns;render()});
 const render=()=>{
 const now=new Date();
 const list=fights.filter(x=>on.includes(x.c)&&!(x.utc?new Date(x.utc)<now-6*36e5:new Date(x.d+"T23:59:59Z")<now-864e5));
 document.getElementById("sched-count").textContent=list.length+(list.length===1?" event":" events");
 document.getElementById("rows").innerHTML=list.length?list.map(x=>{let date,when;if(x.utc){date=`${fmt(x.utc,{day:"numeric"})}<small>${esc(fmt(x.utc,{month:"short"}))} · ${esc(fmt(x.utc,{weekday:"short"}))}</small>`;when=`<p class="under"><span class="local">${esc(fmt(x.utc,{hour:"numeric",minute:"2-digit"}))} ${esc(abbr(x.utc))}</span> · ${esc(x.lab)}</p>`}else{const[,m,dd]=x.d.split("-");date=`${+dd}<small>${mon[+m-1]} · ${esc(x.day)}</small>`;when=`<p class="tba">Start time not announced</p>`}return `<li${x.big?' class="big"':""}><button type="button" class="rowbtn" data-fid="${esc(x.id)}" aria-expanded="${openF.has(x.id)}" aria-controls="card-${esc(x.id)}"><div class="date">${date}</div><div><p class="fight">${esc(x.f)}${/\b(WBA|WBC|IBF|WBO|title|unification|championship)\b/i.test((x.t||"")+" "+(x.u||""))?'<span class="ttl">Title</span>':""}</p><p class="det">${esc([x.t,x.v].filter(Boolean).join(" · "))}</p>${x.u?`<p class="under">${esc(x.u)}</p>`:""}${when}${(n=>n?`<p class="under nstory">${n} ${n>1?"stories":"story"} in the news</p>`:"")(quotes.filter(q=>q.fid===x.id).length)}</div><div class="side">${isLive(x)?'<span class="live">LIVE</span>':""}${tag(x.c)}${x.w&&x.w!=="TBA"?`<span class="net watch"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>${esc(x.w)}${x.wp?` · ${esc(x.wp)}`:""}</span>`:`<span class="net tbd">TV TBA</span>`}<span class="chev" aria-hidden="true"></span></div></button><div class="fcard" id="card-${esc(x.id)}"${openF.has(x.id)?"":" hidden"}>${cardHtml(x)}${newsFor(x)}${barsFor(x)}</div></li>`}).join(""):`<li class="empty">Nothing on the calendar for these picks. Turn on another category above.</li>`;
-const qs=quotes.filter(x=>on.includes(x.c));
+const inOn=quotes.filter(x=>on.includes(x.c));
+const nsports=[...new Set(inOn.map(x=>x.c))];
+if(newsSport!=="all"&&!nsports.includes(newsSport))newsSport="all";
+document.getElementById("ntabs").innerHTML=nsports.length>1?[["all","All",inOn.length],...cats.filter(c=>nsports.includes(c.id)).map(c=>[c.id,c.n,inOn.filter(x=>x.c===c.id).length])].map(([id,n,k])=>`<button type="button" class="ntab" data-ns="${id}" aria-pressed="${newsSport===id}">${esc(n)} <span>${k}</span></button>`).join(""):"";
+const qs=newsSport==="all"?inOn:inOn.filter(x=>x.c===newsSport);
 const hl=document.getElementById("hl");if(qs.length){hl.href="#story-"+qs[0].id;hl.innerHTML=`<b>Latest</b><span>${esc(qs[0].h)}</span>`;hl.hidden=false}else hl.hidden=true;
 document.getElementById("quotes").innerHTML=qs.length?qs.map((x,i)=>`<article class="q${i===0?" lead":""}"><a class="qa" href="#story-${x.id}"><div class="clip">${pic(x,i)}</div><div class="meta">${tag(x.c)}<span class="mood">${esc(x.mood)}</span></div><h3>${esc(x.h)}</h3><p class="sum">${esc(x.sum)}</p>${x.q?`<blockquote>“${esc(x.q)}”</blockquote><p class="who"><b>${esc(x.who)}</b> · ${esc(x.ctx)}</p>`:""}<p class="fts">${x.tags.map(t=>`<span>${esc(t)}</span>`).join("")}</p><p class="rd">${meta(x)}</p></a></article>`).join(""):`<p class="empty">No quotes yet for these picks. More land after every fight night.</p>`;
 document.getElementById("refs").innerHTML=quotes.map((x,i)=>`<li><span class="n">${i+1}</span> ${esc(x.who)}, “${esc(x.h)}”: <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.src)}</a>${x.clip?` · <a href="${esc(x.clip)}" target="_blank" rel="noopener">original video</a>`:""}</li>`).join("");
