@@ -28,6 +28,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Get fonts and Pillow for the share images
+        continue-on-error: true
+        run: |
+          pip install --quiet pillow
+          mkdir -p agent/fonts
+          curl -sSfL -o agent/fonts/Anton-Regular.ttf https://github.com/google/fonts/raw/main/ofl/anton/Anton-Regular.ttf
+          curl -sSfL -o agent/fonts/IBMPlexMono-SemiBold.ttf https://github.com/google/fonts/raw/main/ofl/ibmplexmono/IBMPlexMono-SemiBold.ttf
       - name: Build one page per fight, plus the sitemap
         run: python3 agent/pages.py
         env:

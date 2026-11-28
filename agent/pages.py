@@ -13,7 +13,11 @@ import json
 import pathlib
 import re
 import shutil
+import sys
 from zoneinfo import ZoneInfo
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import cards  # noqa: E402
 
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 DATA = SITE / "data"
@@ -133,7 +137,7 @@ def card_html(f):
     return f'<section><h2>Full card</h2>{"".join(out)}{note}</section>'
 
 
-def page(f, stories, bars, others):
+def page(f, stories, bars, others, image=None):
     name = short_name(f)
     sport = CATS.get(f["c"], f["c"].upper())
     date_txt = nice_date(f["d"])
@@ -184,7 +188,7 @@ def page(f, stories, bars, others):
 <meta name="theme-color" content="#0F0E0C">
 <meta property="og:type" content="website"><meta property="og:site_name" content="FightWhen">
 <meta property="og:url" content="{e(url)}"><meta property="og:title" content="{e('What time is ' + name + '?')}">
-<meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{BASE}/og.png">
+<meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{image or BASE + '/og.png'}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -340,7 +344,13 @@ def main():
         path = page_slug(f)
         d = out / path
         d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(page(f, stories, bars, others))
+        try:
+            made = cards.make(f, CATS.get(f["c"], f["c"]), d / "share.png")
+        except Exception as err:          # a bad image never stops the site from publishing
+            print(f"Share image for {f['id']} failed: {err.__class__.__name__}")
+            made = False
+        image = f"{BASE}/fight/{path}/share.png" if made else None
+        (d / "index.html").write_text(page(f, stories, bars, others, image))
         urls.append((f"{BASE}/fight/{path}/", today))
         if path != f["id"]:
             # The home page links by id; send those visitors to the readable address.
