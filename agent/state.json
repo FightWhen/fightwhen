@@ -395,9 +395,39 @@
   "tSbhfeVYXLY",
   "CqZRACNA1Kk",
   "RLhYbtjXhvk",
-  "dZbVxtBy1dk"
+  "dZbVxtBy1dk",
+  "PqcRUcwMo9Y",
+  "Q2SOD06KY5Q"
  ],
  "pending": [
+  {
+   "fid": "2026-12-05-walker-rocha",
+   "c": "boxing",
+   "mood": "Bold prediction",
+   "h": "Hearn Floats Catterall-Walker World Title Fight If Belt Is Vacated",
+   "sum": "Eddie Hearn says Jack Catterall against Conor Walker for a world title is the plan if the belt is vacated and a win comes first.",
+   "tags": [
+    "Eddie Hearn",
+    "Jack Catterall",
+    "Conor Walker"
+   ],
+   "q": "it's going to be Jack Catterall against Conor Walker for the world title if he wins.",
+   "who": "Eddie Hearn",
+   "ctx": "Matchroom Boxing video interview",
+   "ev": "WALKER VS ROCHA",
+   "body": [
+    "Eddie Hearn says Walker's Dec 5 fight is a “blood bath” and a fight of the year contender. He says he believes Walker will produce the goods.",
+    "Hearn then looked past that fight. He said he has mentioned the idea before, and admitted Sam Jones \"isn't mad on it\". With the Catterall situation coming to a close, a world title fight could follow.",
+    "The plan has conditions. Hearn said the title would have to be vacated, and the fight is tied to a win. He did not say in the transcript whose title it is or who would vacate it.",
+    "Why it matters: A win on Dec 5 could put Walker in a world title fight against Catterall. The plan depends on the belt being vacated and Walker getting the win."
+   ],
+   "id": "hearn-floats-catterall-walker-world-title-fight-if-belt-is-v-pqcruc",
+   "src": "Matchroom Boxing",
+   "url": "https://www.youtube.com/watch?v=PqcRUcwMo9Y&t=31s",
+   "clip": "https://www.youtube.com/watch?v=PqcRUcwMo9Y",
+   "vid": "PqcRUcwMo9Y",
+   "published": "2026-11-28T10:02:21.965312Z"
+  },
   {
    "fid": null,
    "c": "boxing",
@@ -543,7 +573,7 @@
   "@WeighingInWithTravisHartman": "UC35loVsnWxmAAvtlFNaNqQg",
   "@oneononemma": "UC2Kj_l_ZdSgwcDvwgU9E6Ng"
  },
- "last_full_run": "2026-11-28T06:58:35.943444Z",
+ "last_full_run": "2026-11-28T10:02:21.965312Z",
  "last_search": "2026-11-28T06:58:35.943444Z",
  "live": [
   "aj-no-better-time",
