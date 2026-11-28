@@ -181,7 +181,151 @@
      [
       "Aaron McKenna",
       "",
-      "Jevgenijs Aleksejevs",
+      "Etinosa Oliha",
+      "",
+      "title fight"
+     ],
+     [
+      "Canelo Álvarez",
+      "",
+      "Terence Crawford",
+      "",
+      "super middleweight · title fight"
+     ],
+     [
+      "Bek Nurmaganbet",
+      "",
+      "Steven Sumpter",
+      "",
+      ""
+     ],
+     [
+      "Anthony Olascuaga",
+      "",
+      "Juan Carlos Camacho",
+      "",
+      "flyweight · title fight"
+     ],
+     [
+      "Callum Walsh",
+      "",
+      "Carlos Ocampo",
+      "",
+      ""
+     ],
+     [
+      "José Valenzuela",
+      "",
+      "Diego Torres",
+      "",
+      ""
+     ],
+     [
+      "Efe Ajagba",
+      "",
+      "Charles Martin",
+      "",
+      ""
+     ],
+     [
+      "Jai Opetaia",
+      "",
+      "Brandon Glanton",
+      "",
+      "cruiserweight · title fight"
+     ],
+     [
+      "Andres Cortes",
+      "",
+      "Eridson Garcia",
+      "",
+      ""
+     ],
+     [
+      "Tyson Fury",
+      "",
+      "Arslanbek Makhmudov",
+      "",
+      "heavyweight"
+     ],
+     [
+      "Shane Mosley Jr.",
+      "",
+      "Serhii Bohachuk",
+      "",
+      ""
+     ],
+     [
+      "Chris Billam-Smith",
+      "",
+      "Ryan Rozicki",
+      "",
+      ""
+     ],
+     [
+      "Edwin De Los Santos",
+      "",
+      "José Valenzuela",
+      "",
+      ""
+     ],
+     [
+      "Edgar Berlanga",
+      "",
+      "Steven Butler",
+      "",
+      ""
+     ],
+     [
+      "Ryan Garcia",
+      "",
+      "Conor Benn",
+      "",
+      "welterweight · title fight"
+     ],
+     [
+      "Johnny Fisher",
+      "",
+      "Michael Pirotton",
+      "",
+      ""
+     ],
+     [
+      "Chris Billam-Smith",
+      "",
+      "Cheavon Clarke",
+      "",
+      ""
+     ],
+     [
+      "Carlos Adames",
+      "",
+      "Gerome Warburton",
+      "",
+      ""
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2026-12-04-hasanboy-dusmatov-roderick-bautista",
+  "c": "boxing",
+  "d": "2026-12-04",
+  "day": "Fri",
+  "f": "Hasanboy Dusmatov vs Roderick Bautista: IBA President's Cup finals",
+  "t": "title fight",
+  "v": "Istanbul, Türkiye",
+  "w": "TBA",
+  "auto": 1,
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Hasanboy Dusmatov",
+      "",
+      "Roderick Bautista",
       "",
       "title fight"
      ]
