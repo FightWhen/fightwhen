@@ -165,7 +165,7 @@ def page(f, stories, bars, others, image=None):
     url = f"{BASE}/fight/{page_slug(f)}/"
     news = [s for s in stories if s.get("fid") == f["id"]]
     news_html = ("<section><h2>In the news</h2><ul class=news>" + "".join(
-        f'<li><a href="/#story-{e(s["id"])}">{e(s["h"])}</a></li>' for s in news) + "</ul></section>") if news else ""
+        f'<li><a href="/news/{e(s["id"])}/">{e(s["h"])}</a></li>' for s in news) + "</ul></section>") if news else ""
     more = "".join(f'<li><a href="/fight/{e(page_slug(o))}/">{e(short_name(o))}</a><small>{e(nice_date(o["d"]))}</small></li>'
                    for o in others)
     ld = {"@context": "https://schema.org", "@type": "SportsEvent", "name": f["f"], "url": url,
@@ -220,6 +220,95 @@ def page(f, stories, bars, others, image=None):
 </body>
 </html>
 """
+
+
+def news_page(n, fight, more):
+    """A real, crawlable page for one news story (the home page shows them in place)."""
+    url = f"{BASE}/news/{n['id']}/"
+    sport = CATS.get(n.get("c"), (n.get("c") or "").upper())
+    when = (n.get("published") or "")[:10]
+    pub = f"{nice_date(when)}" if re.match(r"\d{4}-\d{2}-\d{2}$", when) else ""
+    img = f"https://i.ytimg.com/vi/{n['vid']}/hqdefault.jpg" if n.get("vid") else f"{BASE}/og.png"
+    quote = (f'<blockquote>“{e(n["q"])}”<cite>{e(n.get("who"))}{" · " + e(n["ctx"]) if n.get("ctx") else ""}</cite></blockquote>'
+             if n.get("q") else "")
+    body = "".join(f"<p>{e(p)}</p>" for p in n.get("body", []))
+    fight_link = (f'<section class="box"><h2>The fight</h2><p><a href="/fight/{e(page_slug(fight))}/">What time is '
+                  f'{e(short_name(fight))}? Start time, full card and where to watch</a></p></section>') if fight else ""
+    others = "".join(f'<li><a href="/news/{e(o["id"])}/">{e(o["h"])}</a></li>' for o in more)
+    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": n["h"][:110], "description": n.get("sum", ""),
+          "image": [img], "datePublished": n.get("published"), "mainEntityOfPage": url,
+          "author": {"@type": "Organization", "name": "FightWhen", "url": BASE},
+          "publisher": {"@type": "Organization", "name": "FightWhen", "logo": {"@type": "ImageObject", "url": f"{BASE}/apple-touch-icon.png"}},
+          "isBasedOn": n.get("clip") or n.get("url")}
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(n["h"])} | FightWhen</title>
+<meta name="description" content="{e(n.get("sum", ""))}">
+<link rel="canonical" href="{e(url)}">
+<meta name="theme-color" content="#0F0E0C">
+<meta property="og:type" content="article"><meta property="og:site_name" content="FightWhen"><meta property="og:url" content="{e(url)}">
+<meta property="og:title" content="{e(n["h"])}"><meta property="og:description" content="{e(n.get("sum", ""))}"><meta property="og:image" content="{e(img)}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}
+.art p{{color:#D8D0C0;font-size:17px;line-height:1.65}}
+blockquote{{margin:22px 0;padding:6px 0 6px 18px;border-left:4px solid var(--red);font-size:20px;line-height:1.45}}
+blockquote cite{{display:block;font:500 14px Inter;color:var(--soft);margin-top:8px;font-style:normal}}
+.thumb{{display:block;margin:20px 0 0;border-radius:10px;overflow:hidden;aspect-ratio:16/9;background:var(--card)}}
+.thumb img{{width:100%;height:100%;object-fit:cover;display:block}}
+.src{{font-size:14px;color:var(--soft)}}</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/">{LOGO}<span>Fight<b>When</b></span></a><a class="all" href="/#story-{e(n["id"])}">All news</a></div></nav>
+<main class="wrap art">
+<p class="kick">{e(sport)}{" · " + e(n["mood"]) if n.get("mood") else ""}</p>
+<h1>{e(n["h"])}</h1>
+<p class="dek">{e(n.get("sum", ""))}</p>
+<p class="src">{e(pub)}{" · " if pub else ""}From <a href="{e(n.get("clip") or n.get("url"))}" target="_blank" rel="noopener">{e(n.get("src"))}</a></p>
+{f'<a class="thumb" href="{e(n.get("url"))}" target="_blank" rel="noopener"><img src="{e(img)}" alt="" loading="lazy" width="480" height="270"></a>' if n.get("vid") else ""}
+{quote}
+{body}
+<p class="src">Written by FightWhen from <a href="{e(n.get("url"))}" target="_blank" rel="noopener">{e(n.get("src"))}’s video</a>. Watch the full interview there.</p>
+{fight_link}
+{f'<section><h2>More fight news</h2><ul class="news">{others}</ul></section>' if others else ""}
+<p class="muted foot"><a href="/">FightWhen</a> · When’s the fight? · <a href="/about/">About &amp; contact</a></p>
+</main>
+</body>
+</html>
+"""
+
+
+def prerender_home(fights, stories, today):
+    """Put plain, crawlable versions of the schedule and news into the home page.
+    The page's script replaces them with the full design as soon as it runs."""
+    home = SITE / "index.html"
+    html = home.read_text()
+    up = sorted((f for f in fights if f.get("d", "") >= today), key=lambda f: f["d"])[:40]
+    rows = "".join(
+        f'<li class="pre"><a href="/fight/{e(page_slug(f))}/"><b>{e(f["f"])}</b> · {e(nice_date(f["d"]))}'
+        f'{" · " + e(when(f["utc"], "America/New_York", False)) + " ET" if f.get("utc") else ""}'
+        f'{" · " + e(f["w"]) if f.get("w") and f["w"] != "TBA" else ""}</a></li>' for f in up)
+    news = "".join(f'<p class="pre"><a href="/news/{e(n["id"])}/"><b>{e(n["h"])}</b></a> {e(n.get("sum", ""))}</p>'
+                   for n in stories[:30])
+    html = re.sub(r'<ul class="rows" id="rows">.*?</ul>', f'<ul class="rows" id="rows">{rows}</ul>', html, count=1, flags=re.S)
+    html = re.sub(r'<div class="quotes" id="quotes">.*?</div>', f'<div class="quotes" id="quotes">{news}</div>', html, count=1, flags=re.S)
+    html = re.sub(r"<title>.*?</title>", "<title>FightWhen · Boxing &amp; UFC Fight Times in Your Time Zone</title>", html, count=1)
+    if 'rel="canonical"' not in html:
+        ld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "WebSite", "name": "FightWhen", "url": BASE + "/"},
+            {"@type": "Organization", "name": "FightWhen", "url": BASE + "/", "logo": BASE + "/apple-touch-icon.png",
+             "email": CONTACT}]}
+        html = html.replace("<title>", f'<link rel="canonical" href="{BASE}/">\n'
+                            f'<script type="application/ld+json">{json.dumps(ld)}</script>\n<title>', 1)
+    if ".pre{" not in html:
+        html = html.replace("</style>", ".pre{list-style:none;padding:10px 0;border-bottom:1px solid #2A261D;color:#A39A86;font-size:15px}"
+                            ".pre a{color:#F2EBDD;text-decoration:none}</style>", 1)
+    home.write_text(html)
 
 
 TV = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>'
@@ -367,8 +456,29 @@ def main():
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"<url><loc>{e(u)}</loc><lastmod>{m}</lastmod></url>\n" for u, m in urls) + "</urlset>\n")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
+    news_dir = SITE / "news"
+    if news_dir.exists():
+        shutil.rmtree(news_dir)
+    by_id = {f["id"]: f for f in fights}
+    for i, n in enumerate(stories):
+        if not n.get("id") or "/" in n["id"]:
+            continue
+        same = [o for o in stories if o is not n and (o.get("fid") and o.get("fid") == n.get("fid") or o.get("c") == n.get("c"))][:6]
+        d = news_dir / n["id"]
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(news_page(n, by_id.get(n.get("fid")), same))
+        urls.append((f"{BASE}/news/{n['id']}/", (n.get("published") or today)[:10]))
+    prerender_home(fights, stories, today)
+    (SITE / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"<url><loc>{e(u)}</loc><lastmod>{m}</lastmod></url>\n" for u, m in urls) + "</urlset>\n")
+    # IndexNow (Bing, Yandex, Naver…): only pages that change often, so pings stay meaningful.
+    soon = (dt.date.today() + dt.timedelta(days=14)).isoformat()
+    ping = [f"{BASE}/"] + [f"{BASE}/fight/{page_slug(f)}/" for f in upcoming if f["d"] <= soon] + \
+           [f"{BASE}/news/{n['id']}/" for n in stories if (n.get("published") or "")[:10] >= (dt.date.today() - dt.timedelta(days=2)).isoformat()]
+    (SITE / "urls.txt").write_text("\n".join(dict.fromkeys(ping)) + "\n")
     add_analytics()
-    print(f"Built {len(urls) - 2} fight pages, the about page and the sitemap.")
+    print(f"Built {len(urls)} pages (fights, news, about, home) and the sitemap.")
 
 
 def add_analytics():
@@ -379,7 +489,7 @@ def add_analytics():
         return
     tag = ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
            f'data-cf-beacon=\'{{"token": "{token}"}}\'></script>')
-    for page in [SITE / "index.html", *SITE.glob("about/index.html"), *SITE.glob("fight/*/index.html")]:
+    for page in [SITE / "index.html", *SITE.glob("about/index.html"), *SITE.glob("fight/*/index.html"), *SITE.glob("news/*/index.html")]:
         html = page.read_text()
         if "cloudflareinsights" not in html and "</body>" in html:
             page.write_text(html.replace("</body>", tag + "\n</body>", 1))
