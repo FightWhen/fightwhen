@@ -1,5 +1,38 @@
 [
  {
+  "id": "2026-11-27-andy-cruz-artur-subkhankulov",
+  "c": "boxing",
+  "d": "2026-11-27",
+  "day": "Fri",
+  "f": "Andy Cruz vs Artur Subkhankulov",
+  "t": "Lightweight · vacant IBF title",
+  "v": "Wrestling Palace, Ufa, Russia",
+  "w": "TBA",
+  "cn": "IBA.PRO 22. Cruz won a split decision (116-110, 116-110, 112-114). Both men were knocked down; Cruz dropped Subkhankulov in rounds 2 and 8.",
+  "card": [
+   {
+    "sec": "Main card",
+    "b": [
+     [
+      "Andy Cruz",
+      "8-1",
+      "Artur Subkhankulov",
+      "12-1",
+      "Lightweight · vacant IBF title",
+      {
+       "res": {
+        "w": "a",
+        "m": "split decision"
+       },
+       "ca": "CUB",
+       "cb": "RUS"
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ {
   "id": "2026-11-28-agit-kabayel-nelson-hysa",
   "c": "boxing",
   "d": "2026-11-28",
